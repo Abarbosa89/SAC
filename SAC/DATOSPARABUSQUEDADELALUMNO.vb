@@ -1,0 +1,3 @@
+﻿Public Class DATOSPARABUSQUEDADELALUMNO
+
+End Class
