@@ -1,0 +1,1372 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+SAC
+</name>
+</assembly>
+<members>
+<member name="P:SAC.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:SAC.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:SAC.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:SAC.SACDataSet.USUARIOSACTIVOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.NUEVAMATRICULADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.IDTUTORDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOPORMATRICULADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARGRADODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARRANGOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSUARIODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSUARIOSPASSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARESCOLARIDADDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.NUEVORECIBOFOLIOFACTURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ACTIVIDADUSUARIOSGLOBALDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ACTIVIDADUSUARIOSPORFECHADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.CORTEDIARIODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSINACTIVOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARADEUDOSALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REPORTECOBRODEPRODUCTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARNIVELDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTUTORESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.TIPOSDEPAGODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.CORTEPORFECHADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.NOPAGARCOLEGIATURASADELANTADASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSPIDENFACTURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVPARFACTURAPORALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSARIOSPORRANGODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCINARCUMPLEAÑOSALUMNOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ELIMINARMOVIMIENTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REPORTEDEPAGOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARADEUDOSARTICULOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTODOSALUMNOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMONTOCOLEGPORNIVELDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PROMOCIONINSCRIPCIONDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PEDIDOSUNIFORMESPORFECHADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ADEUDOSPORALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ALUMNOSPIDENFACTURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.MESESABONADOSPARABECASEPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.MESESLIQUIDADOSPARABECASEPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSINSCRITOSNOINSCRITOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVIMIENTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.BECASASIGNADASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PEDIDOUNIFORMESPORALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INCRIPCIONABONADASBECASEPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INCRIPCIONLIQUIDADABECASEPDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARFECHASERVIDORDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRINTMAXIMODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESINSTANTEDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLOACTUALDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REIMPRESIONDEFOLIODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REIMPRESIONDERECIBODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELCCIONARMOVPARAREIMPRSIONDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCOSTOSPRODUCTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCOSTOSUNIFORMESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVIMIENTOSNOPIDENFACTURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONESOCOLEGIATURASABONADASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONYCOLEGIATURASLIQUIDADASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONABONADADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONLIQUIDADADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSATIVOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPROMOCIONDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMONTOCOLEGIATURAPORNIVELDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPROMOCIONCOLEGIATURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPAGOSREALIZADOSPORALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARLISTAPORGRUPODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSREINSCRITOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARFECHAVENCIPORCICLOYPRODUCTODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTUTORESALUMNODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PRODUCTOSABONADOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PRODUCTOSLIQUIDADOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSACTIVOS2DataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPAGOSDEALUMNOPARAFACTURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.COBRODECOLEGIATURADataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARGRADODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.COBROINSCRIPCIONDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSINSCRIPCIONDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSVARIOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESPORSEXODataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.COBROSDEPRODUCTOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSCOLEGIATURASDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSACTIVOSYINACTIVOSDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.SACDataSet.USUARIOSACTIVOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.NUEVAMATRICULARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.IDTUTORRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOPORMATRICULARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARGRADORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARRANGOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSUARIORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSUARIOSPASSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARESCOLARIDADRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.NUEVORECIBOFOLIOFACTURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ACTIVIDADUSUARIOSGLOBALRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ACTIVIDADUSUARIOSPORFECHARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.CORTEDIARIORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSINACTIVOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARADEUDOSALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REPORTECOBRODEPRODUCTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARNIVELRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTUTORESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.TIPOSDEPAGORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.CORTEPORFECHARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.NOPAGARCOLEGIATURASADELANTADASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSPIDENFACTURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVPARFACTURAPORALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSARIOSPORRANGORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCINARCUMPLEAÑOSALUMNOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ELIMINARMOVIMIENTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REPORTEDEPAGOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARADEUDOSARTICULOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTODOSALUMNOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMONTOCOLEGPORNIVELRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PROMOCIONINSCRIPCIONRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PEDIDOSUNIFORMESPORFECHARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ADEUDOSPORALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.ALUMNOSPIDENFACTURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.MESESABONADOSPARABECASEPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.MESESLIQUIDADOSPARABECASEPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSINSCRITOSNOINSCRITOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVIMIENTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.BECASASIGNADASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PEDIDOUNIFORMESPORALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INCRIPCIONABONADASBECASEPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INCRIPCIONLIQUIDADABECASEPRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARFECHASERVIDORRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRINTMAXIMORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESINSTANTERow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLOACTUALRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REIMPRESIONDEFOLIORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.REIMPRESIONDERECIBORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELCCIONARMOVPARAREIMPRSIONRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCOSTOSPRODUCTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCOSTOSUNIFORMESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVIMIENTOSNOPIDENFACTURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONESOCOLEGIATURASABONADASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONYCOLEGIATURASLIQUIDADASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONABONADARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONLIQUIDADARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSATIVOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPROMOCIONRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMONTOCOLEGIATURAPORNIVELRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPROMOCIONCOLEGIATURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPAGOSREALIZADOSPORALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARLISTAPORGRUPORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSREINSCRITOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARFECHAVENCIPORCICLOYPRODUCTORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTUTORESALUMNORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PRODUCTOSABONADOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.PRODUCTOSLIQUIDADOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSACTIVOS2Row">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPAGOSDEALUMNOPARAFACTURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.COBRODECOLEGIATURARow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARGRADORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.COBROINSCRIPCIONRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSINSCRIPCIONRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSVARIOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESPORSEXORow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.COBROSDEPRODUCTOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSCOLEGIATURASRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSACTIVOSYINACTIVOSRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.SACDataSet.USUARIOSACTIVOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.NUEVAMATRICULARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.IDTUTORRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOPORMATRICULARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARGRADORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARRANGOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSUARIORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSUARIOSPASSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARESCOLARIDADRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.NUEVORECIBOFOLIOFACTURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.ACTIVIDADUSUARIOSGLOBALRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.ACTIVIDADUSUARIOSPORFECHARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.CORTEDIARIORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSINACTIVOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARADEUDOSALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.REPORTECOBRODEPRODUCTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARNIVELRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTUTORESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.TIPOSDEPAGORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.CORTEPORFECHARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.NOPAGARCOLEGIATURASADELANTADASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSPIDENFACTURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVPARFACTURAPORALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUSARIOSPORRANGORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCINARCUMPLEAÑOSALUMNOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.ELIMINARMOVIMIENTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.REPORTEDEPAGOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARADEUDOSARTICULOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTODOSALUMNOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMONTOCOLEGPORNIVELRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.PROMOCIONINSCRIPCIONRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.PEDIDOSUNIFORMESPORFECHARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.ADEUDOSPORALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.ALUMNOSPIDENFACTURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.MESESABONADOSPARABECASEPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.MESESLIQUIDADOSPARABECASEPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSINSCRITOSNOINSCRITOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVIMIENTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.BECASASIGNADASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.PEDIDOUNIFORMESPORALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.INCRIPCIONABONADASBECASEPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.INCRIPCIONLIQUIDADABECASEPRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECIONARFECHASERVIDORRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRINTMAXIMORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESINSTANTERowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLOACTUALRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.REIMPRESIONDEFOLIORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.REIMPRESIONDERECIBORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELCCIONARMOVPARAREIMPRSIONRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCOSTOSPRODUCTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCOSTOSUNIFORMESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMOVIMIENTOSNOPIDENFACTURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONESOCOLEGIATURASABONADASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONYCOLEGIATURASLIQUIDADASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARCICLORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONABONADARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.INSCRIPCIONLIQUIDADARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSATIVOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPROMOCIONRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARMONTOCOLEGIATURAPORNIVELRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPROMOCIONCOLEGIATURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPAGOSREALIZADOSPORALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARLISTAPORGRUPORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSREINSCRITOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARFECHAVENCIPORCICLOYPRODUCTORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARTUTORESALUMNORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.PRODUCTOSABONADOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.PRODUCTOSLIQUIDADOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSACTIVOS2RowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPAGOSDEALUMNOPARAFACTURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.COBRODECOLEGIATURARowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARGRADORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.COBROINSCRIPCIONRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSINSCRIPCIONRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSVARIOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESPORSEXORowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARUNIFORMESRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.COBROSDEPRODUCTOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARPRODUCTOSCOLEGIATURASRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet.SELECCIONARALUMNOSACTIVOSYINACTIVOSRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.SACDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.USUARIOSACTIVOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.NUEVAMATRICULATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.IDTUTORTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOPORMATRICULATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECIONARGRADOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARRANGOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARUSUARIOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARUSUARIOSPASSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARESCOLARIDADTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.NUEVORECIBOFOLIOFACTURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.ACTIVIDADUSUARIOSGLOBALTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.ACTIVIDADUSUARIOSPORFECHATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.CORTEDIARIOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSINACTIVOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARADEUDOSALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.REPORTECOBRODEPRODUCTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECIONARNIVELTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARTUTORESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.TIPOSDEPAGOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.CORTEPORFECHATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.NOPAGARCOLEGIATURASADELANTADASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSPIDENFACTURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARMOVPARFACTURAPORALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARUSARIOSPORRANGOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCINARCUMPLEAÑOSALUMNOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.ELIMINARMOVIMIENTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.REPORTEDEPAGOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARADEUDOSARTICULOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARTODOSALUMNOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARMONTOCOLEGPORNIVELTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.PROMOCIONINSCRIPCIONTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.PEDIDOSUNIFORMESPORFECHATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.ADEUDOSPORALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.ALUMNOSPIDENFACTURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.MESESABONADOSPARABECASEPTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.MESESLIQUIDADOSPARABECASEPTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSINSCRITOSNOINSCRITOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARMOVIMIENTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.BECASASIGNADASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.PEDIDOUNIFORMESPORALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.INCRIPCIONABONADASBECASEPTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.INCRIPCIONLIQUIDADABECASEPTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECIONARFECHASERVIDORTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPRINTMAXIMOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARUNIFORMESINSTANTETableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARCICLOACTUALTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARCICLOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.REIMPRESIONDEFOLIOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.REIMPRESIONDERECIBOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELCCIONARMOVPARAREIMPRSIONTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARCOSTOSPRODUCTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARCOSTOSUNIFORMESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARMOVIMIENTOSNOPIDENFACTURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.INSCRIPCIONESOCOLEGIATURASABONADASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.INSCRIPCIONYCOLEGIATURASLIQUIDADASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARCICLOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.INSCRIPCIONABONADATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.INSCRIPCIONLIQUIDADATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSATIVOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPROMOCIONTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARMONTOCOLEGIATURAPORNIVELTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPROMOCIONCOLEGIATURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPAGOSREALIZADOSPORALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARLISTAPORGRUPOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSREINSCRITOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARFECHAVENCIPORCICLOYPRODUCTOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARTUTORESALUMNOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.PRODUCTOSABONADOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.PRODUCTOSLIQUIDADOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSACTIVOS2TableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPAGOSDEALUMNOPARAFACTURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.COBRODECOLEGIATURATableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARGRADOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.COBROINSCRIPCIONTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPRODUCTOSINSCRIPCIONTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPRODUCTOSVARIOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARUNIFORMESPORSEXOTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARUNIFORMESTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.COBROSDEPRODUCTOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARPRODUCTOSCOLEGIATURASTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.SELECCIONARALUMNOSACTIVOSYINACTIVOSTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:SAC.SACDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(SAC.SACDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:SAC.SACDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(SAC.SACDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:SAC.SACDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(SAC.SACDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:SAC.SACDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:SAC.SACDataSetTableAdapters.TableAdapterManager.UpdateAll(SAC.SACDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:SAC.SACDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

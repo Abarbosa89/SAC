@@ -41,7 +41,6 @@ Partial Class Intro
         Me.PassLabel1 = New System.Windows.Forms.Label()
         Me.IdusLabel1 = New System.Windows.Forms.Label()
         Me.PassperdiCheckBox = New System.Windows.Forms.CheckBox()
-        Me.Label3 = New System.Windows.Forms.Label()
         CType(Me.USUARIOSACTIVOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SELECCIONARUSUARIOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -51,7 +50,7 @@ Partial Class Intro
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(182, 235)
+        Me.Label1.Location = New System.Drawing.Point(49, 76)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 19)
         Me.Label1.TabIndex = 1
@@ -61,7 +60,7 @@ Partial Class Intro
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(142, 264)
+        Me.Label2.Location = New System.Drawing.Point(9, 105)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(129, 19)
         Me.Label2.TabIndex = 2
@@ -74,7 +73,7 @@ Partial Class Intro
         Me.CBOUSUARIO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBOUSUARIO.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBOUSUARIO.FormattingEnabled = True
-        Me.CBOUSUARIO.Location = New System.Drawing.Point(270, 232)
+        Me.CBOUSUARIO.Location = New System.Drawing.Point(137, 73)
         Me.CBOUSUARIO.Name = "CBOUSUARIO"
         Me.CBOUSUARIO.Size = New System.Drawing.Size(167, 26)
         Me.CBOUSUARIO.TabIndex = 3
@@ -93,7 +92,7 @@ Partial Class Intro
         'TXTPASS
         '
         Me.TXTPASS.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPASS.Location = New System.Drawing.Point(270, 261)
+        Me.TXTPASS.Location = New System.Drawing.Point(137, 102)
         Me.TXTPASS.Name = "TXTPASS"
         Me.TXTPASS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXTPASS.Size = New System.Drawing.Size(167, 26)
@@ -101,7 +100,7 @@ Partial Class Intro
         '
         'CMDENTRAR
         '
-        Me.CMDENTRAR.Location = New System.Drawing.Point(306, 301)
+        Me.CMDENTRAR.Location = New System.Drawing.Point(165, 146)
         Me.CMDENTRAR.Name = "CMDENTRAR"
         Me.CMDENTRAR.Size = New System.Drawing.Size(75, 23)
         Me.CMDENTRAR.TabIndex = 5
@@ -122,11 +121,12 @@ Partial Class Intro
         '
         Me.CMDSALIR.BackgroundImage = Global.SAC.My.Resources.Resources.Visualpharm_Must_Have_Log_Out
         Me.CMDSALIR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.CMDSALIR.Location = New System.Drawing.Point(560, 276)
+        Me.CMDSALIR.Location = New System.Drawing.Point(264, 132)
         Me.CMDSALIR.Name = "CMDSALIR"
         Me.CMDSALIR.Size = New System.Drawing.Size(40, 37)
         Me.CMDSALIR.TabIndex = 15
         Me.CMDSALIR.UseVisualStyleBackColor = True
+        Me.CMDSALIR.Visible = False
         '
         'SELECCIONARUSUARIOBindingSource
         '
@@ -140,7 +140,7 @@ Partial Class Intro
         'UsuarioLabel1
         '
         Me.UsuarioLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARUSUARIOBindingSource, "usuario", True))
-        Me.UsuarioLabel1.Location = New System.Drawing.Point(12, 55)
+        Me.UsuarioLabel1.Location = New System.Drawing.Point(12, 306)
         Me.UsuarioLabel1.Name = "UsuarioLabel1"
         Me.UsuarioLabel1.Size = New System.Drawing.Size(100, 23)
         Me.UsuarioLabel1.TabIndex = 19
@@ -149,7 +149,7 @@ Partial Class Intro
         'NomcomLabel1
         '
         Me.NomcomLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARUSUARIOBindingSource, "nomcom", True))
-        Me.NomcomLabel1.Location = New System.Drawing.Point(12, 32)
+        Me.NomcomLabel1.Location = New System.Drawing.Point(12, 283)
         Me.NomcomLabel1.Name = "NomcomLabel1"
         Me.NomcomLabel1.Size = New System.Drawing.Size(100, 23)
         Me.NomcomLabel1.TabIndex = 20
@@ -158,7 +158,7 @@ Partial Class Intro
         'IdRangoLabel1
         '
         Me.IdRangoLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARUSUARIOBindingSource, "IdRango", True))
-        Me.IdRangoLabel1.Location = New System.Drawing.Point(508, 32)
+        Me.IdRangoLabel1.Location = New System.Drawing.Point(508, 138)
         Me.IdRangoLabel1.Name = "IdRangoLabel1"
         Me.IdRangoLabel1.Size = New System.Drawing.Size(100, 23)
         Me.IdRangoLabel1.TabIndex = 21
@@ -167,7 +167,7 @@ Partial Class Intro
         'PassLabel1
         '
         Me.PassLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARUSUARIOBindingSource, "pass", True))
-        Me.PassLabel1.Location = New System.Drawing.Point(12, 9)
+        Me.PassLabel1.Location = New System.Drawing.Point(12, 260)
         Me.PassLabel1.Name = "PassLabel1"
         Me.PassLabel1.Size = New System.Drawing.Size(100, 23)
         Me.PassLabel1.TabIndex = 22
@@ -176,7 +176,7 @@ Partial Class Intro
         'IdusLabel1
         '
         Me.IdusLabel1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARUSUARIOBindingSource, "idus", True))
-        Me.IdusLabel1.Location = New System.Drawing.Point(508, 9)
+        Me.IdusLabel1.Location = New System.Drawing.Point(508, 115)
         Me.IdusLabel1.Name = "IdusLabel1"
         Me.IdusLabel1.Size = New System.Drawing.Size(100, 23)
         Me.IdusLabel1.TabIndex = 23
@@ -185,28 +185,18 @@ Partial Class Intro
         'PassperdiCheckBox
         '
         Me.PassperdiCheckBox.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.SELECCIONARUSUARIOBindingSource, "passperdi", True))
-        Me.PassperdiCheckBox.Location = New System.Drawing.Point(504, 50)
+        Me.PassperdiCheckBox.Location = New System.Drawing.Point(504, 156)
         Me.PassperdiCheckBox.Name = "PassperdiCheckBox"
         Me.PassperdiCheckBox.Size = New System.Drawing.Size(104, 24)
         Me.PassperdiCheckBox.TabIndex = 24
         Me.PassperdiCheckBox.Text = "passperdido"
         Me.PassperdiCheckBox.UseVisualStyleBackColor = True
         '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 311)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(88, 13)
-        Me.Label3.TabIndex = 25
-        Me.Label3.Text = "VERSION : 1.8.3"
-        '
         'Intro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(614, 333)
-        Me.Controls.Add(Me.Label3)
+        Me.ClientSize = New System.Drawing.Size(318, 188)
         Me.Controls.Add(Me.PassperdiCheckBox)
         Me.Controls.Add(Me.IdusLabel1)
         Me.Controls.Add(Me.PassLabel1)
@@ -219,9 +209,12 @@ Partial Class Intro
         Me.Controls.Add(Me.CBOUSUARIO)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
-        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "Intro"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
+        Me.Text = "COLEGIO DUMON v21.6.13"
         CType(Me.USUARIOSACTIVOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SELECCIONARUSUARIOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -247,6 +240,5 @@ Partial Class Intro
     Friend WithEvents PassLabel1 As System.Windows.Forms.Label
     Friend WithEvents IdusLabel1 As System.Windows.Forms.Label
     Friend WithEvents PassperdiCheckBox As System.Windows.Forms.CheckBox
-    Friend WithEvents Label3 As System.Windows.Forms.Label
 
 End Class

@@ -1,11 +1,16 @@
 ﻿Imports System.Data.SqlClient
 Imports System.Data
 Public Class Intro
-    
+
+    Private Sub Intro_FormClosed(sender As Object, e As FormClosedEventArgs) Handles Me.FormClosed
+        End
+    End Sub
+
     Private Sub Intro_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try  'TODO: This line of code loads data into the 'SACDataSet.USUARIOSACTIVOS' table. You can move, or remove it, as needed.
             Me.USUARIOSACTIVOSTableAdapter.Fill(Me.SACDataSet.USUARIOSACTIVOS)
-           
+
+            ConectaBD()
 
             IdRangoLabel1.Hide()
             PassLabel1.Hide()
@@ -26,7 +31,7 @@ Public Class Intro
             Me.SELECCIONARUSUARIOTableAdapter.Fill(Me.SACDataSet.SELECCIONARUSUARIO, CBOUSUARIO.Text)
             If PassperdiCheckBox.Checked = True Then
                 INPUTBOXX.Show()
-                
+
             End If
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)

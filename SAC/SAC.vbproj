@@ -130,6 +130,12 @@
     <Compile Include="ADEUDOSPRODUCTOS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AgregarNuevoCiclo.Designer.vb">
+      <DependentUpon>AgregarNuevoCiclo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AgregarNuevoCiclo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BECASASIGNADAS.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -149,6 +155,7 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CLASES\BECASSEP.vb" />
+    <Compile Include="CLASES\main.vb" />
     <Compile Include="CREARPRODUCTO.Designer.vb">
       <DependentUpon>CREARPRODUCTO.vb</DependentUpon>
     </Compile>
@@ -539,6 +546,7 @@
     <Compile Include="SOPORTE.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="sqlServer.vb" />
     <Compile Include="TUTORES\MODIFICARTUTORES.Designer.vb">
       <DependentUpon>MODIFICARTUTORES.vb</DependentUpon>
     </Compile>
@@ -847,6 +855,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ADEUDOSPRODUCTOS.resx">
       <DependentUpon>ADEUDOSPRODUCTOS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AgregarNuevoCiclo.resx">
+      <DependentUpon>AgregarNuevoCiclo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BECASASIGNADAS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>

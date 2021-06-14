@@ -169,4 +169,10 @@ Public Class ADMINISTRATIVO
         My.Forms.DETALLESTUTORES.Show()
         Me.Close()
     End Sub
+
+    Private Sub cmdNCiclo_Click(sender As Object, e As EventArgs) Handles cmdNCiclo.Click
+        My.Forms.AgregarNuevoCiclo.MdiParent = PADRE
+        My.Forms.AgregarNuevoCiclo.Show()
+        Me.Close()
+    End Sub
 End Class

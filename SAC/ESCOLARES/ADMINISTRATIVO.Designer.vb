@@ -23,6 +23,7 @@ Partial Class ADMINISTRATIVO
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.GPADMINISTRADOR = New System.Windows.Forms.GroupBox()
+        Me.cmdNCiclo = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.CMDMODIFICARFACTURAS = New System.Windows.Forms.Button()
         Me.CMDBECAS = New System.Windows.Forms.Button()
@@ -46,7 +47,6 @@ Partial Class ADMINISTRATIVO
         Me.CMDFLASHPAGOSALUM = New System.Windows.Forms.Button()
         Me.CMDFLASHDETALLESALUM = New System.Windows.Forms.Button()
         Me.CMDSALIR = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
         Me.GPADMINISTRADOR.SuspendLayout()
         Me.GPUSER.SuspendLayout()
         Me.GPTODOS.SuspendLayout()
@@ -54,7 +54,7 @@ Partial Class ADMINISTRATIVO
         '
         'GPADMINISTRADOR
         '
-        Me.GPADMINISTRADOR.Controls.Add(Me.Button3)
+        Me.GPADMINISTRADOR.Controls.Add(Me.cmdNCiclo)
         Me.GPADMINISTRADOR.Controls.Add(Me.Button1)
         Me.GPADMINISTRADOR.Controls.Add(Me.CMDMODIFICARFACTURAS)
         Me.GPADMINISTRADOR.Controls.Add(Me.CMDBECAS)
@@ -69,6 +69,19 @@ Partial Class ADMINISTRATIVO
         Me.GPADMINISTRADOR.TabIndex = 31
         Me.GPADMINISTRADOR.TabStop = False
         Me.GPADMINISTRADOR.Text = "ADMINISTRADOR"
+        '
+        'cmdNCiclo
+        '
+        Me.cmdNCiclo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.cmdNCiclo.Image = Global.SAC.My.Resources.Resources.SIMULADOR
+        Me.cmdNCiclo.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.cmdNCiclo.Location = New System.Drawing.Point(282, 193)
+        Me.cmdNCiclo.Name = "cmdNCiclo"
+        Me.cmdNCiclo.Size = New System.Drawing.Size(123, 78)
+        Me.cmdNCiclo.TabIndex = 30
+        Me.cmdNCiclo.Text = "NUEVO CICLO"
+        Me.cmdNCiclo.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.cmdNCiclo.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -364,19 +377,6 @@ Partial Class ADMINISTRATIVO
         Me.CMDSALIR.TabIndex = 11
         Me.CMDSALIR.UseVisualStyleBackColor = True
         '
-        'Button3
-        '
-        Me.Button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.Button3.Image = Global.SAC.My.Resources.Resources.SIMULADOR
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.Button3.Location = New System.Drawing.Point(282, 193)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(123, 78)
-        Me.Button3.TabIndex = 30
-        Me.Button3.Text = "NUEVO CICLO"
-        Me.Button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.Button3.UseVisualStyleBackColor = True
-        '
         'ADMINISTRATIVO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
@@ -424,5 +424,5 @@ Partial Class ADMINISTRATIVO
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents CMDDETALLESTUTOTES As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents cmdNCiclo As System.Windows.Forms.Button
 End Class
