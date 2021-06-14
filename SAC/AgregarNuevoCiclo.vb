@@ -48,12 +48,31 @@ Public Class AgregarNuevoCiclo
                     Exit Sub
                 Else
                     drDatos = dtDatos.Rows(0)
-                    For x = 0 To dtDatos.Rows.Count
+                    For x = 0 To dtDatos.Rows.Count - 1
+                        drDatos = dtDatos.Rows(x)
                         sSQL = "INSERT INTO COSTOSPRODCICLO (idproduct, idciclo, monto) "
                         sSQL = sSQL & "VALUES (" & drDatos("idproduct").ToString & "," & vUltimoCicloNvo & "," & drDatos("monto").ToString & ") "
+                        sqlServer.ExecSQL(sSQL)
                     Next
 
                 End If
+
+                sSQL = "SELECT ID, IDUNIFORME, MONTO, IDCICLO FROM COSTOUNIFORMECICLO WHERE IDCICLO  = " & vUltimoCiclo
+                dtDatos = sqlServer.ExecSQLReturnDT(sSQL, "COSTOUNIFORMECICLO")
+                If dtDatos Is Nothing OrElse dtDatos.Rows.Count <= 0 Then
+                    MsgBox("No se pueden obtener los parámetros! Por favor avise a sistemas!", MsgBoxStyle.Exclamation, "Facturacion")
+                    Exit Sub
+                Else
+                    drDatos = dtDatos.Rows(0)
+                    For x = 0 To dtDatos.Rows.Count - 1
+                        drDatos = dtDatos.Rows(x)
+                        sSQL = "INSERT INTO COSTOUNIFORMECICLO (IDUNIFORME, IDCICLO, MONTO) "
+                        sSQL = sSQL & "VALUES (" & drDatos("IDUNIFORME").ToString & "," & vUltimoCicloNvo & "," & drDatos("MONTO").ToString & ") "
+                        sqlServer.ExecSQL(sSQL)
+                    Next
+
+                End If
+
 
                 con.Open()
                 com = New SqlCommand("REGISTRODEACTIVIDAD", con)
