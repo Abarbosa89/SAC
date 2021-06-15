@@ -10,7 +10,10 @@ Public Class Intro
         Try  'TODO: This line of code loads data into the 'SACDataSet.USUARIOSACTIVOS' table. You can move, or remove it, as needed.
             Me.USUARIOSACTIVOSTableAdapter.Fill(Me.SACDataSet.USUARIOSACTIVOS)
 
+            'Conexiones de Base de Datos
             ConectaBD()
+            ConectaBDBuffer()
+            '--------------------------
 
             IdRangoLabel1.Hide()
             PassLabel1.Hide()

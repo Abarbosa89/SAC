@@ -25,6 +25,7 @@ Partial Class COBROSPRODUCTOS
         Me.components = New System.ComponentModel.Container()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(COBROSPRODUCTOS))
         Me.CBOPRODUCTOS = New System.Windows.Forms.ComboBox()
+        Me.COBROSDEPRODUCTOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SACDataSet = New SAC.SACDataSet()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -99,15 +100,16 @@ Partial Class COBROSPRODUCTOS
         Me.TIPOSDEPAGOTableAdapter = New SAC.SACDataSetTableAdapters.TIPOSDEPAGOTableAdapter()
         Me.PRODUCTOSABONADOSTableAdapter = New SAC.SACDataSetTableAdapters.PRODUCTOSABONADOSTableAdapter()
         Me.PRODUCTOSLIQUIDADOSTableAdapter = New SAC.SACDataSetTableAdapters.PRODUCTOSLIQUIDADOSTableAdapter()
-        Me.COBROSDEPRODUCTOSBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.COBROSDEPRODUCTOSTableAdapter = New SAC.SACDataSetTableAdapters.COBROSDEPRODUCTOSTableAdapter()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        CType(Me.COBROSDEPRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NUEVORECIBOFOLIOFACTURABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTOSABONADOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PRODUCTOSLIQUIDADOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GPOPRODUCTOS.SuspendLayout()
         CType(Me.TIPOSDEPAGOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.COBROSDEPRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'CBOPRODUCTOS
@@ -121,6 +123,11 @@ Partial Class COBROSPRODUCTOS
         Me.CBOPRODUCTOS.Size = New System.Drawing.Size(541, 28)
         Me.CBOPRODUCTOS.TabIndex = 0
         Me.CBOPRODUCTOS.ValueMember = "idproduc"
+        '
+        'COBROSDEPRODUCTOSBindingSource
+        '
+        Me.COBROSDEPRODUCTOSBindingSource.DataMember = "COBROSDEPRODUCTOS"
+        Me.COBROSDEPRODUCTOSBindingSource.DataSource = Me.SACDataSet
         '
         'SACDataSet
         '
@@ -852,21 +859,27 @@ Partial Class COBROSPRODUCTOS
         '
         Me.PRODUCTOSLIQUIDADOSTableAdapter.ClearBeforeFill = True
         '
-        'COBROSDEPRODUCTOSBindingSource
-        '
-        Me.COBROSDEPRODUCTOSBindingSource.DataMember = "COBROSDEPRODUCTOS"
-        Me.COBROSDEPRODUCTOSBindingSource.DataSource = Me.SACDataSet
-        '
         'COBROSDEPRODUCTOSTableAdapter
         '
         Me.COBROSDEPRODUCTOSTableAdapter.ClearBeforeFill = True
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Location = New System.Drawing.Point(22, 395)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.Size = New System.Drawing.Size(910, 264)
+        Me.DataGridView1.TabIndex = 102
         '
         'COBROSPRODUCTOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(953, 405)
+        Me.ClientSize = New System.Drawing.Size(953, 669)
         Me.ControlBox = False
+        Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.CBOTIPOPAGO)
         Me.Controls.Add(Me.GPOPRODUCTOS)
@@ -887,6 +900,7 @@ Partial Class COBROSPRODUCTOS
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "COBROSPRODUCTOS"
         Me.Text = "COBROSPRODUCTOS"
+        CType(Me.COBROSDEPRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NUEVORECIBOFOLIOFACTURABindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PRODUCTOSABONADOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -894,7 +908,7 @@ Partial Class COBROSPRODUCTOS
         Me.GPOPRODUCTOS.ResumeLayout(False)
         Me.GPOPRODUCTOS.PerformLayout()
         CType(Me.TIPOSDEPAGOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.COBROSDEPRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -976,4 +990,5 @@ Partial Class COBROSPRODUCTOS
     Friend WithEvents PRODUCTOSLIQUIDADOSTableAdapter As SAC.SACDataSetTableAdapters.PRODUCTOSLIQUIDADOSTableAdapter
     Friend WithEvents COBROSDEPRODUCTOSBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents COBROSDEPRODUCTOSTableAdapter As SAC.SACDataSetTableAdapters.COBROSDEPRODUCTOSTableAdapter
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
 End Class
