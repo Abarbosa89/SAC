@@ -159,19 +159,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bjyu7ZTHOdqVcYBA9OYzlMnhaG8=</dsig:DigestValue>
+        <dsig:DigestValue>PNoR4z4ds8B2JWXkDIwnubFkzIQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAC.exe" size="46797312">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAC.exe" size="46796800">
       <assemblyIdentity name="SAC" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>7zUu+O3bdx40mStqI0Vbl+sP1Bc=</dsig:DigestValue>
+        <dsig:DigestValue>1KrDqkZdI1mUyxcDDR/cmZ+hF04=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -214,7 +214,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>QDh20/EoZdkxWVl5weCZ0rpzIfY=</dsig:DigestValue>
+      <dsig:DigestValue>hzbNuXcn5KZT5sTQ2THU1fe0/KA=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

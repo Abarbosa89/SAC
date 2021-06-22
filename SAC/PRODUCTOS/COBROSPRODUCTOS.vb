@@ -2,8 +2,16 @@
 Imports System.Data
 Public Class COBROSPRODUCTOS
     Dim ABONO As Decimal = 0
-    Dim CANTIDAD As Integer
+    Dim CANTIDAD As Integer = 1
     Dim com As SqlCommand = con.CreateCommand()
+    Dim Comando As New OleDb.OleDbCommand
+    Dim sSQL As String = ""
+    Dim DataSet As DataSet
+    Dim registro As Integer
+    Dim PrecioT As Decimal
+    Dim CantIngre As Decimal
+
+
 
 
     Private Sub COBROSPRODUCTOS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -25,252 +33,274 @@ Public Class COBROSPRODUCTOS
         LBLIDPRODUC5.Hide()
 
         Try
+
             Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(2, Integer)))
             LBLNVORECIBO.Text = CInt(LBLNORECIBO.Text) + 1
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
-     
-        Try
             Me.COBROSDEPRODUCTOSTableAdapter.Fill(Me.SACDataSet.COBROSDEPRODUCTOS, New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.LBLIDNIVEL.Text, Integer)), New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.LBLIDGRADO.Text, Integer)), SELECCIONDEALUMNO.LBLSEXO.Text, New System.Nullable(Of Integer)(CType(PADRE.LBLIDCICLO.Text, Integer)))
+
+
+            sSQL = "DELETE FROM CobroProductos"
+            Comando.CommandText = sSQL
+            Comando.Connection = conBuffer
+            Comando.ExecuteNonQuery()
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
-
     End Sub
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
+
         Try
 
             BAND = 2
-            If CONTADOR > 5 Then
-                CONTADOR = 0
+            If CONTADOR >= 5 Then
+                MsgBox("Solo se permiten 5 Productos para el Ticket", MsgBoxStyle.Information, Me.Text)
+                Exit Sub
             Else
+                sSQL = "INSERT INTO CobroProductos (RESTA,TOTAL,ABONO,DESCRIPCION,NOFACTURA,NORECIBO,NOFOLIO,IDUS,MATRI,IDPRODUC,IDTIPOPAGO,FACTURA,DIGITOSCUENTA,IDCICLO) " & _
+                       "VALUES (0," & CDec(CANTIDAD * CDec(LBLMONTOBASE.Text)) & ",0,'" & LBLDESCRIPCION.Text & "',0," & LBLNVORECIBO.Text & ",0," & Intro.IdusLabel1.Text & "," & SELECCIONDEALUMNO.CBOALUMNO.SelectedValue & "," & CBOPRODUCTOS.SelectedValue & "," & CBOTIPOPAGO.SelectedValue & ",' ',' '," & PADRE.LBLIDCICLO.Text & ")"
+                Comando.CommandText = sSQL
+                Comando.Connection = conBuffer
+                Comando.ExecuteNonQuery()
+                Comando.Dispose()
                 CONTADOR = CONTADOR + 1
             End If
 
-            If CONTADOR = 1 Then
-                If CBOPRODUCTOS.SelectedValue = 64 Then
-                    LBLCANT1.Text = CANTIDAD
-                    LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
-                    LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
-                    LBLIDPRODUC1.Text = LBLIDPRODUC.Text
-                    LBABONAR1.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
-                    LBLCANT1.Text = CANTIDAD
-                    LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
-                    LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
-                    LBLIDPRODUC1.Text = LBLIDPRODUC.Text
-                    LBABONAR1.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
-                    LBLCANT1.Text = CANTIDAD
-                    LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
-                    LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
-                    LBLIDPRODUC1.Text = LBLIDPRODUC.Text
-                    LBABONAR1.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
-                    LBLCANT1.Text = CANTIDAD
-                    LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
-                    LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
-                    LBLIDPRODUC1.Text = LBLIDPRODUC.Text
-                    LBABONAR1.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                Else
-                    LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
-                    LBLIDPRODUC1.Text = LBLIDPRODUC.Text
-                    LBLMONTO1.Text = LBLMONTOBASE.Text
-                    LBABONAR1.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                End If
-                Button1.Enabled = True
-            End If
+            Dim DataTable = New OleDb.OleDbDataAdapter("SELECT NOMOV,TOTAL,RESTA,ABONO,DESCRIPCION,MATRI FROM CobroProductos", conBuffer)
+            'DataTable.SelectCommand.CommandText = "SELECT * FROM CobroProductos"
+            'DataTable.SelectCommand.Connection = conBuffer
+            'DataTable.SelectCommand.ExecuteNonQuery()
+            Dim DataSet As DataSet
+            DataSet = New DataSet
+            DataTable.Fill(DataSet)
+            DataGridView1.DataSource = DataSet.Tables(0).DefaultView
+            DataGridView1.Columns(5).HeaderText = "MATRICULA"
+            DataGridView1.Columns(1).DefaultCellStyle.Format = "C2"
+            DataGridView1.Columns(2).DefaultCellStyle.Format = "C2"
+            DataGridView1.Columns(3).DefaultCellStyle.Format = "C2"
 
-            If CONTADOR = 2 Then
-                If CBOPRODUCTOS.SelectedValue = 64 Then
-                    LBLCANT2.Text = CANTIDAD
-                    LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
-                    LBLIDPRODUC2.Text = LBLIDPRODUC.Text
-                    LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
-                    CBOPRODUCTOS.Enabled = False
-                    LBABONAR2.Visible = True
-                ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
-                    LBLCANT2.Text = CANTIDAD
-                    LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
-                    LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
-                    LBLIDPRODUC2.Text = LBLIDPRODUC.Text
-                    LBABONAR2.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
-                    LBLCANT2.Text = CANTIDAD
-                    LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
-                    LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
-                    LBLIDPRODUC2.Text = LBLIDPRODUC.Text
-                    LBABONAR2.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
-                    LBLCANT2.Text = CANTIDAD
-                    LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
-                    LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC2.Text = LBLIDPRODUC.Text
-                    LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
-                    LBABONAR2.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                Else
-                    LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
-                    LBLIDPRODUC2.Text = LBLIDPRODUC.Text
-                    LBLMONTO2.Text = LBLMONTOBASE.Text
-                    LBABONAR2.Visible = True
-                    CBOPRODUCTOS.Enabled = False
+            'If CONTADOR = 1 Then
+            '    If CBOPRODUCTOS.SelectedValue = 64 Then
+            '        LBLCANT1.Text = CANTIDAD
+            '        LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
+            '        LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
+            '        LBLIDPRODUC1.Text = LBLIDPRODUC.Text
+            '        LBABONAR1.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
+            '        LBLCANT1.Text = CANTIDAD
+            '        LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
+            '        LBLIDPRODUC1.Text = LBLIDPRODUC.Text
+            '        LBABONAR1.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
+            '        LBLCANT1.Text = CANTIDAD
+            '        LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
+            '        LBLIDPRODUC1.Text = LBLIDPRODUC.Text
+            '        LBABONAR1.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
+            '        LBLCANT1.Text = CANTIDAD
+            '        LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO1.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO1.Text = FormatCurrency(LBLMONTO1.Text)
+            '        LBLIDPRODUC1.Text = LBLIDPRODUC.Text
+            '        LBABONAR1.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    Else
+            '        LBLCONCEPTO1.Text = LBLDESCRIPCION.Text
+            '        LBLIDPRODUC1.Text = LBLIDPRODUC.Text
+            '        LBLMONTO1.Text = LBLMONTOBASE.Text
+            '        LBABONAR1.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    End If
+            '    Button1.Enabled = True
+            'End If
 
-                End If
-                Button2.Enabled = True
-            End If
+            'If CONTADOR = 2 Then
+            '    If CBOPRODUCTOS.SelectedValue = 64 Then
+            '        LBLCANT2.Text = CANTIDAD
+            '        LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
+            '        LBLIDPRODUC2.Text = LBLIDPRODUC.Text
+            '        LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
+            '        CBOPRODUCTOS.Enabled = False
+            '        LBABONAR2.Visible = True
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
+            '        LBLCANT2.Text = CANTIDAD
+            '        LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
+            '        LBLIDPRODUC2.Text = LBLIDPRODUC.Text
+            '        LBABONAR2.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
+            '        LBLCANT2.Text = CANTIDAD
+            '        LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
+            '        LBLIDPRODUC2.Text = LBLIDPRODUC.Text
+            '        LBABONAR2.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
+            '        LBLCANT2.Text = CANTIDAD
+            '        LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO2.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC2.Text = LBLIDPRODUC.Text
+            '        LBLMONTO2.Text = FormatCurrency(LBLMONTO2.Text)
+            '        LBABONAR2.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    Else
+            '        LBLCONCEPTO2.Text = LBLDESCRIPCION.Text
+            '        LBLIDPRODUC2.Text = LBLIDPRODUC.Text
+            '        LBLMONTO2.Text = LBLMONTOBASE.Text
+            '        LBABONAR2.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
 
-            If CONTADOR = 3 Then
-                If CBOPRODUCTOS.SelectedValue = 64 Then
-                    LBLCANT3.Text = CANTIDAD
-                    LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC3.Text = LBLIDPRODUC.Text
-                    LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
-                    LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
-                    LBABONAR3.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
-                    LBLCANT3.Text = CANTIDAD
-                    LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
-                    LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
-                    LBLIDPRODUC3.Text = LBLIDPRODUC.Text
-                    LBABONAR3.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
-                    LBLCANT3.Text = CANTIDAD
-                    LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
-                    LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC3.Text = LBLIDPRODUC.Text
-                    LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
-                    LBABONAR3.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
-                    LBLCANT3.Text = CANTIDAD
-                    LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
-                    LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC3.Text = LBLIDPRODUC.Text
-                    LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
-                    LBABONAR3.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                Else
-                    LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
-                    LBLIDPRODUC3.Text = LBLIDPRODUC.Text
-                    LBLMONTO3.Text = LBLMONTOBASE.Text
-                    LBABONAR3.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                End If
+            '    End If
+            '    Button2.Enabled = True
+            'End If
 
-                Button3.Enabled = True
+            'If CONTADOR = 3 Then
+            '    If CBOPRODUCTOS.SelectedValue = 64 Then
+            '        LBLCANT3.Text = CANTIDAD
+            '        LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC3.Text = LBLIDPRODUC.Text
+            '        LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
+            '        LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
+            '        LBABONAR3.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
+            '        LBLCANT3.Text = CANTIDAD
+            '        LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
+            '        LBLIDPRODUC3.Text = LBLIDPRODUC.Text
+            '        LBABONAR3.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
+            '        LBLCANT3.Text = CANTIDAD
+            '        LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC3.Text = LBLIDPRODUC.Text
+            '        LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
+            '        LBABONAR3.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
+            '        LBLCANT3.Text = CANTIDAD
+            '        LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO3.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC3.Text = LBLIDPRODUC.Text
+            '        LBLMONTO3.Text = FormatCurrency(LBLMONTO3.Text)
+            '        LBABONAR3.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    Else
+            '        LBLCONCEPTO3.Text = LBLDESCRIPCION.Text
+            '        LBLIDPRODUC3.Text = LBLIDPRODUC.Text
+            '        LBLMONTO3.Text = LBLMONTOBASE.Text
+            '        LBABONAR3.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    End If
 
-            End If
+            '    Button3.Enabled = True
 
-            If CONTADOR = 4 Then
-                If CBOPRODUCTOS.SelectedValue = 64 Then
-                    LBLCANT4.Text = CANTIDAD
-                    LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC4.Text = LBLIDPRODUC.Text
-                    LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
-                    LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
-                    CBOPRODUCTOS.Enabled = False
-                    LBABONAR4.Visible = True
-                ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
-                    LBLCANT4.Text = CANTIDAD
-                    LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
-                    LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
-                    LBLIDPRODUC4.Text = LBLIDPRODUC.Text
-                    LBABONAR4.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
-                    LBLCANT4.Text = CANTIDAD
-                    LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
-                    LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC4.Text = LBLIDPRODUC.Text
-                    LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
-                    LBABONAR4.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
-                    LBLCANT4.Text = CANTIDAD
-                    LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
-                    LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC4.Text = LBLIDPRODUC.Text
-                    LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
-                    LBABONAR4.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                Else
-                    LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
-                    LBLIDPRODUC4.Text = LBLIDPRODUC.Text
-                    LBLMONTO4.Text = LBLMONTOBASE.Text
-                    LBABONAR4.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                End If
+            'End If
 
-                Button4.Enabled = True
+            'If CONTADOR = 4 Then
+            '    If CBOPRODUCTOS.SelectedValue = 64 Then
+            '        LBLCANT4.Text = CANTIDAD
+            '        LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC4.Text = LBLIDPRODUC.Text
+            '        LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
+            '        LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
+            '        CBOPRODUCTOS.Enabled = False
+            '        LBABONAR4.Visible = True
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
+            '        LBLCANT4.Text = CANTIDAD
+            '        LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
+            '        LBLIDPRODUC4.Text = LBLIDPRODUC.Text
+            '        LBABONAR4.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
+            '        LBLCANT4.Text = CANTIDAD
+            '        LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC4.Text = LBLIDPRODUC.Text
+            '        LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
+            '        LBABONAR4.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
+            '        LBLCANT4.Text = CANTIDAD
+            '        LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO4.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC4.Text = LBLIDPRODUC.Text
+            '        LBLMONTO4.Text = FormatCurrency(LBLMONTO4.Text)
+            '        LBABONAR4.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    Else
+            '        LBLCONCEPTO4.Text = LBLDESCRIPCION.Text
+            '        LBLIDPRODUC4.Text = LBLIDPRODUC.Text
+            '        LBLMONTO4.Text = LBLMONTOBASE.Text
+            '        LBABONAR4.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    End If
 
-            End If
+            '    Button4.Enabled = True
 
-            If CONTADOR = 5 Then
-                If CBOPRODUCTOS.SelectedValue = 64 Then
-                    LBLCANT5.Text = CANTIDAD
-                    LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
-                    LBLIDPRODUC5.Text = LBLIDPRODUC.Text
-                    LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
-                    CBOPRODUCTOS.Enabled = False
-                    LBABONAR5.Visible = True
-                ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
-                    LBLCANT5.Text = CANTIDAD
-                    LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
-                    LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
-                    LBLIDPRODUC5.Text = LBLIDPRODUC.Text
-                    LBABONAR5.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
-                    LBLCANT5.Text = CANTIDAD
-                    LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
-                    LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC5.Text = LBLIDPRODUC.Text
-                    LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
-                    LBABONAR5.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
-                    LBLCANT5.Text = CANTIDAD
-                    LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
-                    LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
-                    LBLIDPRODUC5.Text = LBLIDPRODUC.Text
-                    LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
-                    LBABONAR5.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                Else
-                    LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
-                    LBLMONTO5.Text = LBLMONTOBASE.Text
-                    LBLIDPRODUC5.Text = LBLIDPRODUC.Text
-                    LBABONAR5.Visible = True
-                    CBOPRODUCTOS.Enabled = False
-                End If
+            'End If
 
-                Button5.Enabled = True
+            'If CONTADOR = 5 Then
+            '    If CBOPRODUCTOS.SelectedValue = 64 Then
+            '        LBLCANT5.Text = CANTIDAD
+            '        LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
+            '        LBLIDPRODUC5.Text = LBLIDPRODUC.Text
+            '        LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
+            '        CBOPRODUCTOS.Enabled = False
+            '        LBABONAR5.Visible = True
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 63 Then
+            '        LBLCANT5.Text = CANTIDAD
+            '        LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
+            '        LBLIDPRODUC5.Text = LBLIDPRODUC.Text
+            '        LBABONAR5.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
+            '        LBLCANT5.Text = CANTIDAD
+            '        LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC5.Text = LBLIDPRODUC.Text
+            '        LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
+            '        LBABONAR5.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    ElseIf CBOPRODUCTOS.SelectedValue = 71 Then
+            '        LBLCANT5.Text = CANTIDAD
+            '        LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO5.Text = CANTIDAD * CDec(LBLMONTOBASE.Text)
+            '        LBLIDPRODUC5.Text = LBLIDPRODUC.Text
+            '        LBLMONTO5.Text = FormatCurrency(LBLMONTO5.Text)
+            '        LBABONAR5.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    Else
+            '        LBLCONCEPTO5.Text = LBLDESCRIPCION.Text
+            '        LBLMONTO5.Text = LBLMONTOBASE.Text
+            '        LBLIDPRODUC5.Text = LBLIDPRODUC.Text
+            '        LBABONAR5.Visible = True
+            '        CBOPRODUCTOS.Enabled = False
+            '    End If
 
-            End If
+            '    Button5.Enabled = True
+
+            'End If
 
             If CBOPRODUCTOS.SelectedValue = 240 Then
                 My.Forms.UNIFORMES.MdiParent = PADRE
@@ -297,7 +327,7 @@ Public Class COBROSPRODUCTOS
 
     Private Sub CBOPRODUCTOS_Validated(ByVal sender As Object, ByVal e As System.EventArgs) Handles CBOPRODUCTOS.Validated
         Try
-            CANTIDAD = 0
+            CANTIDAD = 1
             If CBOPRODUCTOS.SelectedValue = 64 Then
                 CANTIDAD = InputBox("CANTIDAD DE HORAS?", "CANTIDAD")
             ElseIf CBOPRODUCTOS.SelectedValue = 70 Then
@@ -1009,6 +1039,59 @@ Public Class COBROSPRODUCTOS
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentDoubleClick
+
+
+    End Sub
+
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+
+
+        registro = DataGridView1.CurrentRow.Cells(0).Value
+
+        CantIngre = InputBox("Ingrese cantidad de Pago:", DataGridView1.CurrentRow.Cells(4).Value.ToString, 0)
+
+        If CantIngre < CDec(DataGridView1.CurrentRow.Cells(1).Value) Then
+            Comando.CommandText = "UPDATE CobroProductos SET ABONO = " & CantIngre & ", RESTA = " & CDec(DataGridView1.CurrentRow.Cells(1).Value) - CantIngre & " WHERE NOMOV = " & registro
+            Comando.Connection = conBuffer
+            Comando.ExecuteNonQuery()
+            Comando.Dispose()
+        End If
+
+
+    End Sub
+
+    Private Sub DataGridView1_KeyDown(sender As Object, e As KeyEventArgs) Handles DataGridView1.KeyDown
+        If e.KeyCode = 46 Then
+            registro = DataGridView1.CurrentRow.Cells(0).Value
+            MsgBox("Desea eliminar el registro " & registro, MsgBoxStyle.YesNo, Me.Text)
+            If MsgBoxResult.Yes Then
+
+                Comando.CommandText = "DELETE FROM CobroProductos WHERE NOMOV = " & registro
+                Comando.Connection = conBuffer
+                Comando.ExecuteNonQuery()
+                Comando.Dispose()
+
+                Dim DataTable = New OleDb.OleDbDataAdapter("SELECT NOMOV,TOTAL,RESTA,ABONO,DESCRIPCION,MATRI FROM CobroProductos", conBuffer)
+                DataSet = New DataSet
+                DataTable.Fill(DataSet)
+                DataGridView1.DataSource = DataSet.Tables(0).DefaultView
+                DataGridView1.Columns(5).HeaderText = "MATRICULA"
+                DataGridView1.Columns(1).DefaultCellStyle.Format = "C2"
+                DataGridView1.Columns(2).DefaultCellStyle.Format = "C2"
+                DataGridView1.Columns(3).DefaultCellStyle.Format = "C2"
+            Else
+
+            End If
+        End If
+
+    End Sub
+
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
 
     End Sub
 End Class

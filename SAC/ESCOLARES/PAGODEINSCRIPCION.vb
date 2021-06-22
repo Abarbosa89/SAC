@@ -146,6 +146,8 @@ Public Class PAGODEINSCRIPCION
             LBLRESTA.Text = FormatCurrency(LBLRESTA.Text)
             LBL4DIGITOSCUENTA.Visible = True
             TXT4DIGITOSCUENTA.Visible = True
+
+            Me.Enabled = False
         End If
 
     End Sub

@@ -102,6 +102,7 @@ Partial Class COBROSPRODUCTOS
         Me.PRODUCTOSLIQUIDADOSTableAdapter = New SAC.SACDataSetTableAdapters.PRODUCTOSLIQUIDADOSTableAdapter()
         Me.COBROSDEPRODUCTOSTableAdapter = New SAC.SACDataSetTableAdapters.COBROSDEPRODUCTOSTableAdapter()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.SeleccionartutoresTableAdapter1 = New SAC.SACDataSetTableAdapters.SELECCIONARTUTORESTableAdapter()
         CType(Me.COBROSDEPRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.NUEVORECIBOFOLIOFACTURABindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -866,6 +867,7 @@ Partial Class COBROSPRODUCTOS
         'DataGridView1
         '
         Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Location = New System.Drawing.Point(22, 395)
         Me.DataGridView1.Name = "DataGridView1"
@@ -873,11 +875,15 @@ Partial Class COBROSPRODUCTOS
         Me.DataGridView1.Size = New System.Drawing.Size(910, 264)
         Me.DataGridView1.TabIndex = 102
         '
+        'SeleccionartutoresTableAdapter1
+        '
+        Me.SeleccionartutoresTableAdapter1.ClearBeforeFill = True
+        '
         'COBROSPRODUCTOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(953, 669)
+        Me.ClientSize = New System.Drawing.Size(953, 386)
         Me.ControlBox = False
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label6)
@@ -991,4 +997,5 @@ Partial Class COBROSPRODUCTOS
     Friend WithEvents COBROSDEPRODUCTOSBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents COBROSDEPRODUCTOSTableAdapter As SAC.SACDataSetTableAdapters.COBROSDEPRODUCTOSTableAdapter
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents SeleccionartutoresTableAdapter1 As SAC.SACDataSetTableAdapters.SELECCIONARTUTORESTableAdapter
 End Class

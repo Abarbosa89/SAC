@@ -386,6 +386,8 @@ Public Class PAGOCOLEGIATURA
             LBL4DIGITOSCUENTA.Visible = True
             TXT4DIGITOSCUENTA.Visible = True
 
+            Me.Enabled = False
+
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
             con.Close()

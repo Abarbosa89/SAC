@@ -16,7 +16,7 @@ Module main
         Dim dtPaso As New DataTable
         Try
             'se establecen los parametros de conexión a la sucursal y se inicializa
-            sqlServer.Init(, "SAC", "192.168.3.204", "sa", "masterkey")
+            sqlServer.Init(, "SAC", "192.168.3.206", "sa", "masterkey")
 
             'se ejecuta una consulta para probar la conexión
             sqlServer.ExecSQL("USE SAC")
@@ -28,7 +28,7 @@ Module main
 
             End If
         Catch ex As Exception
-            MsgBox("Error al intentar conectar al servidor, por favor avise a sistemas!", MsgBoxStyle.Exclamation, "Facturación")
+            MsgBox("Error al intentar conectar al servidor, por favor avise a sistemas!", MsgBoxStyle.Exclamation, "SAC")
             End
         End Try
 
@@ -37,15 +37,11 @@ Module main
     Public Sub ConectaBDBuffer()
         Dim sSQL As String = ""
         Try
-            sSQL = "INSERT INTO CobroProductos (RESTA, TOTAL, ABONO, DESCRIPCION, NOFACTURA, NORECIBO, NOFOLIO, IDUS, MATRI, IDPRODUC, IDTIPOPAGO, FACTURA, DIGITOSCUENTA, IDCICLO) "
-            sSQL = sSQL & "VALUES (0,0,0,'HOLA',0,0,0,0,0,0,0,'NEL','NEL',1020)"
             conBuffer = New OleDb.OleDbConnection
             conBuffer.ConnectionString = "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\Buffer\SACBuffer.mdb"
             conBuffer.Open()
-            Dim da = New OleDb.OleDbCommand(sSQL, conBuffer)
-            da.ExecuteNonQuery()
         Catch ex As Exception
-            MsgBox("Error al intentar conectar al Buffer, por favor avise a sistemas!", MsgBoxStyle.Exclamation, "Facturación")
+            MsgBox("Error al intentar conectar al Buffer, por favor avise a sistemas!", MsgBoxStyle.Exclamation, "SAC")
             End
         End Try
 

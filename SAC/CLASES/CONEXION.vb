@@ -5,7 +5,7 @@ Module CONEXION
 
     'Public con As New SqlConnection("Data Source=WIN-INAR48T85I3;Initial Catalog=SAC;User ID=sa;Password=MenoVargas45")
     Public conBuffer As OleDb.OleDbConnection
-    Public con As New SqlConnection("Data Source=192.168.3.204;Initial Catalog=SAC;User ID=sa;Password=masterkey")
+    Public con As New SqlConnection("Data Source=192.168.3.206;Initial Catalog=SAC;User ID=sa;Password=masterkey")
 End Module
 Module VARIABLES
     Public BANDERAREPORTE2 As Integer = 0
