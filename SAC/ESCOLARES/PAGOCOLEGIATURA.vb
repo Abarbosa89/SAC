@@ -7,9 +7,8 @@ Public Class PAGOCOLEGIATURA
     Dim ABONO As Decimal = 0
     Dim BECA As Decimal = 0
     Dim BECASEP As Decimal = 0
-
-
-
+    Dim sSQL As String = ""
+    Dim dtPaso As New DataTable
 
     Private Sub PAGOCOLEGIATURA_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         'TODO: This line of code loads data into the 'SACDataSet.SELECCIONARPROMOCIONCOLEGIATURA' table. You can move, or remove it, as needed.
@@ -29,25 +28,33 @@ Public Class PAGOCOLEGIATURA
             GPFECHATRANS.Visible = False
         End If
         BAND = 0
-        LBLNOPAGARCOLEADE.Hide()
-        LBLIDPRODUC.Hide()
-        LBLDESCONBECA.Hide()
-        LBLSCOPORBECA.Hide()
+        Dim drPaso As DataRow
+        'LBLNOPAGARCOLEADE.Hide()
+        'LBLIDPRODUC.Hide()
+        'LBLDESCONBECA.Hide()
+        'LBLSCOPORBECA.Hide()
         ' LBLFECHAVENCI.Hide()
-        LBLNVOFOLIO.Hide()
-        LBLNOFOLIOMAX.Hide()
-        LBLPORCENTAJE.Hide()
-        CBRECARGO.Hide()
-        LBLABONORECARG.Hide()
-        LBLABONADO.Hide()
-        LBLLIQUIDADO.Hide()
-        LBLMONTOBASE.Hide()
-        LBLCOLEANTERIOR.Hide()
-        LBLPORCENTPROMO.Hide()
-        LBLDESCRIPCIONPROMO.Hide()
+        'LBLNVOFOLIO.Hide()
+        'LBLNOFOLIOMAX.Hide()
+        'LBLPORCENTAJE.Hide()
+        'CBRECARGO.Hide()
+        'LBLABONORECARG.Hide()
+        'LBLABONADO.Hide()
+        'LBLLIQUIDADO.Hide()
+        'LBLMONTOBASE.Hide()
+        'LBLCOLEANTERIOR.Hide()
+        'LBLPORCENTPROMO.Hide()
+        'LBLDESCRIPCIONPROMO.Hide()
         Try
-            Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(BANDERARECFOLFAC, Integer)))
-            LBLNVOFOLIO.Text = CInt(LBLNOFOLIOMAX.Text) + 1
+            sSQL = "EXEC dbo.NUEVORECIBOFOLIOFACTURA " & BANDERARECFOLFAC
+            dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+            drPaso = dtPaso.Rows(0)
+            LBLNVOFOLIO.Text = CInt(drPaso("NOFOLIO").ToString) + 1
+
+            'Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(BANDERARECFOLFAC, Integer)))
+            'LBLNVOFOLIO.Text = CInt(LBLNOFOLIOMAX.Text) + 1
+
+
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
@@ -61,7 +68,6 @@ Public Class PAGOCOLEGIATURA
     End Sub
 
     Private Sub CMDCANCELAR_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDCANCELAR.Click
-        My.Forms.SELECCIONDEALUMNO.Close()
         Me.Close()
     End Sub
 
@@ -185,9 +191,8 @@ Public Class PAGOCOLEGIATURA
                     com.ExecuteNonQuery()
                     con.Close()
                     IMPRESION = 1
-                    My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                    My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+                    My.Forms.VENTANAEMERGENTE.ShowDialog()
+                    Me.Close()
 
                 ElseIf RECARGO = 2 Then
                     con.Open()
@@ -220,9 +225,9 @@ Public Class PAGOCOLEGIATURA
                     con.Close()
 
                     IMPRESION = 1
-                    My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                    My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+
+                    My.Forms.VENTANAEMERGENTE.ShowDialog()
+                    Me.Close()
                 End If
             End If
 
@@ -257,9 +262,8 @@ Public Class PAGOCOLEGIATURA
                     com.ExecuteNonQuery()
                     con.Close()
                     IMPRESION = 1
-                    My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                    My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+                    My.Forms.VENTANAEMERGENTE.ShowDialog()
+                    Me.Close()
 
                 ElseIf RECARGO = 2 Then
 
@@ -292,9 +296,8 @@ Public Class PAGOCOLEGIATURA
                     com.ExecuteNonQuery()
                     con.Close()
                     IMPRESION = 1
-                    My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                    My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+                    My.Forms.VENTANAEMERGENTE.ShowDialog()
+                    Me.Close()
 
                 End If
 
@@ -386,7 +389,7 @@ Public Class PAGOCOLEGIATURA
             LBL4DIGITOSCUENTA.Visible = True
             TXT4DIGITOSCUENTA.Visible = True
 
-            Me.Enabled = False
+            CMDLIQUIDAR.Enabled = False
 
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)

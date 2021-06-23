@@ -4,6 +4,8 @@ Public Class PAGARADEUDOS
     Dim ABONO As Decimal
     Dim RECARG As Decimal
     Dim TOTAL As Decimal
+    Dim sSQL As String = ""
+    Dim dtPaso As New DataTable
 
 
     Private Sub PAGARADEUDOS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -12,16 +14,21 @@ Public Class PAGARADEUDOS
         BAND = 0
         LBLNVOABONO.Text = 0
         LBLNVARESTA.Text = 0
-        LBLPORCENTAJE.Hide()
-        LBLABONORECARG.Hide()
-        LBLIDPRODUC.Hide()
-        LBLNOFOLIOMAX.Hide()
-        LBLNONVOFOLIO.Hide()
-        LBLFECHAVENCI.Hide()
+        Dim drPaso As DataRow
+        'LBLPORCENTAJE.Hide()
+        'LBLABONORECARG.Hide()
+        'LBLIDPRODUC.Hide()
+        'LBLNOFOLIOMAX.Hide()
+        'LBLNONVOFOLIO.Hide()
+        'LBLFECHAVENCI.Hide()
 
         Try
-            Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(BANDERARECFOLFAC, Integer)))
-            LBLNONVOFOLIO.Text = CInt(LBLNOFOLIOMAX.Text) + 1
+            sSQL = "EXEC dbo.NUEVORECIBOFOLIOFACTURA " & BANDERARECFOLFAC
+            dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+            drPaso = dtPaso.Rows(0)
+            LBLNONVOFOLIO.Text = CInt(drPaso("NOFOLIO").ToString) + 1
+            'Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(BANDERARECFOLFAC, Integer)))
+            'LBLNONVOFOLIO.Text = CInt(LBLNOFOLIOMAX.Text) + 1
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
@@ -62,6 +69,9 @@ Public Class PAGARADEUDOS
             LBL4DIGITOSCUENTA.Visible = True
             TXT4DIGITOSCUENTA.Visible = True
             CBFACTURA.Visible = True
+
+            CMDLIQUIDAR.Enabled = False
+
         Catch ex As System.Exception
             con.Close()
             MsgBox("SE ENCONTRO UN PROBLEMA PONGANSE EN CONTACTO CON SU ADMINISTRADOR", MsgBoxStyle.Information, "AVISO")
@@ -101,7 +111,7 @@ Public Class PAGARADEUDOS
                 LBLNVARESTA.Text = FormatCurrency(LBLNVARESTA.Text)
             End If
             ' End If
-
+            CMDABONO.Enabled = False
         Catch ex As System.Exception
             con.Close()
 
@@ -152,9 +162,8 @@ Public Class PAGARADEUDOS
                     con.Close()
 
                     IMPRESION = 1
-                    My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                    My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+                    My.Forms.VENTANAEMERGENTE.ShowDialog()
+                    Me.Close()
 
                 ElseIf RECARGO = 2 Then
                     con.Open()
@@ -194,9 +203,8 @@ Public Class PAGARADEUDOS
                     con.Close()
 
                     IMPRESION = 1
-                    My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                    My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+                    My.Forms.VENTANAEMERGENTE.ShowDialog()
+                    Me.Close()
 
                 End If
 
@@ -241,9 +249,8 @@ Public Class PAGARADEUDOS
                 com.ExecuteNonQuery()
                 con.Close()
                 IMPRESION = 1
-                My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                My.Forms.VENTANAEMERGENTE.Show()
-                Me.Enabled = False
+                My.Forms.VENTANAEMERGENTE.ShowDialog()
+                Me.Close()
             End If
         Catch ex As System.Exception
             con.Close()

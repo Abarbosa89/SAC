@@ -10,16 +10,16 @@
         'TODO: This line of code loads data into the 'SACDataSet.SELECCIONARESCOLARIDAD' table. You can move, or remove it, as needed.
         Me.SELECCIONARESCOLARIDADTableAdapter.Fill(Me.SACDataSet.SELECCIONARESCOLARIDAD)
         BANDTUTOR = 0
-        LBLGRADO.Hide()
-        LBLSEXO.Hide()
-        LBLIDGRADO.Hide()
-        LBLMATRI.Hide()
-        LBLIDNIVEL.Hide()
-        LBLPORCBECA.Hide()
-        CBBECA.Hide()
-        CBBECASEP.Hide()
-        CBBECAINSC.Hide()
-        LBLPORCENINSC.Hide()
+        'LBLGRADO.Hide()
+        'LBLSEXO.Hide()
+        'LBLIDGRADO.Hide()
+        'LBLMATRI.Hide()
+        'LBLIDNIVEL.Hide()
+        'LBLPORCBECA.Hide()
+        'CBBECA.Hide()
+        'CBBECASEP.Hide()
+        'CBBECAINSC.Hide()
+        'LBLPORCENINSC.Hide()
         ' LBLPORCBECASEP.Hide()
         ' CBREQFACTURA.Hide()
 
@@ -39,58 +39,41 @@
             PADRE.TINABILITAR2.Enabled = False
             If BANDERACOBRO = 1 Then
 
-                My.Forms.MSGBOXX.MdiParent = PADRE
-                My.Forms.MSGBOXX.Show()
-                Me.Hide()
+                My.Forms.MSGBOXX.ShowDialog()
             ElseIf BANDERACOBRO = 2 Then
-                My.Forms.COBROSPRODUCTOS.MdiParent = PADRE
-                My.Forms.COBROSPRODUCTOS.Show()
-                Me.Hide()
+
+                My.Forms.COBROSPRODUCTOS.ShowDialog()
             ElseIf BANDERACOBRO = 3 Then
                 Me.SELECCIONARTUTORESTableAdapter.Fill(Me.SACDataSet.SELECCIONARTUTORES, New System.Nullable(Of Integer)(CType(CBOALUMNO.SelectedValue, Integer)))
                 If SELECCIONARTUTORESBindingSource.Count = 0 Then
                     If MsgBox("ESTE ALUMNO NO TIENE TUTORES ASIGANDOS, ¿DESEA AGREGAR TUTORES?", MsgBoxStyle.YesNo, "AVISO") = MsgBoxResult.Yes Then
                         BANDTUTOR = 1
-                        My.Forms.NUEVOTUTOR.MdiParent = PADRE
-                        My.Forms.NUEVOTUTOR.Show()
-                        Me.Hide()
+
+                        My.Forms.NUEVOTUTOR.ShowDialog()
                     Else
                         Me.Close()
                     End If
                 Else
-                    My.Forms.MODIFICARTUTORES.MdiParent = PADRE
-                    My.Forms.MODIFICARTUTORES.Show()
-                    Me.Hide()
+
+                    My.Forms.MODIFICARTUTORES.ShowDialog()
                 End If
 
             ElseIf BANDERACOBRO = 4 Then
-                My.Forms.ADEUDOSPRODUCTOS.MdiParent = PADRE
-                My.Forms.ADEUDOSPRODUCTOS.Show()
-                Me.Hide()
+                My.Forms.ADEUDOSPRODUCTOS.ShowDialog()
             ElseIf BANDERACOBRO = 5 Then
-                My.Forms.PAGOSREALZADOSALUMNO.MdiParent = PADRE
-                My.Forms.PAGOSREALZADOSALUMNO.Show()
-                Me.Hide()
+
+                My.Forms.PAGOSREALZADOSALUMNO.ShowDialog()
             ElseIf BANDERACOBRO = 6 Then
-                My.Forms.ADEUDOSPORALUMNO.MdiParent = PADRE
-                My.Forms.ADEUDOSPORALUMNO.Show()
-                Me.Hide()
+                My.Forms.ADEUDOSPORALUMNO.ShowDialog()
             ElseIf BANDERACOBRO = 7 Then
-                My.Forms.PAGOCOLEGIATURA.MdiParent = PADRE
-                My.Forms.PAGOCOLEGIATURA.Show()
-                Me.Hide()
+                My.Forms.PAGOCOLEGIATURA.ShowDialog()
             ElseIf BANDERACOBRO = 8 Then
-                My.Forms.PAGODEINSCRIPCION.MdiParent = PADRE
-                My.Forms.PAGODEINSCRIPCION.Show()
-                Me.Hide()
+                My.Forms.PAGODEINSCRIPCION.ShowDialog()
             ElseIf BANDERACOBRO = 9 Then
-                My.Forms.PAGARADEUDOS.MdiParent = PADRE
-                My.Forms.PAGARADEUDOS.Show()
-                Me.Hide()
+                My.Forms.PAGARADEUDOS.ShowDialog()
             ElseIf BANDERACOBRO = 10 Then
-                My.Forms.RANGOFECHASPARAFACTURACION.MdiParent = PADRE
-                My.Forms.RANGOFECHASPARAFACTURACION.Show()
-                Me.Hide()
+
+                My.Forms.RANGOFECHASPARAFACTURACION.ShowDialog()
             End If
 
 

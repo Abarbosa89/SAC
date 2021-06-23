@@ -36,7 +36,8 @@ Module VARIABLES
     Public FLASH As Integer = 0
     Public TEXTO As String
     Public IMPRESION As Integer = 0
-
+    Public ImpTicketGLOBAL As String = ""
+    Public ImpresoraGLOBAL As String = ""
 
 End Module
 

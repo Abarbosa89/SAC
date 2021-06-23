@@ -101,7 +101,7 @@ Partial Class PAGARADEUDOS
         'LBLFECHAVENCI
         '
         Me.LBLFECHAVENCI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARADEUDOSALUMNOBindingSource, "fechavenci", True))
-        Me.LBLFECHAVENCI.Location = New System.Drawing.Point(135, 264)
+        Me.LBLFECHAVENCI.Location = New System.Drawing.Point(135, 379)
         Me.LBLFECHAVENCI.Name = "LBLFECHAVENCI"
         Me.LBLFECHAVENCI.Size = New System.Drawing.Size(100, 23)
         Me.LBLFECHAVENCI.TabIndex = 2
@@ -110,7 +110,7 @@ Partial Class PAGARADEUDOS
         'LBLPORCENTAJE
         '
         Me.LBLPORCENTAJE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARADEUDOSALUMNOBindingSource, "porcent", True))
-        Me.LBLPORCENTAJE.Location = New System.Drawing.Point(406, 264)
+        Me.LBLPORCENTAJE.Location = New System.Drawing.Point(406, 385)
         Me.LBLPORCENTAJE.Name = "LBLPORCENTAJE"
         Me.LBLPORCENTAJE.Size = New System.Drawing.Size(100, 23)
         Me.LBLPORCENTAJE.TabIndex = 4
@@ -282,7 +282,7 @@ Partial Class PAGARADEUDOS
         'LBLIDPRODUC
         '
         Me.LBLIDPRODUC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARADEUDOSALUMNOBindingSource, "idproduc", True))
-        Me.LBLIDPRODUC.Location = New System.Drawing.Point(275, 232)
+        Me.LBLIDPRODUC.Location = New System.Drawing.Point(275, 413)
         Me.LBLIDPRODUC.Name = "LBLIDPRODUC"
         Me.LBLIDPRODUC.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDPRODUC.TabIndex = 45
@@ -291,7 +291,7 @@ Partial Class PAGARADEUDOS
         'LBLNOFOLIOMAX
         '
         Me.LBLNOFOLIOMAX.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NUEVORECIBOFOLIOFACTURABindingSource, "NOFOLIO", True))
-        Me.LBLNOFOLIOMAX.Location = New System.Drawing.Point(517, 258)
+        Me.LBLNOFOLIOMAX.Location = New System.Drawing.Point(517, 379)
         Me.LBLNOFOLIOMAX.Name = "LBLNOFOLIOMAX"
         Me.LBLNOFOLIOMAX.Size = New System.Drawing.Size(124, 23)
         Me.LBLNOFOLIOMAX.TabIndex = 46
@@ -300,7 +300,7 @@ Partial Class PAGARADEUDOS
         'LBLNONVOFOLIO
         '
         Me.LBLNONVOFOLIO.AutoSize = True
-        Me.LBLNONVOFOLIO.Location = New System.Drawing.Point(276, 198)
+        Me.LBLNONVOFOLIO.Location = New System.Drawing.Point(276, 379)
         Me.LBLNONVOFOLIO.Name = "LBLNONVOFOLIO"
         Me.LBLNONVOFOLIO.Size = New System.Drawing.Size(88, 18)
         Me.LBLNONVOFOLIO.TabIndex = 47
@@ -327,7 +327,7 @@ Partial Class PAGARADEUDOS
         'LBLABONORECARG
         '
         Me.LBLABONORECARG.AutoSize = True
-        Me.LBLABONORECARG.Location = New System.Drawing.Point(6, 264)
+        Me.LBLABONORECARG.Location = New System.Drawing.Point(6, 379)
         Me.LBLABONORECARG.Name = "LBLABONORECARG"
         Me.LBLABONORECARG.Size = New System.Drawing.Size(133, 18)
         Me.LBLABONORECARG.TabIndex = 58
@@ -398,7 +398,7 @@ Partial Class PAGARADEUDOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(661, 284)
+        Me.ClientSize = New System.Drawing.Size(661, 268)
         Me.ControlBox = False
         Me.Controls.Add(Me.LBL4DIGITOSCUENTA)
         Me.Controls.Add(Me.TXT4DIGITOSCUENTA)

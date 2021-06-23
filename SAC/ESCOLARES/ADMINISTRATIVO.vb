@@ -175,4 +175,8 @@ Public Class ADMINISTRATIVO
         My.Forms.AgregarNuevoCiclo.Show()
         Me.Close()
     End Sub
+
+    Private Sub CMDCRARPRDUCTO_Click(sender As Object, e As EventArgs) Handles CMDCRARPRDUCTO.Click
+
+    End Sub
 End Class

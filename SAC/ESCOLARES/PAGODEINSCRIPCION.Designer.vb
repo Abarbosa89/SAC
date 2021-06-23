@@ -155,7 +155,7 @@ Partial Class PAGODEINSCRIPCION
         'LBLMONTOBASE
         '
         Me.LBLMONTOBASE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBROINSCRIPCIONBindingSource, "monto", True))
-        Me.LBLMONTOBASE.Location = New System.Drawing.Point(337, 281)
+        Me.LBLMONTOBASE.Location = New System.Drawing.Point(327, 436)
         Me.LBLMONTOBASE.Name = "LBLMONTOBASE"
         Me.LBLMONTOBASE.Size = New System.Drawing.Size(100, 23)
         Me.LBLMONTOBASE.TabIndex = 7
@@ -217,7 +217,7 @@ Partial Class PAGODEINSCRIPCION
         'LBLNOFOLIOMAX
         '
         Me.LBLNOFOLIOMAX.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NUEVORECIBOFOLIOFACTURABindingSource, "NOFOLIO", True))
-        Me.LBLNOFOLIOMAX.Location = New System.Drawing.Point(231, 281)
+        Me.LBLNOFOLIOMAX.Location = New System.Drawing.Point(221, 436)
         Me.LBLNOFOLIOMAX.Name = "LBLNOFOLIOMAX"
         Me.LBLNOFOLIOMAX.Size = New System.Drawing.Size(100, 23)
         Me.LBLNOFOLIOMAX.TabIndex = 43
@@ -226,7 +226,7 @@ Partial Class PAGODEINSCRIPCION
         'LBLNONUEVOFOLIO
         '
         Me.LBLNONUEVOFOLIO.AutoSize = True
-        Me.LBLNONUEVOFOLIO.Location = New System.Drawing.Point(231, 304)
+        Me.LBLNONUEVOFOLIO.Location = New System.Drawing.Point(221, 459)
         Me.LBLNONUEVOFOLIO.Name = "LBLNONUEVOFOLIO"
         Me.LBLNONUEVOFOLIO.Size = New System.Drawing.Size(114, 20)
         Me.LBLNONUEVOFOLIO.TabIndex = 44
@@ -235,7 +235,7 @@ Partial Class PAGODEINSCRIPCION
         'LBLIDPRODUC
         '
         Me.LBLIDPRODUC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBROINSCRIPCIONBindingSource, "idproduc", True))
-        Me.LBLIDPRODUC.Location = New System.Drawing.Point(231, 258)
+        Me.LBLIDPRODUC.Location = New System.Drawing.Point(221, 413)
         Me.LBLIDPRODUC.Name = "LBLIDPRODUC"
         Me.LBLIDPRODUC.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDPRODUC.TabIndex = 45
@@ -363,7 +363,7 @@ Partial Class PAGODEINSCRIPCION
         'LBLINSABON
         '
         Me.LBLINSABON.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INSCRIPCIONABONADABindingSource, "ABON", True))
-        Me.LBLINSABON.Location = New System.Drawing.Point(351, 304)
+        Me.LBLINSABON.Location = New System.Drawing.Point(341, 459)
         Me.LBLINSABON.Name = "LBLINSABON"
         Me.LBLINSABON.Size = New System.Drawing.Size(100, 23)
         Me.LBLINSABON.TabIndex = 81
@@ -377,7 +377,7 @@ Partial Class PAGODEINSCRIPCION
         'LBLINSCLIQ
         '
         Me.LBLINSCLIQ.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INSCRIPCIONLIQUIDADABindingSource, "LIQ", True))
-        Me.LBLINSCLIQ.Location = New System.Drawing.Point(337, 258)
+        Me.LBLINSCLIQ.Location = New System.Drawing.Point(327, 413)
         Me.LBLINSCLIQ.Name = "LBLINSCLIQ"
         Me.LBLINSCLIQ.Size = New System.Drawing.Size(100, 23)
         Me.LBLINSCLIQ.TabIndex = 83
@@ -404,7 +404,7 @@ Partial Class PAGODEINSCRIPCION
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 337)
+        Me.ClientSize = New System.Drawing.Size(705, 325)
         Me.ControlBox = False
         Me.Controls.Add(Me.CMDIMPRIMIR)
         Me.Controls.Add(Me.LBLINSCLIQ)

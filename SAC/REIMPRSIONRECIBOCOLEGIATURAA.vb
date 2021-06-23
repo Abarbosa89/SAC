@@ -1,7 +1,7 @@
 ﻿Public Class REIMPRSIONRECIBOCOLEGIATURAA
 
     Private Sub REIMPRSIONRECIBOCOLEGIATURAA_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        My.Forms.REIMPRESIONRECFOL.Close()
+
     End Sub
 
 

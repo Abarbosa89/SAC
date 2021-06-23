@@ -2,7 +2,7 @@
 
 
     Private Sub REIMPRESIONRECIBOPRODUCTOSS_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        My.Forms.REIMPRESIONRECFOL.Close()
+
     End Sub
 
     Private Sub REIMPRESIONRECIBOPRODUCTOSS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load

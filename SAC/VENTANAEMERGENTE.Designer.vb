@@ -49,7 +49,7 @@ Partial Class VENTANAEMERGENTE
         Me.CMDIMPRIMIRSHARP.Name = "CMDIMPRIMIRSHARP"
         Me.CMDIMPRIMIRSHARP.Size = New System.Drawing.Size(100, 57)
         Me.CMDIMPRIMIRSHARP.TabIndex = 47
-        Me.CMDIMPRIMIRSHARP.Text = "SHARP"
+        Me.CMDIMPRIMIRSHARP.Text = "IMPRESORA"
         Me.CMDIMPRIMIRSHARP.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.CMDIMPRIMIRSHARP.UseVisualStyleBackColor = True
         '

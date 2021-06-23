@@ -9,12 +9,13 @@ Public Class PAGODEINSCRIPCION
 
     Private Sub PAGODEINSCRIPCION_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        LBLIDPRODUC.Hide()
-        LBLMONTOBASE.Hide()
-        LBLNOFOLIOMAX.Hide()
-        LBLNONUEVOFOLIO.Hide()
-        LBLINSABON.Hide()
-        LBLINSCLIQ.Hide()
+        'LBLIDPRODUC.Hide()
+        'LBLMONTOBASE.Hide()
+        'LBLNOFOLIOMAX.Hide()
+        'LBLNONUEVOFOLIO.Hide()
+        'LBLINSABON.Hide()
+        'LBLINSCLIQ.Hide()
+
         If SELECCIONDEALUMNO.CBREQFACTURA.Checked = True Then
             TXT4DIGITOSCUENTA.Visible = True
         Else
@@ -128,7 +129,6 @@ Public Class PAGODEINSCRIPCION
 
     Private Sub CMDCANCELAR_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDCANCELAR.Click
 
-        My.Forms.SELECCIONDEALUMNO.Close()
         Me.Close()
 
     End Sub
@@ -147,7 +147,7 @@ Public Class PAGODEINSCRIPCION
             LBL4DIGITOSCUENTA.Visible = True
             TXT4DIGITOSCUENTA.Visible = True
 
-            Me.Enabled = False
+            CMDLIQUIDAR.Enabled = False
         End If
 
     End Sub
@@ -187,9 +187,9 @@ Public Class PAGODEINSCRIPCION
                     com.ExecuteNonQuery()
                     con.Close()
                 IMPRESION = 1
-                My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                My.Forms.VENTANAEMERGENTE.Show()
-                    Me.Enabled = False
+
+                My.Forms.VENTANAEMERGENTE.ShowDialog()
+                Me.Close()
 
                 End If
 
@@ -226,9 +226,8 @@ Public Class PAGODEINSCRIPCION
                     com.ExecuteNonQuery()
                 con.Close()
                 IMPRESION = 1
-                My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-                My.Forms.VENTANAEMERGENTE.Show()
-                Me.Enabled = False
+                My.Forms.VENTANAEMERGENTE.ShowDialog()
+                Me.Close()
 
                 End If
 

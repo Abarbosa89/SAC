@@ -140,7 +140,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLNVOFOLIO
         '
         Me.LBLNVOFOLIO.AutoSize = True
-        Me.LBLNVOFOLIO.Location = New System.Drawing.Point(242, 399)
+        Me.LBLNVOFOLIO.Location = New System.Drawing.Point(21, 557)
         Me.LBLNVOFOLIO.Name = "LBLNVOFOLIO"
         Me.LBLNVOFOLIO.Size = New System.Drawing.Size(88, 18)
         Me.LBLNVOFOLIO.TabIndex = 13
@@ -149,7 +149,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLNOFOLIOMAX
         '
         Me.LBLNOFOLIOMAX.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NUEVORECIBOFOLIOFACTURABindingSource, "NOFOLIO", True))
-        Me.LBLNOFOLIOMAX.Location = New System.Drawing.Point(223, 417)
+        Me.LBLNOFOLIOMAX.Location = New System.Drawing.Point(233, 585)
         Me.LBLNOFOLIOMAX.Name = "LBLNOFOLIOMAX"
         Me.LBLNOFOLIOMAX.Size = New System.Drawing.Size(100, 23)
         Me.LBLNOFOLIOMAX.TabIndex = 14
@@ -259,7 +259,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLMONTOBASE
         '
         Me.LBLMONTOBASE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBRODECOLEGIATURABindingSource, "monto", True))
-        Me.LBLMONTOBASE.Location = New System.Drawing.Point(242, 371)
+        Me.LBLMONTOBASE.Location = New System.Drawing.Point(21, 529)
         Me.LBLMONTOBASE.Name = "LBLMONTOBASE"
         Me.LBLMONTOBASE.Size = New System.Drawing.Size(100, 23)
         Me.LBLMONTOBASE.TabIndex = 52
@@ -267,7 +267,7 @@ Partial Class PAGOCOLEGIATURA
         '
         'CBRECARGO
         '
-        Me.CBRECARGO.Location = New System.Drawing.Point(412, 414)
+        Me.CBRECARGO.Location = New System.Drawing.Point(422, 582)
         Me.CBRECARGO.Name = "CBRECARGO"
         Me.CBRECARGO.Size = New System.Drawing.Size(104, 24)
         Me.CBRECARGO.TabIndex = 54
@@ -277,7 +277,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLIDPRODUC
         '
         Me.LBLIDPRODUC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBRODECOLEGIATURABindingSource, "idproduc", True))
-        Me.LBLIDPRODUC.Location = New System.Drawing.Point(309, 418)
+        Me.LBLIDPRODUC.Location = New System.Drawing.Point(319, 586)
         Me.LBLIDPRODUC.Name = "LBLIDPRODUC"
         Me.LBLIDPRODUC.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDPRODUC.TabIndex = 55
@@ -286,7 +286,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLPORCENTAJE
         '
         Me.LBLPORCENTAJE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBRODECOLEGIATURABindingSource, "porcent", True))
-        Me.LBLPORCENTAJE.Location = New System.Drawing.Point(117, 417)
+        Me.LBLPORCENTAJE.Location = New System.Drawing.Point(127, 585)
         Me.LBLPORCENTAJE.Name = "LBLPORCENTAJE"
         Me.LBLPORCENTAJE.Size = New System.Drawing.Size(100, 23)
         Me.LBLPORCENTAJE.TabIndex = 56
@@ -295,7 +295,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLABONORECARG
         '
         Me.LBLABONORECARG.AutoSize = True
-        Me.LBLABONORECARG.Location = New System.Drawing.Point(636, 394)
+        Me.LBLABONORECARG.Location = New System.Drawing.Point(573, 554)
         Me.LBLABONORECARG.Name = "LBLABONORECARG"
         Me.LBLABONORECARG.Size = New System.Drawing.Size(133, 18)
         Me.LBLABONORECARG.TabIndex = 57
@@ -304,7 +304,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLLIQUIDADO
         '
         Me.LBLLIQUIDADO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INSCRIPCIONYCOLEGIATURASLIQUIDADASBindingSource, "LIQUIDADO", True))
-        Me.LBLLIQUIDADO.Location = New System.Drawing.Point(11, 417)
+        Me.LBLLIQUIDADO.Location = New System.Drawing.Point(21, 585)
         Me.LBLLIQUIDADO.Name = "LBLLIQUIDADO"
         Me.LBLLIQUIDADO.Size = New System.Drawing.Size(100, 23)
         Me.LBLLIQUIDADO.TabIndex = 59
@@ -318,7 +318,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLABONADO
         '
         Me.LBLABONADO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.INSCRIPCIONESOCOLEGIATURASABONADASBindingSource, "LIQUIDADO", True))
-        Me.LBLABONADO.Location = New System.Drawing.Point(513, 415)
+        Me.LBLABONADO.Location = New System.Drawing.Point(523, 583)
         Me.LBLABONADO.Name = "LBLABONADO"
         Me.LBLABONADO.Size = New System.Drawing.Size(100, 23)
         Me.LBLABONADO.TabIndex = 61
@@ -350,7 +350,7 @@ Partial Class PAGOCOLEGIATURA
         '
         'LBLNOPAGARCOLEADE
         '
-        Me.LBLNOPAGARCOLEADE.Location = New System.Drawing.Point(636, 417)
+        Me.LBLNOPAGARCOLEADE.Location = New System.Drawing.Point(646, 585)
         Me.LBLNOPAGARCOLEADE.Name = "LBLNOPAGARCOLEADE"
         Me.LBLNOPAGARCOLEADE.Size = New System.Drawing.Size(100, 23)
         Me.LBLNOPAGARCOLEADE.TabIndex = 65
@@ -417,7 +417,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLCOLEANTERIOR
         '
         Me.LBLCOLEANTERIOR.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NOPAGARCOLEGIATURASADELANTADASBindingSource, "COLEABONADO", True))
-        Me.LBLCOLEANTERIOR.Location = New System.Drawing.Point(636, 369)
+        Me.LBLCOLEANTERIOR.Location = New System.Drawing.Point(573, 529)
         Me.LBLCOLEANTERIOR.Name = "LBLCOLEANTERIOR"
         Me.LBLCOLEANTERIOR.Size = New System.Drawing.Size(100, 23)
         Me.LBLCOLEANTERIOR.TabIndex = 70
@@ -522,7 +522,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLDESCRIPCIONPROMO
         '
         Me.LBLDESCRIPCIONPROMO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARPROMOCIONCOLEGIATURABindingSource, "descripcion", True))
-        Me.LBLDESCRIPCIONPROMO.Location = New System.Drawing.Point(14, 440)
+        Me.LBLDESCRIPCIONPROMO.Location = New System.Drawing.Point(24, 608)
         Me.LBLDESCRIPCIONPROMO.Name = "LBLDESCRIPCIONPROMO"
         Me.LBLDESCRIPCIONPROMO.Size = New System.Drawing.Size(100, 23)
         Me.LBLDESCRIPCIONPROMO.TabIndex = 79
@@ -532,7 +532,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLPORCENTPROMO
         '
         Me.LBLPORCENTPROMO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARPROMOCIONCOLEGIATURABindingSource, "porcedescuento", True))
-        Me.LBLPORCENTPROMO.Location = New System.Drawing.Point(145, 440)
+        Me.LBLPORCENTPROMO.Location = New System.Drawing.Point(155, 608)
         Me.LBLPORCENTPROMO.Name = "LBLPORCENTPROMO"
         Me.LBLPORCENTPROMO.Size = New System.Drawing.Size(100, 23)
         Me.LBLPORCENTPROMO.TabIndex = 80
@@ -554,7 +554,7 @@ Partial Class PAGOCOLEGIATURA
         Me.CBPROMOCION.Enabled = False
         Me.CBPROMOCION.Location = New System.Drawing.Point(229, 25)
         Me.CBPROMOCION.Name = "CBPROMOCION"
-        Me.CBPROMOCION.Size = New System.Drawing.Size(140, 17)
+        Me.CBPROMOCION.Size = New System.Drawing.Size(196, 22)
         Me.CBPROMOCION.TabIndex = 74
         Me.CBPROMOCION.Text = "APLICAR PROMOCION"
         Me.CBPROMOCION.UseVisualStyleBackColor = True
@@ -603,7 +603,7 @@ Partial Class PAGOCOLEGIATURA
         'LBLFECHAVENCI
         '
         Me.LBLFECHAVENCI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARFECHAVENCIPORCICLOYPRODUCTOBindingSource, "FECHAVENCIMIENTO", True))
-        Me.LBLFECHAVENCI.Location = New System.Drawing.Point(316, 440)
+        Me.LBLFECHAVENCI.Location = New System.Drawing.Point(326, 608)
         Me.LBLFECHAVENCI.Name = "LBLFECHAVENCI"
         Me.LBLFECHAVENCI.Size = New System.Drawing.Size(100, 23)
         Me.LBLFECHAVENCI.TabIndex = 74
@@ -617,7 +617,7 @@ Partial Class PAGOCOLEGIATURA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(713, 471)
+        Me.ClientSize = New System.Drawing.Size(713, 431)
         Me.ControlBox = False
         Me.Controls.Add(Me.LBLFECHAVENCI)
         Me.Controls.Add(Me.GroupBox1)

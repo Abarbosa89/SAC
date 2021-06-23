@@ -126,9 +126,6 @@
   <metadata name="COBRODECOLEGIATURABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>418, 134</value>
   </metadata>
-  <metadata name="COBRODECOLEGIATURABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>418, 134</value>
-  </metadata>
   <metadata name="NUEVORECIBOFOLIOFACTURABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>301, 17</value>
   </metadata>
@@ -138,17 +135,8 @@
   <metadata name="INSCRIPCIONYCOLEGIATURASLIQUIDADASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>1116, 56</value>
   </metadata>
-  <metadata name="INSCRIPCIONYCOLEGIATURASLIQUIDADASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>1116, 56</value>
-  </metadata>
   <metadata name="INSCRIPCIONESOCOLEGIATURASABONADASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>368, 56</value>
-  </metadata>
-  <metadata name="INSCRIPCIONESOCOLEGIATURASABONADASBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>368, 56</value>
-  </metadata>
-  <metadata name="TIPOSDEPAGOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>891, 17</value>
   </metadata>
   <metadata name="TIPOSDEPAGOBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>891, 17</value>

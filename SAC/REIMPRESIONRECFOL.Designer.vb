@@ -31,12 +31,6 @@ Partial Class REIMPRESIONRECFOL
         Me.SELCCIONARMOVPARAREIMPRSIONTableAdapter = New SAC.SACDataSetTableAdapters.SELCCIONARMOVPARAREIMPRSIONTableAdapter()
         Me.TableAdapterManager = New SAC.SACDataSetTableAdapters.TableAdapterManager()
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView = New System.Windows.Forms.DataGridView()
-        Me.DTDESDE = New System.Windows.Forms.DateTimePicker()
-        Me.DTHASTA = New System.Windows.Forms.DateTimePicker()
-        Me.CDMCERRAR = New System.Windows.Forms.Button()
-        Me.CMDREIMPRESION = New System.Windows.Forms.Button()
-        Me.LBLNUMFOLIO = New System.Windows.Forms.Label()
-        Me.LBLNUMRECIBO = New System.Windows.Forms.Label()
         Me.DataGridViewTextBoxColumn10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -47,6 +41,12 @@ Partial Class REIMPRESIONRECFOL
         Me.DataGridViewTextBoxColumn6 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.DTDESDE = New System.Windows.Forms.DateTimePicker()
+        Me.DTHASTA = New System.Windows.Forms.DateTimePicker()
+        Me.CDMCERRAR = New System.Windows.Forms.Button()
+        Me.CMDREIMPRESION = New System.Windows.Forms.Button()
+        Me.LBLNUMFOLIO = New System.Windows.Forms.Label()
+        Me.LBLNUMRECIBO = New System.Windows.Forms.Label()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SELCCIONARMOVPARAREIMPRSIONDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -85,66 +85,6 @@ Partial Class REIMPRESIONRECFOL
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.ReadOnly = True
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Size = New System.Drawing.Size(788, 220)
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.TabIndex = 2
-        '
-        'DTDESDE
-        '
-        Me.DTDESDE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTDESDE.Location = New System.Drawing.Point(37, 17)
-        Me.DTDESDE.Name = "DTDESDE"
-        Me.DTDESDE.Size = New System.Drawing.Size(200, 22)
-        Me.DTDESDE.TabIndex = 3
-        '
-        'DTHASTA
-        '
-        Me.DTHASTA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.DTHASTA.Location = New System.Drawing.Point(555, 17)
-        Me.DTHASTA.Name = "DTHASTA"
-        Me.DTHASTA.Size = New System.Drawing.Size(200, 22)
-        Me.DTHASTA.TabIndex = 4
-        '
-        'CDMCERRAR
-        '
-        Me.CDMCERRAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.CDMCERRAR.Image = Global.SAC.My.Resources.Resources.ELIMINAR_REGISTRO
-        Me.CDMCERRAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CDMCERRAR.Location = New System.Drawing.Point(446, 305)
-        Me.CDMCERRAR.Name = "CDMCERRAR"
-        Me.CDMCERRAR.Size = New System.Drawing.Size(114, 63)
-        Me.CDMCERRAR.TabIndex = 18
-        Me.CDMCERRAR.Text = "CERRAR"
-        Me.CDMCERRAR.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.CDMCERRAR.UseVisualStyleBackColor = True
-        '
-        'CMDREIMPRESION
-        '
-        Me.CMDREIMPRESION.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.CMDREIMPRESION.Image = Global.SAC.My.Resources.Resources.PRINTER
-        Me.CMDREIMPRESION.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CMDREIMPRESION.Location = New System.Drawing.Point(285, 305)
-        Me.CMDREIMPRESION.Name = "CMDREIMPRESION"
-        Me.CMDREIMPRESION.Size = New System.Drawing.Size(114, 63)
-        Me.CMDREIMPRESION.TabIndex = 17
-        Me.CMDREIMPRESION.Text = "REIMPRESION"
-        Me.CMDREIMPRESION.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.CMDREIMPRESION.UseVisualStyleBackColor = True
-        '
-        'LBLNUMFOLIO
-        '
-        Me.LBLNUMFOLIO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numfolio", True))
-        Me.LBLNUMFOLIO.Location = New System.Drawing.Point(12, 290)
-        Me.LBLNUMFOLIO.Name = "LBLNUMFOLIO"
-        Me.LBLNUMFOLIO.Size = New System.Drawing.Size(100, 23)
-        Me.LBLNUMFOLIO.TabIndex = 19
-        Me.LBLNUMFOLIO.Text = "#FOLIO"
-        '
-        'LBLNUMRECIBO
-        '
-        Me.LBLNUMRECIBO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numrecibo", True))
-        Me.LBLNUMRECIBO.Location = New System.Drawing.Point(12, 313)
-        Me.LBLNUMRECIBO.Name = "LBLNUMRECIBO"
-        Me.LBLNUMRECIBO.Size = New System.Drawing.Size(100, 23)
-        Me.LBLNUMRECIBO.TabIndex = 20
-        Me.LBLNUMRECIBO.Text = "#RECIBO"
         '
         'DataGridViewTextBoxColumn10
         '
@@ -223,11 +163,71 @@ Partial Class REIMPRESIONRECFOL
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
         '
+        'DTDESDE
+        '
+        Me.DTDESDE.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTDESDE.Location = New System.Drawing.Point(37, 17)
+        Me.DTDESDE.Name = "DTDESDE"
+        Me.DTDESDE.Size = New System.Drawing.Size(200, 22)
+        Me.DTDESDE.TabIndex = 3
+        '
+        'DTHASTA
+        '
+        Me.DTHASTA.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.DTHASTA.Location = New System.Drawing.Point(555, 17)
+        Me.DTHASTA.Name = "DTHASTA"
+        Me.DTHASTA.Size = New System.Drawing.Size(200, 22)
+        Me.DTHASTA.TabIndex = 4
+        '
+        'CDMCERRAR
+        '
+        Me.CDMCERRAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CDMCERRAR.Image = Global.SAC.My.Resources.Resources.ELIMINAR_REGISTRO
+        Me.CDMCERRAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.CDMCERRAR.Location = New System.Drawing.Point(446, 305)
+        Me.CDMCERRAR.Name = "CDMCERRAR"
+        Me.CDMCERRAR.Size = New System.Drawing.Size(114, 63)
+        Me.CDMCERRAR.TabIndex = 18
+        Me.CDMCERRAR.Text = "CERRAR"
+        Me.CDMCERRAR.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CDMCERRAR.UseVisualStyleBackColor = True
+        '
+        'CMDREIMPRESION
+        '
+        Me.CMDREIMPRESION.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.CMDREIMPRESION.Image = Global.SAC.My.Resources.Resources.PRINTER
+        Me.CMDREIMPRESION.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.CMDREIMPRESION.Location = New System.Drawing.Point(285, 305)
+        Me.CMDREIMPRESION.Name = "CMDREIMPRESION"
+        Me.CMDREIMPRESION.Size = New System.Drawing.Size(114, 63)
+        Me.CMDREIMPRESION.TabIndex = 17
+        Me.CMDREIMPRESION.Text = "REIMPRESION"
+        Me.CMDREIMPRESION.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.CMDREIMPRESION.UseVisualStyleBackColor = True
+        '
+        'LBLNUMFOLIO
+        '
+        Me.LBLNUMFOLIO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numfolio", True))
+        Me.LBLNUMFOLIO.Location = New System.Drawing.Point(9, 478)
+        Me.LBLNUMFOLIO.Name = "LBLNUMFOLIO"
+        Me.LBLNUMFOLIO.Size = New System.Drawing.Size(100, 23)
+        Me.LBLNUMFOLIO.TabIndex = 19
+        Me.LBLNUMFOLIO.Text = "#FOLIO"
+        '
+        'LBLNUMRECIBO
+        '
+        Me.LBLNUMRECIBO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numrecibo", True))
+        Me.LBLNUMRECIBO.Location = New System.Drawing.Point(9, 501)
+        Me.LBLNUMRECIBO.Name = "LBLNUMRECIBO"
+        Me.LBLNUMRECIBO.Size = New System.Drawing.Size(100, 23)
+        Me.LBLNUMRECIBO.TabIndex = 20
+        Me.LBLNUMRECIBO.Text = "#RECIBO"
+        '
         'REIMPRESIONRECFOL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(820, 407)
+        Me.ClientSize = New System.Drawing.Size(820, 385)
         Me.Controls.Add(Me.LBLNUMRECIBO)
         Me.Controls.Add(Me.LBLNUMFOLIO)
         Me.Controls.Add(Me.CDMCERRAR)

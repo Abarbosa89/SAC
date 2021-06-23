@@ -98,7 +98,7 @@ Partial Class SELECCIONDEALUMNO
         Me.CMDCANCELAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CMDCANCELAR.Image = Global.SAC.My.Resources.Resources.ELIMINAR_REGISTRO
         Me.CMDCANCELAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CMDCANCELAR.Location = New System.Drawing.Point(309, 53)
+        Me.CMDCANCELAR.Location = New System.Drawing.Point(270, 51)
         Me.CMDCANCELAR.Name = "CMDCANCELAR"
         Me.CMDCANCELAR.Size = New System.Drawing.Size(91, 62)
         Me.CMDCANCELAR.TabIndex = 41
@@ -119,7 +119,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLMATRI
         '
         Me.LBLMATRI.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "matri", True))
-        Me.LBLMATRI.Location = New System.Drawing.Point(12, 53)
+        Me.LBLMATRI.Location = New System.Drawing.Point(6, 205)
         Me.LBLMATRI.Name = "LBLMATRI"
         Me.LBLMATRI.Size = New System.Drawing.Size(100, 23)
         Me.LBLMATRI.TabIndex = 42
@@ -128,7 +128,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLGRADO
         '
         Me.LBLGRADO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "grado", True))
-        Me.LBLGRADO.Location = New System.Drawing.Point(109, 53)
+        Me.LBLGRADO.Location = New System.Drawing.Point(447, 195)
         Me.LBLGRADO.Name = "LBLGRADO"
         Me.LBLGRADO.Size = New System.Drawing.Size(100, 23)
         Me.LBLGRADO.TabIndex = 43
@@ -137,7 +137,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLSEXO
         '
         Me.LBLSEXO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "sexo", True))
-        Me.LBLSEXO.Location = New System.Drawing.Point(109, 76)
+        Me.LBLSEXO.Location = New System.Drawing.Point(447, 218)
         Me.LBLSEXO.Name = "LBLSEXO"
         Me.LBLSEXO.Size = New System.Drawing.Size(100, 23)
         Me.LBLSEXO.TabIndex = 44
@@ -146,7 +146,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLIDGRADO
         '
         Me.LBLIDGRADO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "idgrado", True))
-        Me.LBLIDGRADO.Location = New System.Drawing.Point(12, 77)
+        Me.LBLIDGRADO.Location = New System.Drawing.Point(6, 229)
         Me.LBLIDGRADO.Name = "LBLIDGRADO"
         Me.LBLIDGRADO.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDGRADO.TabIndex = 45
@@ -157,7 +157,7 @@ Partial Class SELECCIONDEALUMNO
         Me.CMDSELECCIONAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center
         Me.CMDSELECCIONAR.Image = Global.SAC.My.Resources.Resources.BUSCAR_REGISTRO
         Me.CMDSELECCIONAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CMDSELECCIONAR.Location = New System.Drawing.Point(210, 53)
+        Me.CMDSELECCIONAR.Location = New System.Drawing.Point(171, 51)
         Me.CMDSELECCIONAR.Name = "CMDSELECCIONAR"
         Me.CMDSELECCIONAR.Size = New System.Drawing.Size(93, 62)
         Me.CMDSELECCIONAR.TabIndex = 46
@@ -168,7 +168,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLIDNIVEL
         '
         Me.LBLIDNIVEL.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "idnivel", True))
-        Me.LBLIDNIVEL.Location = New System.Drawing.Point(12, 99)
+        Me.LBLIDNIVEL.Location = New System.Drawing.Point(6, 251)
         Me.LBLIDNIVEL.Name = "LBLIDNIVEL"
         Me.LBLIDNIVEL.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDNIVEL.TabIndex = 47
@@ -177,7 +177,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLPORCBECA
         '
         Me.LBLPORCBECA.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "porcent", True))
-        Me.LBLPORCBECA.Location = New System.Drawing.Point(109, 100)
+        Me.LBLPORCBECA.Location = New System.Drawing.Point(447, 242)
         Me.LBLPORCBECA.Name = "LBLPORCBECA"
         Me.LBLPORCBECA.Size = New System.Drawing.Size(100, 23)
         Me.LBLPORCBECA.TabIndex = 48
@@ -186,7 +186,7 @@ Partial Class SELECCIONDEALUMNO
         'CBBECA
         '
         Me.CBBECA.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.SELECCIONARALUMNOSATIVOSBindingSource, "beca", True))
-        Me.CBBECA.Location = New System.Drawing.Point(435, 100)
+        Me.CBBECA.Location = New System.Drawing.Point(343, 237)
         Me.CBBECA.Name = "CBBECA"
         Me.CBBECA.Size = New System.Drawing.Size(104, 24)
         Me.CBBECA.TabIndex = 49
@@ -205,7 +205,7 @@ Partial Class SELECCIONDEALUMNO
         'CBBECASEP
         '
         Me.CBBECASEP.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.SELECCIONARALUMNOSATIVOSBindingSource, "becasep", True))
-        Me.CBBECASEP.Location = New System.Drawing.Point(435, 75)
+        Me.CBBECASEP.Location = New System.Drawing.Point(112, 244)
         Me.CBBECASEP.Name = "CBBECASEP"
         Me.CBBECASEP.Size = New System.Drawing.Size(104, 24)
         Me.CBBECASEP.TabIndex = 50
@@ -215,7 +215,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLPORCBECASEP
         '
         Me.LBLPORCBECASEP.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "porcentsep", True))
-        Me.LBLPORCBECASEP.Location = New System.Drawing.Point(432, 53)
+        Me.LBLPORCBECASEP.Location = New System.Drawing.Point(331, 216)
         Me.LBLPORCBECASEP.Name = "LBLPORCBECASEP"
         Me.LBLPORCBECASEP.Size = New System.Drawing.Size(100, 23)
         Me.LBLPORCBECASEP.TabIndex = 51
@@ -224,7 +224,7 @@ Partial Class SELECCIONDEALUMNO
         'CBBECAINSC
         '
         Me.CBBECAINSC.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.SELECCIONARALUMNOSATIVOSBindingSource, "becainscr", True))
-        Me.CBBECAINSC.Location = New System.Drawing.Point(199, 117)
+        Me.CBBECAINSC.Location = New System.Drawing.Point(112, 215)
         Me.CBBECAINSC.Name = "CBBECAINSC"
         Me.CBBECAINSC.Size = New System.Drawing.Size(104, 24)
         Me.CBBECAINSC.TabIndex = 52
@@ -234,7 +234,7 @@ Partial Class SELECCIONDEALUMNO
         'LBLPORCENINSC
         '
         Me.LBLPORCENINSC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARALUMNOSATIVOSBindingSource, "porcentinscr", True))
-        Me.LBLPORCENINSC.Location = New System.Drawing.Point(329, 118)
+        Me.LBLPORCENINSC.Location = New System.Drawing.Point(237, 217)
         Me.LBLPORCENINSC.Name = "LBLPORCENINSC"
         Me.LBLPORCENINSC.Size = New System.Drawing.Size(100, 23)
         Me.LBLPORCENINSC.TabIndex = 53
@@ -247,7 +247,7 @@ Partial Class SELECCIONDEALUMNO
         'CBREQFACTURA
         '
         Me.CBREQFACTURA.DataBindings.Add(New System.Windows.Forms.Binding("CheckState", Me.SELECCIONARALUMNOSATIVOSBindingSource, "reqfactura", True))
-        Me.CBREQFACTURA.Location = New System.Drawing.Point(428, 130)
+        Me.CBREQFACTURA.Location = New System.Drawing.Point(233, 244)
         Me.CBREQFACTURA.Name = "CBREQFACTURA"
         Me.CBREQFACTURA.Size = New System.Drawing.Size(104, 24)
         Me.CBREQFACTURA.TabIndex = 54
@@ -258,7 +258,7 @@ Partial Class SELECCIONDEALUMNO
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(559, 149)
+        Me.ClientSize = New System.Drawing.Size(559, 128)
         Me.ControlBox = False
         Me.Controls.Add(Me.CBREQFACTURA)
         Me.Controls.Add(Me.LBLPORCENINSC)

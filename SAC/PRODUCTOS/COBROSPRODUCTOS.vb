@@ -303,8 +303,8 @@ Public Class COBROSPRODUCTOS
             'End If
 
             If CBOPRODUCTOS.SelectedValue = 240 Then
-                My.Forms.UNIFORMES.MdiParent = PADRE
-                My.Forms.UNIFORMES.Show()
+                'My.Forms.UNIFORMES.MdiParent = PADRE
+                My.Forms.UNIFORMES.ShowDialog()
 
             End If
 
@@ -824,8 +824,8 @@ Public Class COBROSPRODUCTOS
     Private Sub CMDIMPRIMIR_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDIMPRIMIR.Click
         BANDERAREPORTE2 = 1
         IMPRESION = 2
-        My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
-        My.Forms.VENTANAEMERGENTE.Show()
+        'My.Forms.VENTANAEMERGENTE.MdiParent = PADRE
+        My.Forms.VENTANAEMERGENTE.ShowDialog()
         Me.Enabled = False
 
 
