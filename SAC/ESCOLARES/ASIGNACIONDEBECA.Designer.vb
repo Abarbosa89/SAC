@@ -528,7 +528,7 @@ Partial Class ASIGNACIONDEBECA
         Me.GPMENSUALIDADES.Controls.Add(Me.LBLMONTOMENS)
         Me.GPMENSUALIDADES.Controls.Add(Me.LBLTOTABONMENS)
         Me.GPMENSUALIDADES.Controls.Add(Me.LBLIDPRODMENS)
-        Me.GPMENSUALIDADES.Location = New System.Drawing.Point(12, 168)
+        Me.GPMENSUALIDADES.Location = New System.Drawing.Point(6, 380)
         Me.GPMENSUALIDADES.Name = "GPMENSUALIDADES"
         Me.GPMENSUALIDADES.Size = New System.Drawing.Size(131, 226)
         Me.GPMENSUALIDADES.TabIndex = 77
@@ -546,7 +546,7 @@ Partial Class ASIGNACIONDEBECA
         Me.GPINSCRIPCIONES.Controls.Add(Me.LBLPORBECAINT)
         Me.GPINSCRIPCIONES.Controls.Add(Me.LBLIDPRODINSC)
         Me.GPINSCRIPCIONES.Controls.Add(Me.LBLPORBECASEP)
-        Me.GPINSCRIPCIONES.Location = New System.Drawing.Point(576, 201)
+        Me.GPINSCRIPCIONES.Location = New System.Drawing.Point(576, 366)
         Me.GPINSCRIPCIONES.Name = "GPINSCRIPCIONES"
         Me.GPINSCRIPCIONES.Size = New System.Drawing.Size(226, 165)
         Me.GPINSCRIPCIONES.TabIndex = 78
@@ -589,7 +589,7 @@ Partial Class ASIGNACIONDEBECA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(814, 401)
+        Me.ClientSize = New System.Drawing.Size(814, 356)
         Me.ControlBox = False
         Me.Controls.Add(Me.RBBECAINSCRI)
         Me.Controls.Add(Me.RBBECASEP)

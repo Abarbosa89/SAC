@@ -23,39 +23,45 @@ Partial Class PADRE
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Colegiaturas")
-        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Inscripcion")
-        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Articulos")
-        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudos Articulos")
-        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudos Colegiaturas/Inscripcion")
-        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudos", New System.Windows.Forms.TreeNode() {TreeNode4, TreeNode5})
+        Dim TreeNode39 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Colegiaturas")
+        Dim TreeNode40 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Inscripcion")
+        Dim TreeNode41 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Articulos")
+        Dim TreeNode42 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudos Articulos")
+        Dim TreeNode43 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudos Colegiaturas/Inscripcion")
+        Dim TreeNode44 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudos", New System.Windows.Forms.TreeNode() {TreeNode42, TreeNode43})
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(PADRE))
-        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Alumno")
-        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Tutor")
-        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pagos Alumnos")
-        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Detalle Tutores")
-        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Detalle Alumnos")
-        Dim TreeNode12 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pedido Uniformes")
-        Dim TreeNode13 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reimpresion Folio o Recibo")
-        Dim TreeNode14 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Creacion Reportes")
-        Dim TreeNode15 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudo Alumnos")
-        Dim TreeNode16 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("General", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8, TreeNode9, TreeNode10, TreeNode11, TreeNode12, TreeNode13, TreeNode14, TreeNode15})
-        Dim TreeNode17 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Asignar Becas")
-        Dim TreeNode18 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eliminar Movimientos")
-        Dim TreeNode19 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Productos")
-        Dim TreeNode20 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crear Producto")
-        Dim TreeNode21 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Edicion Usuarios")
-        Dim TreeNode22 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Pagos")
-        Dim TreeNode23 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Facturas")
-        Dim TreeNode24 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reporte Facturas")
-        Dim TreeNode25 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crear Nuevo Ciclo")
-        Dim TreeNode26 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Administrativo", New System.Windows.Forms.TreeNode() {TreeNode17, TreeNode18, TreeNode19, TreeNode20, TreeNode21, TreeNode22, TreeNode23, TreeNode24, TreeNode25})
-        Dim TreeNode27 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Corte Diario")
-        Dim TreeNode28 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Alumnos")
-        Dim TreeNode29 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Cumpleaños")
-        Dim TreeNode30 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Asistencia")
-        Dim TreeNode31 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Correos")
-        Dim TreeNode32 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reportes Academicos", New System.Windows.Forms.TreeNode() {TreeNode28, TreeNode29, TreeNode30, TreeNode31})
+        Dim TreeNode1 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Alumno")
+        Dim TreeNode2 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Tutor")
+        Dim TreeNode3 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pagos Alumnos")
+        Dim TreeNode4 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Detalle Tutores")
+        Dim TreeNode5 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Detalle Alumnos")
+        Dim TreeNode6 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pedido Uniformes")
+        Dim TreeNode45 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reimpresion Folio o Recibo")
+        Dim TreeNode46 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Corte Diario por Fecha")
+        Dim TreeNode47 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Actividad de Usuario")
+        Dim TreeNode48 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Clientes Piden Factura")
+        Dim TreeNode49 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Pedidos de Uniformes")
+        Dim TreeNode50 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Becas Asignadas")
+        Dim TreeNode51 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Costos de Productos")
+        Dim TreeNode52 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Creacion Reportes", New System.Windows.Forms.TreeNode() {TreeNode46, TreeNode47, TreeNode48, TreeNode49, TreeNode50, TreeNode51})
+        Dim TreeNode53 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Adeudo Alumnos")
+        Dim TreeNode54 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("General", New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3, TreeNode4, TreeNode5, TreeNode6, TreeNode45, TreeNode52, TreeNode53})
+        Dim TreeNode55 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Asignar Becas")
+        Dim TreeNode56 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Eliminar Movimientos")
+        Dim TreeNode57 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Productos")
+        Dim TreeNode58 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crear Producto")
+        Dim TreeNode59 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Edicion Usuarios")
+        Dim TreeNode60 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Pagos")
+        Dim TreeNode61 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Modificar Facturas")
+        Dim TreeNode62 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reporte Facturas")
+        Dim TreeNode63 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Crear Nuevo Ciclo")
+        Dim TreeNode64 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Administrativo", New System.Windows.Forms.TreeNode() {TreeNode55, TreeNode56, TreeNode57, TreeNode58, TreeNode59, TreeNode60, TreeNode61, TreeNode62, TreeNode63})
+        Dim TreeNode65 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Corte Diario")
+        Dim TreeNode7 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Alumnos")
+        Dim TreeNode8 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Cumpleaños")
+        Dim TreeNode9 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Asistencia")
+        Dim TreeNode10 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Lista Correos")
+        Dim TreeNode11 As System.Windows.Forms.TreeNode = New System.Windows.Forms.TreeNode("Reportes Academicos", New System.Windows.Forms.TreeNode() {TreeNode7, TreeNode8, TreeNode9, TreeNode10})
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.TSRELOJ = New System.Windows.Forms.ToolStripLabel()
@@ -117,10 +123,18 @@ Partial Class PADRE
         Me.tvAcademico = New System.Windows.Forms.TreeView()
         Me.msPrincipal = New System.Windows.Forms.MenuStrip()
         Me.AbrirSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SalirToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CerrarSesionToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegresarCorteDiarioToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ConfiguracionSistemaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Impresora = New System.Windows.Forms.ToolStripMenuItem()
         Me.Ticket = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TValidarCierre = New System.Windows.Forms.Timer(Me.components)
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStrip1.SuspendLayout()
         Me.TSVARIOS.SuspendLayout()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -133,7 +147,7 @@ Partial Class PADRE
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.TSRELOJ, Me.TSFECHA, Me.ToolStripLabel8, Me.TSCICLOESCOLAR, Me.ToolStripLabel7, Me.ToolStripLabel3, Me.tsImpresoraTi, Me.ToolStripSeparator2, Me.ToolStripLabel4, Me.tsImpresora})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.TSRELOJ, Me.TSFECHA, Me.ToolStripLabel8, Me.TSCICLOESCOLAR, Me.ToolStripLabel7, Me.ToolStripSeparator5, Me.ToolStripSeparator6, Me.ToolStripSeparator9, Me.ToolStripSeparator11, Me.ToolStripSeparator10, Me.ToolStripLabel3, Me.tsImpresoraTi, Me.ToolStripSeparator2, Me.ToolStripLabel4, Me.tsImpresora})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 713)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(1379, 25)
@@ -324,6 +338,7 @@ Partial Class PADRE
         Me.TSBCORTEDIARIO.Size = New System.Drawing.Size(171, 54)
         Me.TSBCORTEDIARIO.Text = "CORTE DIARIO"
         Me.TSBCORTEDIARIO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
+        Me.TSBCORTEDIARIO.Visible = False
         '
         'ToolStripSeparator3
         '
@@ -598,19 +613,19 @@ Partial Class PADRE
         Me.tvCobros.ImageList = Me.ImageList1
         Me.tvCobros.Location = New System.Drawing.Point(182, 179)
         Me.tvCobros.Name = "tvCobros"
-        TreeNode1.Name = "NTodos"
-        TreeNode1.Text = "Colegiaturas"
-        TreeNode2.Name = "NUsuarios"
-        TreeNode2.Text = "Inscripcion"
-        TreeNode3.Name = "NAdministrador"
-        TreeNode3.Text = "Articulos"
-        TreeNode4.Name = "Nodo1"
-        TreeNode4.Text = "Adeudos Articulos"
-        TreeNode5.Name = "Nodo2"
-        TreeNode5.Text = "Adeudos Colegiaturas/Inscripcion"
-        TreeNode6.Name = "Nodo0"
-        TreeNode6.Text = "Adeudos"
-        Me.tvCobros.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode1, TreeNode2, TreeNode3, TreeNode6})
+        TreeNode39.Name = "NTodos"
+        TreeNode39.Text = "Colegiaturas"
+        TreeNode40.Name = "NUsuarios"
+        TreeNode40.Text = "Inscripcion"
+        TreeNode41.Name = "NAdministrador"
+        TreeNode41.Text = "Articulos"
+        TreeNode42.Name = "Nodo1"
+        TreeNode42.Text = "Adeudos Articulos"
+        TreeNode43.Name = "Nodo2"
+        TreeNode43.Text = "Adeudos Colegiaturas/Inscripcion"
+        TreeNode44.Name = "Nodo0"
+        TreeNode44.Text = "Adeudos"
+        Me.tvCobros.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode39, TreeNode40, TreeNode41, TreeNode44})
         Me.tvCobros.SelectedImageIndex = 0
         Me.tvCobros.Size = New System.Drawing.Size(442, 129)
         Me.tvCobros.TabIndex = 16
@@ -633,51 +648,70 @@ Partial Class PADRE
         Me.tvAdministrativo.ImageList = Me.ImageList1
         Me.tvAdministrativo.Location = New System.Drawing.Point(182, 314)
         Me.tvAdministrativo.Name = "tvAdministrativo"
-        TreeNode7.Name = "Nodo3"
-        TreeNode7.NodeFont = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        TreeNode7.Text = "Modificar Alumno"
-        TreeNode8.Name = "Nodo0"
-        TreeNode8.Text = "Modificar Tutor"
-        TreeNode9.Name = "Nodo1"
-        TreeNode9.Text = "Pagos Alumnos"
-        TreeNode10.Name = "Nodo2"
-        TreeNode10.Text = "Detalle Tutores"
-        TreeNode11.Name = "Nodo3"
-        TreeNode11.Text = "Detalle Alumnos"
-        TreeNode12.Name = "Nodo4"
-        TreeNode12.Text = "Pedido Uniformes"
-        TreeNode13.Name = "Nodo5"
-        TreeNode13.Text = "Reimpresion Folio o Recibo"
-        TreeNode14.Name = "Nodo21"
-        TreeNode14.Text = "Creacion Reportes"
-        TreeNode15.Name = "Nodo22"
-        TreeNode15.Text = "Adeudo Alumnos"
-        TreeNode16.Name = "NTodos"
-        TreeNode16.Text = "General"
-        TreeNode17.Name = "Nodo13"
-        TreeNode17.Text = "Asignar Becas"
-        TreeNode18.Name = "Nodo14"
-        TreeNode18.Text = "Eliminar Movimientos"
-        TreeNode19.Name = "Nodo15"
-        TreeNode19.Text = "Modificar Productos"
-        TreeNode20.Name = "Nodo16"
-        TreeNode20.Text = "Crear Producto"
-        TreeNode21.Name = "Nodo17"
-        TreeNode21.Text = "Edicion Usuarios"
-        TreeNode22.Name = "Nodo18"
-        TreeNode22.Text = "Modificar Pagos"
-        TreeNode23.Name = "Nodo19"
-        TreeNode23.Text = "Modificar Facturas"
-        TreeNode24.Name = "Nodo20"
-        TreeNode24.Text = "Reporte Facturas"
-        TreeNode25.Name = "Nodo23"
-        TreeNode25.Text = "Crear Nuevo Ciclo"
-        TreeNode26.Name = "NUsuarios"
-        TreeNode26.Text = "Administrativo"
-        TreeNode27.ImageIndex = 2
-        TreeNode27.Name = "NAdministrador"
-        TreeNode27.Text = "Corte Diario"
-        Me.tvAdministrativo.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode16, TreeNode26, TreeNode27})
+        TreeNode1.Name = "Nodo3"
+        TreeNode1.NodeFont = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        TreeNode1.Text = "Modificar Alumno"
+        TreeNode2.Name = "Nodo0"
+        TreeNode2.Text = "Modificar Tutor"
+        TreeNode3.Name = "Nodo1"
+        TreeNode3.Text = "Pagos Alumnos"
+        TreeNode4.Name = "Nodo2"
+        TreeNode4.Text = "Detalle Tutores"
+        TreeNode5.Name = "Nodo3"
+        TreeNode5.Text = "Detalle Alumnos"
+        TreeNode6.Name = "Nodo4"
+        TreeNode6.Text = "Pedido Uniformes"
+        TreeNode45.Name = "Nodo5"
+        TreeNode45.Text = "Reimpresion Folio o Recibo"
+        TreeNode46.ImageIndex = 1
+        TreeNode46.Name = "Nodo1"
+        TreeNode46.Text = "Corte Diario por Fecha"
+        TreeNode47.ImageIndex = 1
+        TreeNode47.Name = "Nodo2"
+        TreeNode47.Text = "Actividad de Usuario"
+        TreeNode48.ImageIndex = 1
+        TreeNode48.Name = "Nodo3"
+        TreeNode48.Text = "Clientes Piden Factura"
+        TreeNode49.ImageIndex = 1
+        TreeNode49.Name = "Nodo4"
+        TreeNode49.Text = "Pedidos de Uniformes"
+        TreeNode50.ImageIndex = 1
+        TreeNode50.Name = "Nodo5"
+        TreeNode50.Text = "Becas Asignadas"
+        TreeNode51.ImageIndex = 1
+        TreeNode51.Name = "Nodo6"
+        TreeNode51.Text = "Costos de Productos"
+        TreeNode52.ImageIndex = 1
+        TreeNode52.Name = "Nodo21"
+        TreeNode52.Text = "Creacion Reportes"
+        TreeNode53.Name = "Nodo22"
+        TreeNode53.Text = "Adeudo Alumnos"
+        TreeNode54.Name = "NTodos"
+        TreeNode54.Text = "General"
+        TreeNode55.Name = "Nodo13"
+        TreeNode55.Text = "Asignar Becas"
+        TreeNode56.Name = "Nodo14"
+        TreeNode56.Text = "Eliminar Movimientos"
+        TreeNode57.Name = "Nodo15"
+        TreeNode57.Text = "Modificar Productos"
+        TreeNode58.Name = "Nodo16"
+        TreeNode58.Text = "Crear Producto"
+        TreeNode59.Name = "Nodo17"
+        TreeNode59.Text = "Edicion Usuarios"
+        TreeNode60.Name = "Nodo18"
+        TreeNode60.Text = "Modificar Pagos"
+        TreeNode61.Name = "Nodo19"
+        TreeNode61.Text = "Modificar Facturas"
+        TreeNode62.Name = "Nodo20"
+        TreeNode62.Text = "Reporte Facturas"
+        TreeNode63.Name = "Nodo23"
+        TreeNode63.Text = "Crear Nuevo Ciclo"
+        TreeNode64.Name = "NUsuarios"
+        TreeNode64.Text = "Administrativo"
+        TreeNode65.ImageIndex = 2
+        TreeNode65.Name = "NAdministrador"
+        TreeNode65.Text = "Corte Diario"
+        Me.tvAdministrativo.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode54, TreeNode64, TreeNode65})
         Me.tvAdministrativo.SelectedImageIndex = 0
         Me.tvAdministrativo.Size = New System.Drawing.Size(442, 129)
         Me.tvAdministrativo.TabIndex = 17
@@ -688,19 +722,19 @@ Partial Class PADRE
         Me.tvAcademico.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tvAcademico.ImageKey = "Custom-Icon-Design-Pretty-Office-3-Product-sales-report.ico"
         Me.tvAcademico.ImageList = Me.ImageList1
-        Me.tvAcademico.Location = New System.Drawing.Point(167, 27)
+        Me.tvAcademico.Location = New System.Drawing.Point(182, 44)
         Me.tvAcademico.Name = "tvAcademico"
-        TreeNode28.Name = "Nodo3"
-        TreeNode28.Text = "Lista Alumnos"
-        TreeNode29.Name = "Nodo0"
-        TreeNode29.Text = "Lista Cumpleaños"
-        TreeNode30.Name = "Nodo1"
-        TreeNode30.Text = "Lista Asistencia"
-        TreeNode31.Name = "Nodo2"
-        TreeNode31.Text = "Lista Correos"
-        TreeNode32.Name = "NTodos"
-        TreeNode32.Text = "Reportes Academicos"
-        Me.tvAcademico.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode32})
+        TreeNode7.Name = "Nodo3"
+        TreeNode7.Text = "Lista Alumnos"
+        TreeNode8.Name = "Nodo0"
+        TreeNode8.Text = "Lista Cumpleaños"
+        TreeNode9.Name = "Nodo1"
+        TreeNode9.Text = "Lista Asistencia"
+        TreeNode10.Name = "Nodo2"
+        TreeNode10.Text = "Lista Correos"
+        TreeNode11.Name = "NTodos"
+        TreeNode11.Text = "Reportes Academicos"
+        Me.tvAcademico.Nodes.AddRange(New System.Windows.Forms.TreeNode() {TreeNode11})
         Me.tvAcademico.SelectedImageIndex = 0
         Me.tvAcademico.Size = New System.Drawing.Size(442, 129)
         Me.tvAcademico.TabIndex = 18
@@ -717,15 +751,29 @@ Partial Class PADRE
         '
         'AbrirSesionToolStripMenuItem
         '
+        Me.AbrirSesionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SalirToolStripMenuItem})
         Me.AbrirSesionToolStripMenuItem.Name = "AbrirSesionToolStripMenuItem"
-        Me.AbrirSesionToolStripMenuItem.Size = New System.Drawing.Size(82, 20)
-        Me.AbrirSesionToolStripMenuItem.Text = "Abrir Sesion"
+        Me.AbrirSesionToolStripMenuItem.Size = New System.Drawing.Size(60, 20)
+        Me.AbrirSesionToolStripMenuItem.Text = "Archivo"
+        '
+        'SalirToolStripMenuItem
+        '
+        Me.SalirToolStripMenuItem.Name = "SalirToolStripMenuItem"
+        Me.SalirToolStripMenuItem.Size = New System.Drawing.Size(96, 22)
+        Me.SalirToolStripMenuItem.Text = "Salir"
         '
         'CerrarSesionToolStripMenuItem
         '
+        Me.CerrarSesionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RegresarCorteDiarioToolStripMenuItem})
         Me.CerrarSesionToolStripMenuItem.Name = "CerrarSesionToolStripMenuItem"
-        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(88, 20)
-        Me.CerrarSesionToolStripMenuItem.Text = "Cerrar Sesion"
+        Me.CerrarSesionToolStripMenuItem.Size = New System.Drawing.Size(69, 20)
+        Me.CerrarSesionToolStripMenuItem.Text = "Opciones"
+        '
+        'RegresarCorteDiarioToolStripMenuItem
+        '
+        Me.RegresarCorteDiarioToolStripMenuItem.Name = "RegresarCorteDiarioToolStripMenuItem"
+        Me.RegresarCorteDiarioToolStripMenuItem.Size = New System.Drawing.Size(185, 22)
+        Me.RegresarCorteDiarioToolStripMenuItem.Text = "Regresar Corte Diario"
         '
         'ConfiguracionSistemaToolStripMenuItem
         '
@@ -745,6 +793,36 @@ Partial Class PADRE
         Me.Ticket.Name = "Ticket"
         Me.Ticket.Size = New System.Drawing.Size(204, 22)
         Me.Ticket.Text = "Definir Impresora Tickets"
+        '
+        'TValidarCierre
+        '
+        Me.TValidarCierre.Enabled = True
+        Me.TValidarCierre.Interval = 7000
+        '
+        'ToolStripSeparator5
+        '
+        Me.ToolStripSeparator5.Name = "ToolStripSeparator5"
+        Me.ToolStripSeparator5.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator6
+        '
+        Me.ToolStripSeparator6.Name = "ToolStripSeparator6"
+        Me.ToolStripSeparator6.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator9
+        '
+        Me.ToolStripSeparator9.Name = "ToolStripSeparator9"
+        Me.ToolStripSeparator9.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator10
+        '
+        Me.ToolStripSeparator10.Name = "ToolStripSeparator10"
+        Me.ToolStripSeparator10.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripSeparator11
+        '
+        Me.ToolStripSeparator11.Name = "ToolStripSeparator11"
+        Me.ToolStripSeparator11.Size = New System.Drawing.Size(6, 25)
         '
         'PADRE
         '
@@ -851,4 +929,12 @@ Partial Class PADRE
     Friend WithEvents ToolStripSeparator2 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents ToolStripLabel4 As System.Windows.Forms.ToolStripLabel
     Friend WithEvents tsImpresora As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents TValidarCierre As System.Windows.Forms.Timer
+    Friend WithEvents SalirToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents RegresarCorteDiarioToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator5 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator6 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator9 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator11 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripSeparator10 As System.Windows.Forms.ToolStripSeparator
 End Class

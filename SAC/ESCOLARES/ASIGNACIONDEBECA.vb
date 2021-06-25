@@ -207,8 +207,8 @@ Public Class ASIGNACIONDEBECA
 
     Private Sub ASIGNACIONDEBECA_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
 
-        GPINSCRIPCIONES.Hide()
-        GPMENSUALIDADES.Hide()
+        'GPINSCRIPCIONES.Hide()
+        'GPMENSUALIDADES.Hide()
         'TODO: This line of code loads data into the 'SACDataSet.SELECCIONARESCOLARIDAD' table. You can move, or remove it, as needed.
         Me.SELECCIONARESCOLARIDADTableAdapter.Fill(Me.SACDataSet.SELECCIONARESCOLARIDAD)
 

@@ -221,8 +221,8 @@ Public Class REINSCRIPCION
             End If
 
             MsgBox("ALUMNO REINSCRITO SATISFACTORIAMENTE", MsgBoxStyle.Information, "GRACIAS")
-            My.Forms.ESCOLARES.MdiParent = PADRE
-            My.Forms.ESCOLARES.Show()
+            'My.Forms.ESCOLARES.MdiParent = PADRE
+            'My.Forms.ESCOLARES.Show()
             Me.Close()
 
         Catch ex As System.Exception
@@ -233,8 +233,8 @@ Public Class REINSCRIPCION
     End Sub
 
     Private Sub CMDCANCELAR_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CMDCANCELAR.Click
-        My.Forms.ESCOLARES.MdiParent = PADRE
-        My.Forms.ESCOLARES.Show()
+        'My.Forms.ESCOLARES.MdiParent = PADRE
+        'My.Forms.ESCOLARES.Show()
         Me.Close()
     End Sub
 

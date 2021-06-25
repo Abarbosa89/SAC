@@ -3,6 +3,8 @@ Imports System.Data
 Public Class ADEUDOSPRODUCTOS
     Dim ABONO As Decimal
     Dim TOTAL As Decimal
+    Dim dtPaso As New DataTable
+    Dim sSQL As String = ""
 
 
     Private Sub FillToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -11,23 +13,23 @@ Public Class ADEUDOSPRODUCTOS
     End Sub
 
     Private Sub ADEUDOSPRODUCTOS_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        LBLIDPRODUC.Hide()
 
-        LBLRECIBOMAX.Hide()
-        LBLCONCEPTO.Hide()
         Try
 
             Me.SELECCIONARADEUDOSARTICULOSTableAdapter.Fill(Me.SACDataSet.SELECCIONARADEUDOSARTICULOS, New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.CBOALUMNO.SelectedValue, Integer)))
 
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
 
+            Dim drPaso As DataRow
+            sSQL = "EXEC dbo.NUEVORECIBOFOLIOFACTURA 2"
+            dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+            drPaso = dtPaso.Rows(0)
+            LBLNVORECIBO.Text = CInt(drPaso("NOFOLIO").ToString) + 1
 
-        Try
-            Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(2, Integer)))
+            'Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(2, Integer)))
+            'LBLNVORECIBO.Text = CInt(LBLRECIBOMAX.Text) + 1
+
             Me.SELECCIONARADEUDOSARTICULOSTableAdapter.Fill(Me.SACDataSet.SELECCIONARADEUDOSARTICULOS, New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.CBOALUMNO.SelectedValue, Integer)))
-            LBLNVORECIBO.Text = CInt(LBLRECIBOMAX.Text) + 1
+
 
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
@@ -106,8 +108,8 @@ Public Class ADEUDOSPRODUCTOS
                 com.ExecuteNonQuery()
                 con.Close()
 
-                My.Forms.RECIBOPRODUCTOSS.MdiParent = PADRE
-                My.Forms.RECIBOPRODUCTOSS.Show()
+
+                My.Forms.RECIBOPRODUCTOSS.ShowDialog()
             ElseIf BAND = 2 Then
 
                 con.Open()
@@ -145,8 +147,8 @@ Public Class ADEUDOSPRODUCTOS
                 com.Parameters.Add("@ACTIVIDAD", SqlDbType.NVarChar).Value = "LIQUIDACION AL ADEUDO CON RECIBO " & LBLNVORECIBO.Text
                 com.ExecuteNonQuery()
                 con.Close()
-                My.Forms.RECIBOPRODUCTOSS.MdiParent = PADRE
-                My.Forms.RECIBOPRODUCTOSS.Show()
+
+                My.Forms.RECIBOPRODUCTOSS.ShowDialog()
 
             End If
 

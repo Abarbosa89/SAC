@@ -188,7 +188,7 @@ Partial Class ADEUDOSPRODUCTOS
         'LBLRECIBOMAX
         '
         Me.LBLRECIBOMAX.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NUEVORECIBOFOLIOFACTURABindingSource, "NOFOLIO", True))
-        Me.LBLRECIBOMAX.Location = New System.Drawing.Point(244, 181)
+        Me.LBLRECIBOMAX.Location = New System.Drawing.Point(26, 365)
         Me.LBLRECIBOMAX.Name = "LBLRECIBOMAX"
         Me.LBLRECIBOMAX.Size = New System.Drawing.Size(100, 23)
         Me.LBLRECIBOMAX.TabIndex = 50
@@ -197,7 +197,7 @@ Partial Class ADEUDOSPRODUCTOS
         'LBLNVORECIBO
         '
         Me.LBLNVORECIBO.AutoSize = True
-        Me.LBLNVORECIBO.Location = New System.Drawing.Point(239, 204)
+        Me.LBLNVORECIBO.Location = New System.Drawing.Point(21, 388)
         Me.LBLNVORECIBO.Name = "LBLNVORECIBO"
         Me.LBLNVORECIBO.Size = New System.Drawing.Size(102, 18)
         Me.LBLNVORECIBO.TabIndex = 51
@@ -242,7 +242,7 @@ Partial Class ADEUDOSPRODUCTOS
         'LBLIDPRODUC
         '
         Me.LBLIDPRODUC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARADEUDOSARTICULOSBindingSource, "idproduc", True))
-        Me.LBLIDPRODUC.Location = New System.Drawing.Point(239, 222)
+        Me.LBLIDPRODUC.Location = New System.Drawing.Point(21, 406)
         Me.LBLIDPRODUC.Name = "LBLIDPRODUC"
         Me.LBLIDPRODUC.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDPRODUC.TabIndex = 58
@@ -251,7 +251,7 @@ Partial Class ADEUDOSPRODUCTOS
         'LBLCONCEPTO
         '
         Me.LBLCONCEPTO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARADEUDOSARTICULOSBindingSource, "concep", True))
-        Me.LBLCONCEPTO.Location = New System.Drawing.Point(14, 238)
+        Me.LBLCONCEPTO.Location = New System.Drawing.Point(192, 388)
         Me.LBLCONCEPTO.Name = "LBLCONCEPTO"
         Me.LBLCONCEPTO.Size = New System.Drawing.Size(100, 23)
         Me.LBLCONCEPTO.TabIndex = 59
@@ -261,7 +261,7 @@ Partial Class ADEUDOSPRODUCTOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(609, 256)
+        Me.ClientSize = New System.Drawing.Size(609, 255)
         Me.Controls.Add(Me.LBLCONCEPTO)
         Me.Controls.Add(Me.LBLIDPRODUC)
         Me.Controls.Add(Me.LBLNVARESTA)

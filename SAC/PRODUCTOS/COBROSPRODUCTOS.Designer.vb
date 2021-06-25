@@ -365,7 +365,7 @@ Partial Class COBROSPRODUCTOS
         Me.CMDCANCELAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CMDCANCELAR.Image = Global.SAC.My.Resources.Resources.ELIMINAR_REGISTRO
         Me.CMDCANCELAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CMDCANCELAR.Location = New System.Drawing.Point(476, 300)
+        Me.CMDCANCELAR.Location = New System.Drawing.Point(446, 329)
         Me.CMDCANCELAR.Name = "CMDCANCELAR"
         Me.CMDCANCELAR.Size = New System.Drawing.Size(100, 57)
         Me.CMDCANCELAR.TabIndex = 65
@@ -379,7 +379,7 @@ Partial Class COBROSPRODUCTOS
         Me.CMDIMPRIMIR.Enabled = False
         Me.CMDIMPRIMIR.Image = Global.SAC.My.Resources.Resources.PRINTER
         Me.CMDIMPRIMIR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CMDIMPRIMIR.Location = New System.Drawing.Point(370, 300)
+        Me.CMDIMPRIMIR.Location = New System.Drawing.Point(340, 329)
         Me.CMDIMPRIMIR.Name = "CMDIMPRIMIR"
         Me.CMDIMPRIMIR.Size = New System.Drawing.Size(100, 57)
         Me.CMDIMPRIMIR.TabIndex = 64
@@ -396,7 +396,7 @@ Partial Class COBROSPRODUCTOS
         'LBLCONCEPTOBASE
         '
         Me.LBLCONCEPTOBASE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBROSDEPRODUCTOSBindingSource, "concep", True))
-        Me.LBLCONCEPTOBASE.Location = New System.Drawing.Point(158, 369)
+        Me.LBLCONCEPTOBASE.Location = New System.Drawing.Point(8, 611)
         Me.LBLCONCEPTOBASE.Name = "LBLCONCEPTOBASE"
         Me.LBLCONCEPTOBASE.Size = New System.Drawing.Size(100, 23)
         Me.LBLCONCEPTOBASE.TabIndex = 66
@@ -405,7 +405,7 @@ Partial Class COBROSPRODUCTOS
         'LBLMONTOBASE
         '
         Me.LBLMONTOBASE.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBROSDEPRODUCTOSBindingSource, "monto", True))
-        Me.LBLMONTOBASE.Location = New System.Drawing.Point(158, 300)
+        Me.LBLMONTOBASE.Location = New System.Drawing.Point(8, 542)
         Me.LBLMONTOBASE.Name = "LBLMONTOBASE"
         Me.LBLMONTOBASE.Size = New System.Drawing.Size(100, 23)
         Me.LBLMONTOBASE.TabIndex = 67
@@ -534,7 +534,7 @@ Partial Class COBROSPRODUCTOS
         'LBLIDPRODUC
         '
         Me.LBLIDPRODUC.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBROSDEPRODUCTOSBindingSource, "idproduc", True))
-        Me.LBLIDPRODUC.Location = New System.Drawing.Point(158, 323)
+        Me.LBLIDPRODUC.Location = New System.Drawing.Point(8, 565)
         Me.LBLIDPRODUC.Name = "LBLIDPRODUC"
         Me.LBLIDPRODUC.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDPRODUC.TabIndex = 79
@@ -552,7 +552,7 @@ Partial Class COBROSPRODUCTOS
         'LBLNORECIBO
         '
         Me.LBLNORECIBO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.NUEVORECIBOFOLIOFACTURABindingSource, "NOFOLIO", True))
-        Me.LBLNORECIBO.Location = New System.Drawing.Point(582, 300)
+        Me.LBLNORECIBO.Location = New System.Drawing.Point(151, 554)
         Me.LBLNORECIBO.Name = "LBLNORECIBO"
         Me.LBLNORECIBO.Size = New System.Drawing.Size(100, 23)
         Me.LBLNORECIBO.TabIndex = 81
@@ -561,7 +561,7 @@ Partial Class COBROSPRODUCTOS
         'LBLNVORECIBO
         '
         Me.LBLNVORECIBO.AutoSize = True
-        Me.LBLNVORECIBO.Location = New System.Drawing.Point(582, 323)
+        Me.LBLNVORECIBO.Location = New System.Drawing.Point(151, 577)
         Me.LBLNVORECIBO.Name = "LBLNVORECIBO"
         Me.LBLNVORECIBO.Size = New System.Drawing.Size(105, 20)
         Me.LBLNVORECIBO.TabIndex = 82
@@ -685,7 +685,7 @@ Partial Class COBROSPRODUCTOS
         'LBLDESCRIPCION
         '
         Me.LBLDESCRIPCION.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.COBROSDEPRODUCTOSBindingSource, "descripcion", True))
-        Me.LBLDESCRIPCION.Location = New System.Drawing.Point(158, 346)
+        Me.LBLDESCRIPCION.Location = New System.Drawing.Point(8, 588)
         Me.LBLDESCRIPCION.Name = "LBLDESCRIPCION"
         Me.LBLDESCRIPCION.Size = New System.Drawing.Size(100, 23)
         Me.LBLDESCRIPCION.TabIndex = 94
@@ -694,7 +694,7 @@ Partial Class COBROSPRODUCTOS
         'LBLABONADO
         '
         Me.LBLABONADO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRODUCTOSABONADOSBindingSource, "LIQUIDADO", True))
-        Me.LBLABONADO.Location = New System.Drawing.Point(370, 360)
+        Me.LBLABONADO.Location = New System.Drawing.Point(151, 531)
         Me.LBLABONADO.Name = "LBLABONADO"
         Me.LBLABONADO.Size = New System.Drawing.Size(100, 23)
         Me.LBLABONADO.TabIndex = 96
@@ -708,7 +708,7 @@ Partial Class COBROSPRODUCTOS
         'LBLLIQUIDADO
         '
         Me.LBLLIQUIDADO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.PRODUCTOSLIQUIDADOSBindingSource, "LIQUIDADO", True))
-        Me.LBLLIQUIDADO.Location = New System.Drawing.Point(472, 360)
+        Me.LBLLIQUIDADO.Location = New System.Drawing.Point(151, 597)
         Me.LBLLIQUIDADO.Name = "LBLLIQUIDADO"
         Me.LBLLIQUIDADO.Size = New System.Drawing.Size(100, 23)
         Me.LBLLIQUIDADO.TabIndex = 98
@@ -771,12 +771,13 @@ Partial Class COBROSPRODUCTOS
         Me.GPOPRODUCTOS.Controls.Add(Me.Label3)
         Me.GPOPRODUCTOS.Controls.Add(Me.Label2)
         Me.GPOPRODUCTOS.Controls.Add(Me.Label1)
-        Me.GPOPRODUCTOS.Location = New System.Drawing.Point(10, 52)
+        Me.GPOPRODUCTOS.Location = New System.Drawing.Point(305, 422)
         Me.GPOPRODUCTOS.Name = "GPOPRODUCTOS"
         Me.GPOPRODUCTOS.Size = New System.Drawing.Size(923, 242)
         Me.GPOPRODUCTOS.TabIndex = 99
         Me.GPOPRODUCTOS.TabStop = False
         Me.GPOPRODUCTOS.Text = "PRODUCTOS AGREGADOS"
+        Me.GPOPRODUCTOS.Visible = False
         '
         'LBLIDPRODUC5
         '
@@ -826,7 +827,7 @@ Partial Class COBROSPRODUCTOS
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(757, 297)
+        Me.Label6.Location = New System.Drawing.Point(727, 326)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(122, 20)
         Me.Label6.TabIndex = 101
@@ -837,7 +838,7 @@ Partial Class COBROSPRODUCTOS
         Me.CBOTIPOPAGO.DataSource = Me.TIPOSDEPAGOBindingSource
         Me.CBOTIPOPAGO.DisplayMember = "tipopago"
         Me.CBOTIPOPAGO.FormattingEnabled = True
-        Me.CBOTIPOPAGO.Location = New System.Drawing.Point(724, 323)
+        Me.CBOTIPOPAGO.Location = New System.Drawing.Point(694, 352)
         Me.CBOTIPOPAGO.Name = "CBOTIPOPAGO"
         Me.CBOTIPOPAGO.Size = New System.Drawing.Size(189, 28)
         Me.CBOTIPOPAGO.TabIndex = 100
@@ -866,13 +867,14 @@ Partial Class COBROSPRODUCTOS
         '
         'DataGridView1
         '
+        Me.DataGridView1.AllowUserToAddRows = False
         Me.DataGridView1.AllowUserToDeleteRows = False
         Me.DataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(22, 395)
+        Me.DataGridView1.Location = New System.Drawing.Point(12, 52)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.Size = New System.Drawing.Size(910, 264)
+        Me.DataGridView1.Size = New System.Drawing.Size(929, 264)
         Me.DataGridView1.TabIndex = 102
         '
         'SeleccionartutoresTableAdapter1
@@ -883,7 +885,7 @@ Partial Class COBROSPRODUCTOS
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(953, 386)
+        Me.ClientSize = New System.Drawing.Size(953, 398)
         Me.ControlBox = False
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label6)
@@ -905,7 +907,7 @@ Partial Class COBROSPRODUCTOS
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Margin = New System.Windows.Forms.Padding(4, 5, 4, 5)
         Me.Name = "COBROSPRODUCTOS"
-        Me.Text = "COBROSPRODUCTOS"
+        Me.Text = "COBROS DE PRODUCTOS"
         CType(Me.COBROSDEPRODUCTOSBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.NUEVORECIBOFOLIOFACTURABindingSource, System.ComponentModel.ISupportInitialize).EndInit()

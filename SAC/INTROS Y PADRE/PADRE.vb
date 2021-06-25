@@ -3,7 +3,10 @@ Imports System.Data
 Imports System.Drawing.Printing
 Imports System
 Public Class PADRE
-
+    Dim sSQL As String = ""
+    Dim D1 As New DataTable
+    Dim dImpresoras As New DataTable
+    Dim DR1 As DataRow
     Private Sub PADRE_FormClosed(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosedEventArgs) Handles Me.FormClosed
 
     End Sub
@@ -40,12 +43,20 @@ Public Class PADRE
                 TSREPORTESACADEMICOS.Visible = False
                 TSBADEUDOSARTICULOS.Visible = False
             End If
+
             TINABILITAR.Enabled = True
             TSFECHA.Text = FECHASERLabel1.Text
             TSCICLOESCOLAR.Text = LBLCICLO.Text
+            FechaActual = Mid(TSFECHA.Text, 7, 4) & "-" & Mid(TSFECHA.Text, 4, 2) & "-" & Mid(TSFECHA.Text, 1, 2)
+
 
             AgregaImpresoras()
             AgregaImpresorasTicket()
+            CargoImpresoras()
+
+            Me.Text = ": : : : COLEGIO DUMONT Versión  " & My.Application.Info.Version.ToString & " : : : :" & "                   Fecha de Ultimo Corte: " & DameFechaUltimoCorte()
+
+            FechaCIerre = DameFechaUltimoCorte()
 
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
@@ -167,8 +178,7 @@ Public Class PADRE
 
     Private Sub TSCAMBIARCICLO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSCAMBIARCICLO.Click
         MuestraMenu("Sin Menu")
-        My.Forms.CAMBIARCICLO.MdiParent = Me
-        My.Forms.CAMBIARCICLO.Show()
+        My.Forms.CAMBIARCICLO.ShowDialog()
     End Sub
 
     Private Sub FillToolStripButton_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -177,22 +187,22 @@ Public Class PADRE
     End Sub
 
     Private Sub TSBCORTEDIARIO_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TSBCORTEDIARIO.Click
-        Try
-            ' RESPALDAR BASE DE DATOS
-            Dim fecha As String
-            fecha = TSFECHA.Text
-            fecha = fecha.Replace("/", "-")
-            Dim com As SqlCommand = con.CreateCommand()
-            con.Open()
-            com = New SqlCommand("BACKUPSAC", con)
-            com.CommandType = CommandType.StoredProcedure
-            com.Parameters.Add("@FECHA", SqlDbType.NVarChar).Value = fecha
-            com.ExecuteNonQuery()
-            con.Close()
+        'Try
+        '    ' RESPALDAR BASE DE DATOS
+        '    Dim fecha As String
+        '    fecha = TSFECHA.Text
+        '    fecha = fecha.Replace("/", "-")
+        '    Dim com As SqlCommand = con.CreateCommand()
+        '    con.Open()
+        '    com = New SqlCommand("BACKUPSAC", con)
+        '    com.CommandType = CommandType.StoredProcedure
+        '    com.Parameters.Add("@FECHA", SqlDbType.NVarChar).Value = fecha
+        '    com.ExecuteNonQuery()
+        '    con.Close()
 
-        Catch
-            con.Close()
-        End Try
+        'Catch
+        '    con.Close()
+        'End Try
 
         My.Forms.CORTEDIARIOO.MdiParent = Me
         My.Forms.CORTEDIARIOO.Show()
@@ -307,30 +317,71 @@ Public Class PADRE
             Case "Crear Nuevo Ciclo"
                 My.Forms.AgregarNuevoCiclo.ShowDialog()
             Case "Corte Diario"
-                Try
-                    ' RESPALDAR BASE DE DATOS
-                    Dim fecha As String
-                    fecha = TSFECHA.Text
-                    fecha = fecha.Replace("/", "-")
-                    Dim com As SqlCommand = con.CreateCommand()
-                    con.Open()
-                    com = New SqlCommand("BACKUPSAC", con)
-                    com.CommandType = CommandType.StoredProcedure
-                    com.Parameters.Add("@FECHA", SqlDbType.NVarChar).Value = fecha
-                    com.ExecuteNonQuery()
-                    con.Close()
+                If FechaActual = FechaCIerre Then
+                    MsgBox("La fecha actual, ya se encuentra cerrada, no se puede realizar el Corte Diario.", MsgBoxStyle.Information, Me.Text)
+                Else
+                    If MsgBox("Va a realizar el Corte Diario, tenga en cuenta que al realizar esta accion ya no podra realizar movimientos." & vbCrLf & vbCrLf & "Desea realizar el Corte Diario?", MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.Yes Then
+                        'Try
+                        '    ' RESPALDAR BASE DE DATOS
+                        '    Dim fecha As String
+                        '    fecha = TSFECHA.Text
+                        '    fecha = fecha.Replace("/", "-")
+                        '    Dim com As SqlCommand = con.CreateCommand()
+                        '    con.Open()
+                        '    com = New SqlCommand("BACKUPSAC", con)
+                        '    com.CommandType = CommandType.StoredProcedure
+                        '    com.Parameters.Add("@FECHA", SqlDbType.NVarChar).Value = fecha
+                        '    com.ExecuteNonQuery()
+                        '    con.Close()
 
-                Catch
-                    con.Close()
-                End Try
+                        'Catch
+                        '    con.Close()
+                        'End Try
+
+                        D1 = New DataTable
+                        sSQL = "SELECT SUM(total) AS TOTAL FROM MOVIMIENTOS "
+                        sSQL = sSQL & "WHERE idmov <> 1 AND fecha = CONVERT(DATETIME, '" & Mid(TSFECHA.Text, 7, 4) & "-" & Mid(TSFECHA.Text, 4, 2) & "-" & Mid(TSFECHA.Text, 1, 2) & " 00:00:00', 102)"
+                        D1 = sqlServer.ExecSQLReturnDT(sSQL)
+                        If Not D1 Is Nothing AndAlso D1.Rows.Count > 0 Then
+                            DR1 = D1.Rows(0)
+                            sSQL = "INSERT INTO CIERREDIARIO (FechaCorte, Total, Usuario) "
+                            sSQL = sSQL & "VALUES ('" & Mid(TSFECHA.Text, 7, 4) & "-" & Mid(TSFECHA.Text, 4, 2) & "-" & Mid(TSFECHA.Text, 1, 2) & "'," & IIf(IsDBNull(DR1("TOTAL")), 0, DR1("TOTAL")) & "," & Intro.IdusLabel1.Text & ")"
+                            sqlServer.ExecSQL(sSQL)
+                        Else
+
+                        End If
+
+                        My.Forms.CORTEDIARIOO.ShowDialog()
 
 
-                My.Forms.CORTEDIARIOO.ShowDialog()
+                    Else
+
+
+                    End If
+                End If
+
+
+            Case "Corte Diario por Fecha"
+                My.Forms.FECHASCORTEPORFECHAS.ShowDialog()
+            Case "Actividad de Usuario"
+                My.Forms.ACTIVIDADUSUARIOS.ShowDialog()
+            Case "Clientes Piden Factura"
+                My.Forms.FECHASPIDENFACTURA.ShowDialog()
+            Case "Pedidos de Uniformes"
+                My.Forms.RANGOFECHASPEDIDOUNIFORMES.ShowDialog()
+            Case "Becas Asignadas"
+                My.Forms.BECASASIGNADASS.ShowDialog()
+            Case "Costos de Productos"
+                My.Forms.REPORTESCOSTOS.ShowDialog()
         End Select
     End Sub
 
     Private Sub tlsCobros_Click(sender As Object, e As EventArgs) Handles tlsCobros.Click
-        MuestraMenu("Cobros")
+        If FechaActual = FechaCIerre Then
+            MsgBox("La fecha actual, ya se encuentra cerrada, no se pueden realizar movimientos.", MsgBoxStyle.Information, Me.Text)
+        Else
+            MuestraMenu("Cobros")
+        End If
     End Sub
 
     Private Sub tvCobros_DoubleClick(sender As Object, e As EventArgs) Handles tvCobros.DoubleClick
@@ -415,7 +466,29 @@ Public Class PADRE
 
         End If
     End Sub
+    Private Sub CargoImpresoras()
+        '----- Agrego Todas las Impresoras disponibles en Windows
+        dImpresoras = New DataTable
+        sSQL = "SELECT * FROM IMPRESORAS "
+        dImpresoras = sqlServer.ExecSQLReturnDT(sSQL)
+        Dim drImpresoras As DataRow
+        If DataVacio(dImpresoras) = False Then
+            Dim x As Integer
+            For x = 0 To dImpresoras.Rows.Count - 1
+                drImpresoras = dImpresoras.Rows(x)
+                If drImpresoras("Tipo") = 1 Then
+                    ImpTicketGLOBAL = drImpresoras("Impresora")
+                    tsImpresoraTi.Text = ImpTicketGLOBAL
+                Else
+                    ImpresoraGLOBAL = drImpresoras("Impresora")
+                    tsImpresora.Text = ImpresoraGLOBAL
+                End If
+            Next
+        Else
+            MsgBox("No hay impresoras seleccionadas.", MsgBoxStyle.Information, Me.Text)
+        End If
 
+    End Sub
 
     Private Sub AgregaImpresoras()
         '----- Agrego Todas las Impresoras disponibles en Windows
@@ -448,10 +521,60 @@ Public Class PADRE
     Private Sub Impresora_DropDownItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles Impresora.DropDownItemClicked
         ImpresoraGLOBAL = e.ClickedItem.Text
         tsImpresora.Text = ImpresoraGLOBAL
+
+        dImpresoras = New DataTable
+        sSQL = "SELECT * FROM IMPRESORAS WHERE Tipo = 2"
+        dImpresoras = sqlServer.ExecSQLReturnDT(sSQL)
+        If DataVacio(dImpresoras) = True Then
+            sSQL = "INSERT INTO IMPRESORAS (Impresora, Tickets, Tipo) " & _
+                   "VALUES ('" & ImpresoraGLOBAL & "',0,2) "
+            sqlServer.ExecSQL(sSQL)
+        Else
+            sSQL = "UPDATE IMPRESORAS SET Impresora = '" & ImpresoraGLOBAL & "' WHERE Tipo = 2"
+            sqlServer.ExecSQL(sSQL)
+        End If
+
     End Sub
 
     Private Sub Ticket_DropDownItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles Ticket.DropDownItemClicked
         ImpTicketGLOBAL = e.ClickedItem.Text
         tsImpresoraTi.Text = ImpTicketGLOBAL
+
+        dImpresoras = New DataTable
+        sSQL = "SELECT * FROM IMPRESORAS WHERE Tipo = 1"
+        dImpresoras = sqlServer.ExecSQLReturnDT(sSQL)
+        If DataVacio(dImpresoras) = True Then
+            sSQL = "INSERT INTO IMPRESORAS (Impresora, Tickets, Tipo) " & _
+                   "VALUES ('" & ImpTicketGLOBAL & "',1,1) "
+            sqlServer.ExecSQL(sSQL)
+        Else
+            sSQL = "UPDATE IMPRESORAS SET Impresora = '" & ImpTicketGLOBAL & "' WHERE Tipo = 1"
+            sqlServer.ExecSQL(sSQL)
+        End If
+    End Sub
+
+    Private Sub TValidarCierre_Tick(sender As Object, e As EventArgs) Handles TValidarCierre.Tick
+        Me.Text = ": : : : COLEGIO DUMONT Versión  " & My.Application.Info.Version.ToString & " : : : :" & "                   Fecha de Ultimo Corte: " & DameFechaUltimoCorte()
+        FechaCIerre = DameFechaUltimoCorte()
+    End Sub
+
+    Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SalirToolStripMenuItem.Click
+        End
+    End Sub
+
+    Private Sub RegresarCorteDiarioToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles RegresarCorteDiarioToolStripMenuItem.Click
+        Dim sSQL As String = ""
+
+        If MsgBox("Desea regresar el Corte Diario del " & FechaCIerre & "?", MsgBoxStyle.YesNo, Me.Text) = MsgBoxResult.Yes Then
+            sSQL = "DELETE FROM CIERREDIARIO WHERE FechaCorte = '" & FechaCIerre & "'"
+            sqlServer.ExecSQL(sSQL)
+            MsgBox("Se ah regresado el Corte Diario", MsgBoxStyle.Information, Me.Text)
+        Else
+
+        End If
+    End Sub
+
+    Private Sub Impresora_Click(sender As Object, e As EventArgs) Handles Impresora.Click
+
     End Sub
 End Class

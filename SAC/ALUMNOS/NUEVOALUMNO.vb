@@ -135,8 +135,8 @@ Public Class NUEVOALUMNO
             com.Parameters.Add("@MATRICULA", SqlDbType.Int).Value = TXTMATRICULA.Text
             com.ExecuteNonQuery()
             con.Close()
-            My.Forms.ESCOLARES.MdiParent = PADRE
-            My.Forms.ESCOLARES.Show()
+            'My.Forms.ESCOLARES.MdiParent = PADRE
+            'My.Forms.ESCOLARES.Show()
             Me.Close()
         Catch
             con.Close()

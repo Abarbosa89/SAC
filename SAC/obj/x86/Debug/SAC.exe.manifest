@@ -4,7 +4,7 @@
   <description asmv2:iconFile="DUMONT.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="SAC" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="SAC" version="21.6.24.0" language="neutral" processorArchitecture="x86" />
     <commandLine file="SAC.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -164,14 +164,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAC.exe" size="46817792">
-      <assemblyIdentity name="SAC" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAC.exe" size="46826496">
+      <assemblyIdentity name="SAC" version="21.6.24.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>bqo0U8Idvyq4j6bBYXePAN7ClNk=</dsig:DigestValue>
+        <dsig:DigestValue>Jj/EPF+ZWDwVGOzNgPiyzSSF4wI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

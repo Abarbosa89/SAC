@@ -28,6 +28,7 @@ Partial Class UNIFORMES
         Me.SACDataSet = New SAC.SACDataSet()
         Me.TableAdapterManager = New SAC.SACDataSetTableAdapters.TableAdapterManager()
         Me.CBOUNIFORMES = New System.Windows.Forms.ComboBox()
+        Me.SELECCIONARUNIFORMESPORSEXOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.Button13 = New System.Windows.Forms.Button()
         Me.LBLCANT5 = New System.Windows.Forms.Label()
         Me.LBLCANT4 = New System.Windows.Forms.Label()
@@ -91,13 +92,14 @@ Partial Class UNIFORMES
         Me.LBLIDPRINTMAX = New System.Windows.Forms.Label()
         Me.LBLIDPRINTNEW = New System.Windows.Forms.Label()
         Me.CMDIMPRIMIT = New System.Windows.Forms.Button()
-        Me.SELECCIONARUNIFORMESPORSEXOBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SELECCIONARUNIFORMESPORSEXOTableAdapter = New SAC.SACDataSetTableAdapters.SELECCIONARUNIFORMESPORSEXOTableAdapter()
+        Me.dgvUniformes = New System.Windows.Forms.DataGridView()
         MontoLabel = New System.Windows.Forms.Label()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SELECCIONARUNIFORMESPORSEXOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
         CType(Me.SELECCIONARPRINTMAXIMOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.SELECCIONARUNIFORMESPORSEXOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvUniformes, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'MontoLabel
@@ -132,6 +134,11 @@ Partial Class UNIFORMES
         Me.CBOUNIFORMES.Size = New System.Drawing.Size(572, 26)
         Me.CBOUNIFORMES.TabIndex = 0
         Me.CBOUNIFORMES.ValueMember = "iduniform"
+        '
+        'SELECCIONARUNIFORMESPORSEXOBindingSource
+        '
+        Me.SELECCIONARUNIFORMESPORSEXOBindingSource.DataMember = "SELECCIONARUNIFORMESPORSEXO"
+        Me.SELECCIONARUNIFORMESPORSEXOBindingSource.DataSource = Me.SACDataSet
         '
         'Button13
         '
@@ -613,7 +620,7 @@ Partial Class UNIFORMES
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(385, 394)
+        Me.Label3.Location = New System.Drawing.Point(251, 392)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(69, 20)
         Me.Label3.TabIndex = 140
@@ -623,7 +630,7 @@ Partial Class UNIFORMES
         '
         Me.LBLTOTAL.AutoSize = True
         Me.LBLTOTAL.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.LBLTOTAL.Location = New System.Drawing.Point(465, 394)
+        Me.LBLTOTAL.Location = New System.Drawing.Point(331, 392)
         Me.LBLTOTAL.Name = "LBLTOTAL"
         Me.LBLTOTAL.Size = New System.Drawing.Size(19, 20)
         Me.LBLTOTAL.TabIndex = 141
@@ -682,7 +689,7 @@ Partial Class UNIFORMES
         Me.GroupBox1.Controls.Add(Me.LBLCONCEPTO1)
         Me.GroupBox1.Controls.Add(Me.Label2)
         Me.GroupBox1.Controls.Add(Me.Label1)
-        Me.GroupBox1.Location = New System.Drawing.Point(14, 73)
+        Me.GroupBox1.Location = New System.Drawing.Point(19, 552)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(689, 321)
         Me.GroupBox1.TabIndex = 142
@@ -773,7 +780,7 @@ Partial Class UNIFORMES
         'LBLIDPRINTMAX
         '
         Me.LBLIDPRINTMAX.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELECCIONARPRINTMAXIMOBindingSource, "IDPRINT", True))
-        Me.LBLIDPRINTMAX.Location = New System.Drawing.Point(11, 469)
+        Me.LBLIDPRINTMAX.Location = New System.Drawing.Point(615, 526)
         Me.LBLIDPRINTMAX.Name = "LBLIDPRINTMAX"
         Me.LBLIDPRINTMAX.Size = New System.Drawing.Size(100, 23)
         Me.LBLIDPRINTMAX.TabIndex = 143
@@ -782,7 +789,7 @@ Partial Class UNIFORMES
         'LBLIDPRINTNEW
         '
         Me.LBLIDPRINTNEW.AutoSize = True
-        Me.LBLIDPRINTNEW.Location = New System.Drawing.Point(11, 440)
+        Me.LBLIDPRINTNEW.Location = New System.Drawing.Point(615, 497)
         Me.LBLIDPRINTNEW.Name = "LBLIDPRINTNEW"
         Me.LBLIDPRINTNEW.Size = New System.Drawing.Size(68, 18)
         Me.LBLIDPRINTNEW.TabIndex = 144
@@ -800,21 +807,29 @@ Partial Class UNIFORMES
         Me.CMDIMPRIMIT.Text = "IMPRIMIR"
         Me.CMDIMPRIMIT.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.CMDIMPRIMIT.UseVisualStyleBackColor = True
-        '
-        'SELECCIONARUNIFORMESPORSEXOBindingSource
-        '
-        Me.SELECCIONARUNIFORMESPORSEXOBindingSource.DataMember = "SELECCIONARUNIFORMESPORSEXO"
-        Me.SELECCIONARUNIFORMESPORSEXOBindingSource.DataSource = Me.SACDataSet
+        Me.CMDIMPRIMIT.Visible = False
         '
         'SELECCIONARUNIFORMESPORSEXOTableAdapter
         '
         Me.SELECCIONARUNIFORMESPORSEXOTableAdapter.ClearBeforeFill = True
         '
+        'dgvUniformes
+        '
+        Me.dgvUniformes.AllowUserToAddRows = False
+        Me.dgvUniformes.AllowUserToDeleteRows = False
+        Me.dgvUniformes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvUniformes.Location = New System.Drawing.Point(19, 77)
+        Me.dgvUniformes.Name = "dgvUniformes"
+        Me.dgvUniformes.ReadOnly = True
+        Me.dgvUniformes.Size = New System.Drawing.Size(689, 312)
+        Me.dgvUniformes.TabIndex = 146
+        '
         'UNIFORMES
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(719, 509)
+        Me.ClientSize = New System.Drawing.Size(721, 488)
+        Me.Controls.Add(Me.dgvUniformes)
         Me.Controls.Add(Me.CMDIMPRIMIT)
         Me.Controls.Add(Me.LBLIDPRINTNEW)
         Me.Controls.Add(Me.LBLIDPRINTMAX)
@@ -834,10 +849,11 @@ Partial Class UNIFORMES
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UNIFORMES"
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SELECCIONARUNIFORMESPORSEXOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         CType(Me.SELECCIONARPRINTMAXIMOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.SELECCIONARUNIFORMESPORSEXOBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvUniformes, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -910,4 +926,5 @@ Partial Class UNIFORMES
     Friend WithEvents CMDIMPRIMIT As System.Windows.Forms.Button
     Friend WithEvents SELECCIONARUNIFORMESPORSEXOBindingSource As System.Windows.Forms.BindingSource
     Friend WithEvents SELECCIONARUNIFORMESPORSEXOTableAdapter As SAC.SACDataSetTableAdapters.SELECCIONARUNIFORMESPORSEXOTableAdapter
+    Friend WithEvents dgvUniformes As System.Windows.Forms.DataGridView
 End Class

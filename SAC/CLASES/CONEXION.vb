@@ -38,7 +38,8 @@ Module VARIABLES
     Public IMPRESION As Integer = 0
     Public ImpTicketGLOBAL As String = ""
     Public ImpresoraGLOBAL As String = ""
-
+    Public FechaCIerre As String = ""
+    Public FechaActual As String = ""
 End Module
 
 

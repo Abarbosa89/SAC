@@ -46,4 +46,38 @@ Module main
         End Try
 
     End Sub
+
+    Function DameFechaUltimoCorte() As String
+        Dim sSQL As String = ""
+        Dim dtPaso As New DataTable
+        Dim drPaso As DataRow
+
+        sSQL = "SELECT MAX(FechaCorte) AS Fecha FROM CIERREDIARIO"
+        dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+        If Not dtPaso Is Nothing AndAlso dtPaso.Rows.Count > 0 Then
+            drPaso = dtPaso.Rows(0)
+            DameFechaUltimoCorte = drPaso("Fecha").ToString
+        Else
+            DameFechaUltimoCorte = "SIN FECHA"
+        End If
+
+    End Function
+
+    Function DataVacio(ByVal DT As DataTable) As Boolean
+        If DT Is Nothing Or DT.Rows.Count = 0 Then
+            DataVacio = True
+        Else
+            DataVacio = False
+        End If
+
+
+    End Function
+
+    Function DataVacioBuffer(ByVal DT As OleDb.OleDbDataAdapter) As Boolean
+        If DT Is Nothing Then
+            DataVacioBuffer = True
+        Else
+            DataVacioBuffer = False
+        End If
+    End Function
 End Module

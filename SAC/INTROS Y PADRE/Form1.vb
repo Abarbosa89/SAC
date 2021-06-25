@@ -18,13 +18,15 @@ Public Class Intro
             '--------------------------
 
 
-            IdRangoLabel1.Hide()
-            PassLabel1.Hide()
-            PassperdiCheckBox.Hide()
-            NomcomLabel1.Hide()
-            UsuarioLabel1.Hide()
-            IdusLabel1.Hide()
+            'IdRangoLabel1.Hide()
+            'PassLabel1.Hide()
+            'PassperdiCheckBox.Hide()
+            'NomcomLabel1.Hide()
+            'UsuarioLabel1.Hide()
+            'IdusLabel1.Hide()
 
+
+            Me.Text = ": : : : COLEGIO DUMONT Versión  " & My.Application.Info.Version.ToString & " : : : :"
         Catch
             con.Close()
         End Try

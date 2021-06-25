@@ -10,18 +10,6 @@
         'TODO: This line of code loads data into the 'SACDataSet.SELECCIONARESCOLARIDAD' table. You can move, or remove it, as needed.
         Me.SELECCIONARESCOLARIDADTableAdapter.Fill(Me.SACDataSet.SELECCIONARESCOLARIDAD)
         BANDTUTOR = 0
-        'LBLGRADO.Hide()
-        'LBLSEXO.Hide()
-        'LBLIDGRADO.Hide()
-        'LBLMATRI.Hide()
-        'LBLIDNIVEL.Hide()
-        'LBLPORCBECA.Hide()
-        'CBBECA.Hide()
-        'CBBECASEP.Hide()
-        'CBBECAINSC.Hide()
-        'LBLPORCENINSC.Hide()
-        ' LBLPORCBECASEP.Hide()
-        ' CBREQFACTURA.Hide()
 
     End Sub
 
