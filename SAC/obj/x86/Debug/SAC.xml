@@ -6,7 +6,23 @@ SAC
 </name>
 </assembly>
 <members>
-<member name="T:SAC.SACDataSet.USUARIOSACTIVOSDataTable">
+<member name="T:SAC.dsReportes.dtReciboDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:SAC.dsReportes.dtReciboRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:SAC.dsReportes.dtReciboRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:SAC.dsReportes">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:SAC.SACDataSet.USUARIOSACTIVOSDataTable">
 	<summary>
 Represents the strongly named DataTable class.
 </summary>

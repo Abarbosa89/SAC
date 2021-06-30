@@ -16,7 +16,7 @@ Module main
         Dim dtPaso As New DataTable
         Try
             'se establecen los parametros de conexión a la sucursal y se inicializa
-            sqlServer.Init(, "SAC", "192.168.3.206", "sa", "masterkey")
+            sqlServer.Init(, "SAC", "192.168.1.66", "sa", "MenoVargas45")
 
             'se ejecuta una consulta para probar la conexión
             sqlServer.ExecSQL("USE SAC")
@@ -80,4 +80,35 @@ Module main
             DataVacioBuffer = False
         End If
     End Function
+
+    Function ReimpresionTicket(ByVal Folio As Integer, ByVal Tipo As Integer) As DataTable
+        'VAriable Tipo: Es para saber si es Recibo Productos = 1 o REcibo Colegiatura/Inscripcion = 2
+
+        Dim sSQL As String = ""
+        If Tipo = 1 Then
+            sSQL = "SELECT b.nombre + ' ' + b.appat + ' ' + b.apmat AS Alumno, c.CICLO AS Ciclo, ' ' AS Escolaridad, IIF(a.cantidad IS NULL, 1, a.cantidad) AS Cantidad, "
+            sSQL = sSQL & "a.descripcion AS Concepto, a.total AS Importe, u.nomcom AS Cajero, a.numrecibo as Folio, a.matri as Matricula, a.resta AS Resta, "
+            sSQL = sSQL & "t.tipopago AS TipoPago "
+            sSQL = sSQL & "FROM MOVIMIENTOS a "
+            sSQL = sSQL & "INNER JOIN ALUMNOS b ON a.matri = b.matri "
+            sSQL = sSQL & "INNER JOIN CICLOSESCOLARES c ON a.idciclo = c.IDCICLO "
+            sSQL = sSQL & "INNER JOIN USUARIOS u ON a.idus = u.idus "
+            sSQL = sSQL & "INNER JOIN TIPOSPAGO t ON a.idtipopago = t.idtipopago "
+            sSQL = sSQL & "WHERE a.numrecibo = " & Folio
+        ElseIf Tipo = 2 Then
+            sSQL = "SELECT b.nombre + ' ' + b.appat + ' ' + b.apmat AS Alumno, c.CICLO AS Ciclo, ' ' AS Escolaridad, IIF(a.cantidad IS NULL, 1, a.cantidad) AS Cantidad, "
+            sSQL = sSQL & "a.descripcion AS Concepto, a.total AS Importe, u.nomcom AS Cajero, a.numrecibo as Folio, a.matri as Matricula, a.resta AS Resta, "
+            sSQL = sSQL & "t.tipopago AS TipoPago "
+            sSQL = sSQL & "FROM MOVIMIENTOS a "
+            sSQL = sSQL & "INNER JOIN ALUMNOS b ON a.matri = b.matri "
+            sSQL = sSQL & "INNER JOIN CICLOSESCOLARES c ON a.idciclo = c.IDCICLO "
+            sSQL = sSQL & "INNER JOIN USUARIOS u ON a.idus = u.idus "
+            sSQL = sSQL & "INNER JOIN TIPOSPAGO t ON a.idtipopago = t.idtipopago "
+            sSQL = sSQL & "WHERE a.numfolio = " & Folio
+        End If
+
+        ReimpresionTicket = sqlServer.ExecSQLReturnDT(sSQL)
+
+    End Function
+
 End Module

@@ -41,6 +41,7 @@ Partial Class Intro
         Me.PassLabel1 = New System.Windows.Forms.Label()
         Me.IdusLabel1 = New System.Windows.Forms.Label()
         Me.PassperdiCheckBox = New System.Windows.Forms.CheckBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.USUARIOSACTIVOSBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SELECCIONARUSUARIOBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -50,7 +51,7 @@ Partial Class Intro
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(49, 76)
+        Me.Label1.Location = New System.Drawing.Point(49, 14)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(89, 19)
         Me.Label1.TabIndex = 1
@@ -60,7 +61,7 @@ Partial Class Intro
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(9, 105)
+        Me.Label2.Location = New System.Drawing.Point(9, 43)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(129, 19)
         Me.Label2.TabIndex = 2
@@ -73,7 +74,7 @@ Partial Class Intro
         Me.CBOUSUARIO.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.CBOUSUARIO.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.CBOUSUARIO.FormattingEnabled = True
-        Me.CBOUSUARIO.Location = New System.Drawing.Point(137, 73)
+        Me.CBOUSUARIO.Location = New System.Drawing.Point(137, 11)
         Me.CBOUSUARIO.Name = "CBOUSUARIO"
         Me.CBOUSUARIO.Size = New System.Drawing.Size(167, 26)
         Me.CBOUSUARIO.TabIndex = 3
@@ -92,7 +93,7 @@ Partial Class Intro
         'TXTPASS
         '
         Me.TXTPASS.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TXTPASS.Location = New System.Drawing.Point(137, 102)
+        Me.TXTPASS.Location = New System.Drawing.Point(137, 40)
         Me.TXTPASS.Name = "TXTPASS"
         Me.TXTPASS.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.TXTPASS.Size = New System.Drawing.Size(167, 26)
@@ -100,7 +101,7 @@ Partial Class Intro
         '
         'CMDENTRAR
         '
-        Me.CMDENTRAR.Location = New System.Drawing.Point(165, 146)
+        Me.CMDENTRAR.Location = New System.Drawing.Point(165, 84)
         Me.CMDENTRAR.Name = "CMDENTRAR"
         Me.CMDENTRAR.Size = New System.Drawing.Size(75, 23)
         Me.CMDENTRAR.TabIndex = 5
@@ -121,7 +122,7 @@ Partial Class Intro
         '
         Me.CMDSALIR.BackgroundImage = Global.SAC.My.Resources.Resources.Visualpharm_Must_Have_Log_Out
         Me.CMDSALIR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.CMDSALIR.Location = New System.Drawing.Point(264, 132)
+        Me.CMDSALIR.Location = New System.Drawing.Point(264, 70)
         Me.CMDSALIR.Name = "CMDSALIR"
         Me.CMDSALIR.Size = New System.Drawing.Size(40, 37)
         Me.CMDSALIR.TabIndex = 15
@@ -192,11 +193,23 @@ Partial Class Intro
         Me.PassperdiCheckBox.Text = "passperdido"
         Me.PassperdiCheckBox.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.BackgroundImage = Global.SAC.My.Resources.Resources.AYUDA
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Location = New System.Drawing.Point(3, 84)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(26, 28)
+        Me.Button1.TabIndex = 25
+        Me.Button1.Tag = "Revisar los cambios en el Sistema."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Intro
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(318, 179)
+        Me.ClientSize = New System.Drawing.Size(318, 118)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.PassperdiCheckBox)
         Me.Controls.Add(Me.IdusLabel1)
         Me.Controls.Add(Me.PassLabel1)
@@ -240,5 +253,6 @@ Partial Class Intro
     Friend WithEvents PassLabel1 As System.Windows.Forms.Label
     Friend WithEvents IdusLabel1 As System.Windows.Forms.Label
     Friend WithEvents PassperdiCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 
 End Class

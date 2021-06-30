@@ -10,6 +10,12 @@ Public Class AgregarNuevoCiclo
     End Sub
 
     Private Sub cmdCrear_Click(sender As Object, e As EventArgs) Handles cmdCrear.Click
+
+        If cboCicloIni.Text > cbdCicloFin.Text Then
+            MsgBox("Ciclo erroneo, por favor verifique", MsgBoxStyle.Critical, Me.Text)
+            Exit Sub
+        End If
+
         Dim sSQL As String = ""
         Dim dtDatos As New DataTable
         Dim drDatos As DataRow
@@ -18,6 +24,7 @@ Public Class AgregarNuevoCiclo
         Try
             If cboCicloIni.Text = "" Or cbdCicloFin.Text = "" Then
                 MsgBox("Debe selecciona un Ciclo", MsgBoxStyle.Exclamation, Me.Text)
+                Exit Sub
             Else
                 sSQL = "SELECT MAX(IDCICLO) AS CICLO FROM CICLOSESCOLARES"
                 dtDatos = sqlServer.ExecSQLReturnDT(sSQL, "CICLOSESCOLARES")

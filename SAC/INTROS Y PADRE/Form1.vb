@@ -10,7 +10,7 @@ Public Class Intro
         Try  'TODO: This line of code loads data into the 'SACDataSet.USUARIOSACTIVOS' table. You can move, or remove it, as needed.
             Me.USUARIOSACTIVOSTableAdapter.Fill(Me.SACDataSet.USUARIOSACTIVOS)
 
-            'FileCopy("\\192.168.3.206\Buffer\SACBuffer.mdb", "C:\Buffer\SACBuffer2.mdb")
+            'FileCopy("\\192.168.1.66\Buffer\SACBuffer.mdb", "C:\Buffer\SACBuffer.mdb")
 
             'Conexiones de Base de Datos
             ConectaBD()
@@ -26,7 +26,7 @@ Public Class Intro
             'IdusLabel1.Hide()
 
 
-            Me.Text = ": : : : COLEGIO DUMONT Versión  " & My.Application.Info.Version.ToString & " : : : :"
+            Me.Text = ": : : : SAC Versión  " & My.Application.Info.Version.ToString & " : : : :"
         Catch
             con.Close()
         End Try
@@ -70,4 +70,7 @@ Public Class Intro
     End Sub
 
 
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Readme.ShowDialog()
+    End Sub
 End Class

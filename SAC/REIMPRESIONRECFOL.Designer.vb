@@ -23,9 +23,9 @@ Partial Class REIMPRESIONRECFOL
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
-        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle4 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle5 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle6 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.SACDataSet = New SAC.SACDataSet()
         Me.SELCCIONARMOVPARAREIMPRSIONBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.SELCCIONARMOVPARAREIMPRSIONTableAdapter = New SAC.SACDataSetTableAdapters.SELCCIONARMOVPARAREIMPRSIONTableAdapter()
@@ -43,13 +43,16 @@ Partial Class REIMPRESIONRECFOL
         Me.DataGridViewTextBoxColumn8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.DTDESDE = New System.Windows.Forms.DateTimePicker()
         Me.DTHASTA = New System.Windows.Forms.DateTimePicker()
-        Me.CDMCERRAR = New System.Windows.Forms.Button()
-        Me.CMDREIMPRESION = New System.Windows.Forms.Button()
         Me.LBLNUMFOLIO = New System.Windows.Forms.Label()
         Me.LBLNUMRECIBO = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.CDMCERRAR = New System.Windows.Forms.Button()
+        Me.CMDREIMPRESION = New System.Windows.Forms.Button()
+        Me.dgvDatos = New System.Windows.Forms.DataGridView()
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.SELCCIONARMOVPARAREIMPRSIONDataGridView, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'SACDataSet
@@ -80,11 +83,12 @@ Partial Class REIMPRESIONRECFOL
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.DataGridViewTextBoxColumn10, Me.DataGridViewTextBoxColumn11, Me.DataGridViewTextBoxColumn1, Me.DataGridViewTextBoxColumn2, Me.DataGridViewTextBoxColumn4, Me.DataGridViewTextBoxColumn5, Me.DataGridViewTextBoxColumn9, Me.DataGridViewTextBoxColumn6, Me.DataGridViewTextBoxColumn7, Me.DataGridViewTextBoxColumn8})
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.DataSource = Me.SELCCIONARMOVPARAREIMPRSIONBindingSource
-        Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Location = New System.Drawing.Point(12, 67)
+        Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Location = New System.Drawing.Point(477, 408)
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Name = "SELCCIONARMOVPARAREIMPRSIONDataGridView"
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.ReadOnly = True
-        Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Size = New System.Drawing.Size(788, 220)
+        Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Size = New System.Drawing.Size(322, 91)
         Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.TabIndex = 2
+        Me.SELCCIONARMOVPARAREIMPRSIONDataGridView.Visible = False
         '
         'DataGridViewTextBoxColumn10
         '
@@ -138,9 +142,9 @@ Partial Class REIMPRESIONRECFOL
         'DataGridViewTextBoxColumn6
         '
         Me.DataGridViewTextBoxColumn6.DataPropertyName = "abono"
-        DataGridViewCellStyle1.Format = "C2"
-        DataGridViewCellStyle1.NullValue = Nothing
-        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle4.Format = "C2"
+        DataGridViewCellStyle4.NullValue = Nothing
+        Me.DataGridViewTextBoxColumn6.DefaultCellStyle = DataGridViewCellStyle4
         Me.DataGridViewTextBoxColumn6.HeaderText = "ABONO"
         Me.DataGridViewTextBoxColumn6.Name = "DataGridViewTextBoxColumn6"
         Me.DataGridViewTextBoxColumn6.ReadOnly = True
@@ -148,8 +152,8 @@ Partial Class REIMPRESIONRECFOL
         'DataGridViewTextBoxColumn7
         '
         Me.DataGridViewTextBoxColumn7.DataPropertyName = "resta"
-        DataGridViewCellStyle2.Format = "C2"
-        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle2
+        DataGridViewCellStyle5.Format = "C2"
+        Me.DataGridViewTextBoxColumn7.DefaultCellStyle = DataGridViewCellStyle5
         Me.DataGridViewTextBoxColumn7.HeaderText = "RESTA"
         Me.DataGridViewTextBoxColumn7.Name = "DataGridViewTextBoxColumn7"
         Me.DataGridViewTextBoxColumn7.ReadOnly = True
@@ -157,8 +161,8 @@ Partial Class REIMPRESIONRECFOL
         'DataGridViewTextBoxColumn8
         '
         Me.DataGridViewTextBoxColumn8.DataPropertyName = "total"
-        DataGridViewCellStyle3.Format = "C2"
-        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle3
+        DataGridViewCellStyle6.Format = "C2"
+        Me.DataGridViewTextBoxColumn8.DefaultCellStyle = DataGridViewCellStyle6
         Me.DataGridViewTextBoxColumn8.HeaderText = "TOTAL"
         Me.DataGridViewTextBoxColumn8.Name = "DataGridViewTextBoxColumn8"
         Me.DataGridViewTextBoxColumn8.ReadOnly = True
@@ -179,12 +183,43 @@ Partial Class REIMPRESIONRECFOL
         Me.DTHASTA.Size = New System.Drawing.Size(200, 22)
         Me.DTHASTA.TabIndex = 4
         '
+        'LBLNUMFOLIO
+        '
+        Me.LBLNUMFOLIO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numfolio", True))
+        Me.LBLNUMFOLIO.Location = New System.Drawing.Point(9, 464)
+        Me.LBLNUMFOLIO.Name = "LBLNUMFOLIO"
+        Me.LBLNUMFOLIO.Size = New System.Drawing.Size(100, 23)
+        Me.LBLNUMFOLIO.TabIndex = 19
+        Me.LBLNUMFOLIO.Text = "#FOLIO"
+        '
+        'LBLNUMRECIBO
+        '
+        Me.LBLNUMRECIBO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numrecibo", True))
+        Me.LBLNUMRECIBO.Location = New System.Drawing.Point(9, 487)
+        Me.LBLNUMRECIBO.Name = "LBLNUMRECIBO"
+        Me.LBLNUMRECIBO.Size = New System.Drawing.Size(100, 23)
+        Me.LBLNUMRECIBO.TabIndex = 20
+        Me.LBLNUMRECIBO.Text = "#RECIBO"
+        '
+        'Button1
+        '
+        Me.Button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.Button1.Image = Global.SAC.My.Resources.Resources.PRINTER
+        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter
+        Me.Button1.Location = New System.Drawing.Point(397, 307)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(114, 63)
+        Me.Button1.TabIndex = 21
+        Me.Button1.Text = "TICKET"
+        Me.Button1.TextAlign = System.Drawing.ContentAlignment.BottomCenter
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'CDMCERRAR
         '
         Me.CDMCERRAR.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CDMCERRAR.Image = Global.SAC.My.Resources.Resources.ELIMINAR_REGISTRO
         Me.CDMCERRAR.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CDMCERRAR.Location = New System.Drawing.Point(446, 305)
+        Me.CDMCERRAR.Location = New System.Drawing.Point(694, 307)
         Me.CDMCERRAR.Name = "CDMCERRAR"
         Me.CDMCERRAR.Size = New System.Drawing.Size(114, 63)
         Me.CDMCERRAR.TabIndex = 18
@@ -197,7 +232,7 @@ Partial Class REIMPRESIONRECFOL
         Me.CMDREIMPRESION.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.CMDREIMPRESION.Image = Global.SAC.My.Resources.Resources.PRINTER
         Me.CMDREIMPRESION.ImageAlign = System.Drawing.ContentAlignment.TopCenter
-        Me.CMDREIMPRESION.Location = New System.Drawing.Point(285, 305)
+        Me.CMDREIMPRESION.Location = New System.Drawing.Point(277, 307)
         Me.CMDREIMPRESION.Name = "CMDREIMPRESION"
         Me.CMDREIMPRESION.Size = New System.Drawing.Size(114, 63)
         Me.CMDREIMPRESION.TabIndex = 17
@@ -205,29 +240,24 @@ Partial Class REIMPRESIONRECFOL
         Me.CMDREIMPRESION.TextAlign = System.Drawing.ContentAlignment.BottomCenter
         Me.CMDREIMPRESION.UseVisualStyleBackColor = True
         '
-        'LBLNUMFOLIO
+        'dgvDatos
         '
-        Me.LBLNUMFOLIO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numfolio", True))
-        Me.LBLNUMFOLIO.Location = New System.Drawing.Point(9, 478)
-        Me.LBLNUMFOLIO.Name = "LBLNUMFOLIO"
-        Me.LBLNUMFOLIO.Size = New System.Drawing.Size(100, 23)
-        Me.LBLNUMFOLIO.TabIndex = 19
-        Me.LBLNUMFOLIO.Text = "#FOLIO"
-        '
-        'LBLNUMRECIBO
-        '
-        Me.LBLNUMRECIBO.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, "numrecibo", True))
-        Me.LBLNUMRECIBO.Location = New System.Drawing.Point(9, 501)
-        Me.LBLNUMRECIBO.Name = "LBLNUMRECIBO"
-        Me.LBLNUMRECIBO.Size = New System.Drawing.Size(100, 23)
-        Me.LBLNUMRECIBO.TabIndex = 20
-        Me.LBLNUMRECIBO.Text = "#RECIBO"
+        Me.dgvDatos.AllowUserToAddRows = False
+        Me.dgvDatos.AllowUserToDeleteRows = False
+        Me.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvDatos.Location = New System.Drawing.Point(12, 56)
+        Me.dgvDatos.Name = "dgvDatos"
+        Me.dgvDatos.ReadOnly = True
+        Me.dgvDatos.Size = New System.Drawing.Size(796, 245)
+        Me.dgvDatos.TabIndex = 22
         '
         'REIMPRESIONRECFOL
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(820, 385)
+        Me.ClientSize = New System.Drawing.Size(820, 379)
+        Me.Controls.Add(Me.dgvDatos)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.LBLNUMRECIBO)
         Me.Controls.Add(Me.LBLNUMFOLIO)
         Me.Controls.Add(Me.CDMCERRAR)
@@ -240,10 +270,11 @@ Partial Class REIMPRESIONRECFOL
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "REIMPRESIONRECFOL"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "REIMPRESIONRECFOL"
+        Me.Text = "REIMPRESION DE RECIBOS O FOLIOS"
         CType(Me.SACDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SELCCIONARMOVPARAREIMPRSIONBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.SELCCIONARMOVPARAREIMPRSIONDataGridView, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvDatos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
@@ -268,4 +299,6 @@ Partial Class REIMPRESIONRECFOL
     Friend WithEvents DataGridViewTextBoxColumn6 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents DataGridViewTextBoxColumn8 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents dgvDatos As System.Windows.Forms.DataGridView
 End Class

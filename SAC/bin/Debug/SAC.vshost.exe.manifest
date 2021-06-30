@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="SAC.exe" version="1.1.0.2" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
+  <asmv1:assemblyIdentity name="SAC.exe" version="21.6.29.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
   <description asmv2:iconFile="DUMONT.ico" xmlns="urn:schemas-microsoft-com:asm.v1" />
   <application />
   <entryPoint>
-    <assemblyIdentity name="SAC" version="21.6.24.0" language="neutral" processorArchitecture="x86" />
+    <assemblyIdentity name="SAC" version="21.6.29.0" language="neutral" processorArchitecture="x86" />
     <commandLine file="SAC.exe" parameters="" />
   </entryPoint>
   <trustInfo>
@@ -135,7 +135,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>SlOhE9ga2aE/exedmZ7BjIuCwbU=</dsig:DigestValue>
+        <dsig:DigestValue>whjduo2xr8Tq3kMggTi9DBf3f+I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -152,26 +152,26 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SHDocVw.dll" size="154112">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Interop.SHDocVw.dll" size="143360">
       <assemblyIdentity name="Interop.SHDocVw" version="1.1.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>PNoR4z4ds8B2JWXkDIwnubFkzIQ=</dsig:DigestValue>
+        <dsig:DigestValue>luH7iqFXMGfVWdKclex8Me4StOA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAC.exe" size="46826496">
-      <assemblyIdentity name="SAC" version="21.6.24.0" language="neutral" processorArchitecture="x86" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="SAC.exe" size="51037184">
+      <assemblyIdentity name="SAC" version="21.6.29.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>Jj/EPF+ZWDwVGOzNgPiyzSSF4wI=</dsig:DigestValue>
+        <dsig:DigestValue>n6VW7LrkG4QcFMnA507se0J5wGw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -208,13 +208,13 @@
       <dsig:DigestValue>fEZGVjCIeygrVF1HPOxk2iQtiW4=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="SAC.exe.config" size="2199">
+  <file name="SAC.exe.config" size="2196">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>hzbNuXcn5KZT5sTQ2THU1fe0/KA=</dsig:DigestValue>
+      <dsig:DigestValue>ryxcl4nz1xA1Erpaz+fpCIMBieQ=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

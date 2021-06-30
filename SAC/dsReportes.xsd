@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="dsReportes" targetNamespace="http://tempuri.org/dsReportes.xsd" xmlns:mstns="http://tempuri.org/dsReportes.xsd" xmlns="http://tempuri.org/dsReportes.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="dsReportes" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="dsReportes" msprop:Generator_UserDSName="dsReportes">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="dtRecibo" msprop:Generator_TableClassName="dtReciboDataTable" msprop:Generator_TableVarName="tabledtRecibo" msprop:Generator_TablePropName="dtRecibo" msprop:Generator_RowDeletingName="dtReciboRowDeleting" msprop:Generator_RowChangingName="dtReciboRowChanging" msprop:Generator_RowEvHandlerName="dtReciboRowChangeEventHandler" msprop:Generator_RowDeletedName="dtReciboRowDeleted" msprop:Generator_UserTableName="dtRecibo" msprop:Generator_RowChangedName="dtReciboRowChanged" msprop:Generator_RowEvArgName="dtReciboRowChangeEvent" msprop:Generator_RowClassName="dtReciboRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Alumno" msprop:Generator_ColumnVarNameInTable="columnAlumno" msprop:Generator_ColumnPropNameInRow="Alumno" msprop:Generator_ColumnPropNameInTable="AlumnoColumn" msprop:Generator_UserColumnName="Alumno" type="xs:string" minOccurs="0" />
+              <xs:element name="Ciclo" msprop:Generator_ColumnVarNameInTable="columnCiclo" msprop:Generator_ColumnPropNameInRow="Ciclo" msprop:Generator_ColumnPropNameInTable="CicloColumn" msprop:Generator_UserColumnName="Ciclo" type="xs:string" minOccurs="0" />
+              <xs:element name="Escolaridad" msprop:Generator_ColumnVarNameInTable="columnEscolaridad" msprop:Generator_ColumnPropNameInRow="Escolaridad" msprop:Generator_ColumnPropNameInTable="EscolaridadColumn" msprop:Generator_UserColumnName="Escolaridad" type="xs:string" minOccurs="0" />
+              <xs:element name="Cantidad" msprop:Generator_ColumnVarNameInTable="columnCantidad" msprop:Generator_ColumnPropNameInRow="Cantidad" msprop:Generator_ColumnPropNameInTable="CantidadColumn" msprop:Generator_UserColumnName="Cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="Concepto" msprop:Generator_ColumnVarNameInTable="columnConcepto" msprop:Generator_ColumnPropNameInRow="Concepto" msprop:Generator_ColumnPropNameInTable="ConceptoColumn" msprop:Generator_UserColumnName="Concepto" type="xs:string" minOccurs="0" />
+              <xs:element name="Importe" msprop:Generator_ColumnVarNameInTable="columnImporte" msprop:Generator_ColumnPropNameInRow="Importe" msprop:Generator_ColumnPropNameInTable="ImporteColumn" msprop:Generator_UserColumnName="Importe" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Cajero" msprop:Generator_ColumnVarNameInTable="columnCajero" msprop:Generator_ColumnPropNameInRow="Cajero" msprop:Generator_ColumnPropNameInTable="CajeroColumn" msprop:Generator_UserColumnName="Cajero" type="xs:string" minOccurs="0" />
+              <xs:element name="Folio" msprop:Generator_ColumnVarNameInTable="columnFolio" msprop:Generator_ColumnPropNameInRow="Folio" msprop:Generator_ColumnPropNameInTable="FolioColumn" msprop:Generator_UserColumnName="Folio" type="xs:string" minOccurs="0" />
+              <xs:element name="Matricula" msprop:Generator_ColumnVarNameInTable="columnMatricula" msprop:Generator_ColumnPropNameInRow="Matricula" msprop:Generator_ColumnPropNameInTable="MatriculaColumn" msprop:Generator_UserColumnName="Matricula" type="xs:string" minOccurs="0" />
+              <xs:element name="Resta" msprop:Generator_ColumnVarNameInTable="columnResta" msprop:Generator_ColumnPropNameInRow="Resta" msprop:Generator_ColumnPropNameInTable="RestaColumn" msprop:Generator_UserColumnName="Resta" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TipoPago" msprop:Generator_ColumnVarNameInTable="columnTipoPago" msprop:Generator_ColumnPropNameInRow="TipoPago" msprop:Generator_ColumnPropNameInTable="TipoPagoColumn" msprop:Generator_UserColumnName="TipoPago" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

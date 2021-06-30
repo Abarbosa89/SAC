@@ -46,7 +46,7 @@
                         RPT.SetParameterValue("TIPOPAGO", PAGODEINSCRIPCION.CBOTIPOPAGO.Text)
                         RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                         RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                        RPT.PrintToPrinter(1, False, 0, 0)
+                        RPT.PrintToPrinter(2, False, 0, 0)
 
                         'CrystalReportViewer1.ReportSource = RPT
                     End If
@@ -67,7 +67,7 @@
                         RPT.SetParameterValue("TIPOPAGO", PAGODEINSCRIPCION.CBOTIPOPAGO.Text)
                         RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                         RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                        RPT.PrintToPrinter(1, False, 0, 0)
+                        RPT.PrintToPrinter(2, False, 0, 0)
 
                         'CrystalReportViewer1.ReportSource = RPT
                     End If
@@ -93,7 +93,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGARADEUDOS.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
                             'CrystalReportViewer1.ReportSource = RPT
                         End If
@@ -115,7 +115,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGARADEUDOS.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
                             'CrystalReportViewer1.ReportSource = RPT
                         End If
@@ -140,7 +140,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGARADEUDOS.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
                             ' CrystalReportViewer1.ReportSource = RPT
                         End If
@@ -162,7 +162,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGARADEUDOS.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
                             'CrystalReportViewer1.ReportSource = RPT
                         End If
@@ -188,7 +188,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGOCOLEGIATURA.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
                             ' CrystalReportViewer1.ReportSource = RPT
                         End If
@@ -211,7 +211,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGOCOLEGIATURA.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
 
                             'CrystalReportViewer1.ReportSource = RPT
@@ -237,7 +237,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGOCOLEGIATURA.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
 
                             ' CrystalReportViewer1.ReportSource = RPT
@@ -260,7 +260,7 @@
                             RPT.SetParameterValue("TIPOPAGO", PAGOCOLEGIATURA.CBOTIPOPAGO.Text)
                             RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                             RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                            RPT.PrintToPrinter(1, False, 0, 0)
+                            RPT.PrintToPrinter(2, False, 0, 0)
 
 
                             'CrystalReportViewer1.ReportSource = RPT
@@ -422,7 +422,7 @@
                     RPT.SetParameterValue("CICLO", PADRE.LBLCICLO.Text)
                     RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                     RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                    RPT.PrintToPrinter(1, False, 0, 0)
+                    RPT.PrintToPrinter(2, False, 0, 0)
                     ' CrystalReportViewer1.ReportSource = RPT
 
                 ElseIf BANDERAREPORTE2 = 2 Then
@@ -461,7 +461,7 @@
                         RPT.SetParameterValue("TIPOPAGO", "EFECTIVO")
                         RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                         RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                        RPT.PrintToPrinter(1, False, 0, 0)
+                        RPT.PrintToPrinter(2, False, 0, 0)
                         ' CrystalReportViewer1.ReportSource = RPT
 
                     ElseIf BAND = 2 Then
@@ -499,7 +499,7 @@
                         RPT.SetParameterValue("TIPOPAGO", "EFECTIVO")
                         RPT.SetParameterValue("NOMCAJERO", Intro.NomcomLabel1.Text)
                         RPT.PrintOptions.PrinterName = "\\192.168.1.66\RECIBOS"
-                        RPT.PrintToPrinter(1, False, 0, 0)
+                        RPT.PrintToPrinter(2, False, 0, 0)
                         'CrystalReportViewer1.ReportSource = RPT
                     End If
 

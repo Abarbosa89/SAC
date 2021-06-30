@@ -28,9 +28,9 @@
     <UpdateRequired>true</UpdateRequired>
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\WIN-INAR48T85I3\Actualizaciones\</InstallUrl>
-    <MinimumRequiredVersion>1.1.0.1</MinimumRequiredVersion>
-    <ApplicationRevision>2</ApplicationRevision>
-    <ApplicationVersion>1.1.0.%2a</ApplicationVersion>
+    <MinimumRequiredVersion>21.6.29.1</MinimumRequiredVersion>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>21.6.29.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -81,7 +81,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
@@ -192,6 +192,11 @@
     <Compile Include="DETALLESTUTORES.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="dsReportes.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ELIMINARMOVIMIENTOS.Designer.vb">
       <DependentUpon>ELIMINARMOVIMIENTOS.vb</DependentUpon>
     </Compile>
@@ -288,6 +293,12 @@
     <Compile Include="RANGOFECHASPARAFACTURACION.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Readme.Designer.vb">
+      <DependentUpon>Readme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Readme.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="REIMPRESIONRECFOL.Designer.vb">
       <DependentUpon>REIMPRESIONRECFOL.vb</DependentUpon>
     </Compile>
@@ -348,6 +359,12 @@
     <Compile Include="REPORTECOSTOSUNIFORMESS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="REPORTEGENERAL.Designer.vb">
+      <DependentUpon>REPORTEGENERAL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="REPORTEGENERAL.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="REPORTEPAGOSREALIZADOSALUMNO.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -366,14 +383,32 @@
     <Compile Include="REPORTESCOSTOS.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="REPORTES\RECIBODEPRODUCTOSTICKETS.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBODEPRODUCTOSTICKETS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\RECIBODETICKETS1.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RECIBODETICKETS.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="REPORTES\REPORTETICKET.vb">
+      <DependentUpon>REPORTETICKET.rpt</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="REPORTES\RECIBOCOLEGIATURASHARP.vb">
       <DependentUpon>RECIBOCOLEGIATURASHARP.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
     </Compile>
-    <Compile Include="REPORTES\RECIBODEPRODUCTOSTICKETS.vb">
-      <DependentUpon>RECIBODEPRODUCTOSTICKETS.rpt</DependentUpon>
+    <Compile Include="REPORTES\RECIBODETICKETS.vb">
+      <DependentUpon>RECIBODETICKETS.rpt</DependentUpon>
       <AutoGen>True</AutoGen>
       <SubType>Component</SubType>
       <DesignTime>True</DesignTime>
@@ -931,6 +966,9 @@
     <EmbeddedResource Include="RANGOFECHASPARAFACTURACION.resx">
       <DependentUpon>RANGOFECHASPARAFACTURACION.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Readme.resx">
+      <DependentUpon>Readme.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REIMPRESIONRECFOL.resx">
       <DependentUpon>REIMPRESIONRECFOL.vb</DependentUpon>
     </EmbeddedResource>
@@ -964,6 +1002,9 @@
     <EmbeddedResource Include="REPORTECOSTOSUNIFORMESS.resx">
       <DependentUpon>REPORTECOSTOSUNIFORMESS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTEGENERAL.resx">
+      <DependentUpon>REPORTEGENERAL.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTEPAGOSREALIZADOSALUMNO.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>REPORTEPAGOSREALIZADOSALUMNO.vb</LastGenOutput>
@@ -974,13 +1015,21 @@
     <EmbeddedResource Include="REPORTESCOSTOS.resx">
       <DependentUpon>REPORTESCOSTOS.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\RECIBODEPRODUCTOSTICKETS.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RECIBODEPRODUCTOSTICKETS.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="REPORTES\REPORTETICKET.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>REPORTETICKET.vb</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\RECIBOCOLEGIATURASHARP.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>RECIBOCOLEGIATURASHARP.vb</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="REPORTES\RECIBODEPRODUCTOSTICKETS.rpt">
+    <EmbeddedResource Include="REPORTES\RECIBODETICKETS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>RECIBODEPRODUCTOSTICKETS.vb</LastGenOutput>
+      <LastGenOutput>RECIBODETICKETS1.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="REPORTES\REIMPRESIONRECIBODEPRODUCTOS.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
@@ -1231,6 +1280,17 @@
   <ItemGroup>
     <None Include="app.config">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="dsReportes.xsc">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="dsReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportes.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="dsReportes.xss">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
     </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
