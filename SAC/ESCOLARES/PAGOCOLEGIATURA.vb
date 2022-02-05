@@ -427,10 +427,18 @@ Public Class PAGOCOLEGIATURA
 
     Private Sub Button13_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button13.Click
         Try
+            'Dim drPaso As DataRow
+            'dtPaso = New DataTable
+            'sSQL = "EXEC dbo.SELECCIONARFECHAVENCIPORCICLOYPRODUCTO " & CInt(PADRE.LBLIDCICLO.Text) & "," & CInt(LBLIDPRODUC.Text)
+            'dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+            'drPaso = dtPaso.Rows(0)
+            'LBLFECHAVENCI.Text = CInt(drPaso("FECHAVENCIMIENTO").ToString) + 1
+
             Me.SELECCIONARFECHAVENCIPORCICLOYPRODUCTOTableAdapter.Fill(Me.SACDataSet.SELECCIONARFECHAVENCIPORCICLOYPRODUCTO, New System.Nullable(Of Integer)(CType(PADRE.LBLIDCICLO.Text, Integer)), New System.Nullable(Of Integer)(CType(LBLIDPRODUC.Text, Integer)))
-        If SELECCIONDEALUMNO.CBBECA.Checked = True Then
-            BECA = CDec(LBLMONTOBASE.Text) * CDec(SELECCIONDEALUMNO.LBLPORCBECA.Text)
-            LBLSCOPORBECA.Text = CDec(LBLMONTOBASE.Text) - BECA
+
+            If SELECCIONDEALUMNO.CBBECA.Checked = True Then
+                BECA = CDec(LBLMONTOBASE.Text) * CDec(SELECCIONDEALUMNO.LBLPORCBECA.Text)
+                LBLSCOPORBECA.Text = CDec(LBLMONTOBASE.Text) - BECA
                 LBLSCOPORBECA.Text = FormatCurrency(LBLSCOPORBECA.Text)
                 LBLDESCONBECA.Show()
                 LBLSCOPORBECA.Show()
@@ -461,7 +469,7 @@ Public Class PAGOCOLEGIATURA
                 TEXTO = ""
             End If
 
-        If SELECCIONDEALUMNO.LBLIDNIVEL.Text = 1 Then
+            If SELECCIONDEALUMNO.LBLIDNIVEL.Text = 1 Then
                 If LBLIDPRODUC.Text > 1 And LBLIDPRODUC.Text < 12 Then
                     LBLNOPAGARCOLEADE.Text = CInt(LBLIDPRODUC.Text) - 1
                     Me.NOPAGARCOLEGIATURASADELANTADASTableAdapter.Fill(Me.SACDataSet.NOPAGARCOLEGIATURASADELANTADAS, New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.CBOALUMNO.SelectedValue, Integer)), New System.Nullable(Of Integer)(CType(LBLNOPAGARCOLEADE.Text, Integer)))
@@ -524,7 +532,7 @@ Public Class PAGOCOLEGIATURA
                 End If
             End If
 
-      
+
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
             con.Close()

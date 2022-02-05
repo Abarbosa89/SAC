@@ -5,6 +5,12 @@ Public Class PAGODEINSCRIPCION
     Dim PORCE As Decimal
     Dim BECA As Decimal = 0
     Dim BECASEP As Decimal = 0
+    Dim dtPaso As New DataTable
+    Dim D1 As New DataTable
+    Dim com As SqlCommand = con.CreateCommand()
+    Dim Comando As New OleDb.OleDbCommand
+    Dim sSQL As String = ""
+    Dim DataSet As DataSet
 
 
     Private Sub PAGODEINSCRIPCION_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
@@ -32,16 +38,27 @@ Public Class PAGODEINSCRIPCION
         Me.TIPOSDEPAGOTableAdapter.Fill(Me.SACDataSet.TIPOSDEPAGO)
         BAND = 0
         LBLABONO.Text = 0
-
+        Dim drPaso As DataRow
         Try
-            Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(BANDERARECFOLFAC, Integer)))
-            LBLNONUEVOFOLIO.Text = CInt(LBLNOFOLIOMAX.Text) + 1
+
+            sSQL = "EXEC dbo.NUEVORECIBOFOLIOFACTURA " & BANDERARECFOLFAC
+            dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+            drPaso = dtPaso.Rows(0)
+            LBLNONUEVOFOLIO.Text = CInt(drPaso("NOFOLIO").ToString) + 1
+
+
+            'Me.NUEVORECIBOFOLIOFACTURATableAdapter.Fill(Me.SACDataSet.NUEVORECIBOFOLIOFACTURA, New System.Nullable(Of Integer)(CType(BANDERARECFOLFAC, Integer)))
+            'LBLNONUEVOFOLIO.Text = CInt(LBLNOFOLIOMAX.Text) + 1
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)
         End Try
 
         Try
-            Me.COBROINSCRIPCIONTableAdapter.Fill(Me.SACDataSet.COBROINSCRIPCION, New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.LBLIDNIVEL.Text, Integer)), New System.Nullable(Of Integer)(CType(PADRE.LBLIDCICLO.Text, Integer)))
+            sSQL = "EXEC dbo.COBROINSCRIPCION " & CInt(SELECCIONDEALUMNO.LBLIDNIVEL.Text) & "," & CInt(PADRE.LBLIDCICLO.Text)
+            dtPaso = sqlServer.ExecSQLReturnDT(sSQL)
+            drPaso = dtPaso.Rows(0)
+            LBLMONTOBASE.Text = CDbl(drPaso("monto").ToString) + 1
+            'Me.COBROINSCRIPCIONTableAdapter.Fill(Me.SACDataSet.COBROINSCRIPCION, New System.Nullable(Of Integer)(CType(SELECCIONDEALUMNO.LBLIDNIVEL.Text, Integer)), New System.Nullable(Of Integer)(CType(PADRE.LBLIDCICLO.Text, Integer)))
 
         Catch ex As System.Exception
             System.Windows.Forms.MessageBox.Show(ex.Message)

@@ -404,7 +404,7 @@ Partial Class PAGODEINSCRIPCION
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 325)
+        Me.ClientSize = New System.Drawing.Size(705, 510)
         Me.ControlBox = False
         Me.Controls.Add(Me.CMDIMPRIMIR)
         Me.Controls.Add(Me.LBLINSCLIQ)

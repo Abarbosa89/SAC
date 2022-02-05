@@ -617,7 +617,7 @@ Partial Class PAGOCOLEGIATURA
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 18.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(713, 431)
+        Me.ClientSize = New System.Drawing.Size(713, 415)
         Me.ControlBox = False
         Me.Controls.Add(Me.LBLFECHAVENCI)
         Me.Controls.Add(Me.GroupBox1)
