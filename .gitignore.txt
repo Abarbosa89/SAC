@@ -1,0 +1,13 @@
+# Archivos compilados de Visual Studio
+app.config
+
+# Carpetas generadas por Visual Studio
+obj/
+bin/
+packages/
+
+# Archivos de respaldo y caché
+
+# Otros archivos y carpetas generados automáticamente
+SAC/obj/
+SAC/bin/
