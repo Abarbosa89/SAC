@@ -229,13 +229,13 @@ Partial Class PADRE
         'ToolStripLabel3
         '
         Me.ToolStripLabel3.Name = "ToolStripLabel3"
-        Me.ToolStripLabel3.Size = New System.Drawing.Size(103, 22)
+        Me.ToolStripLabel3.Size = New System.Drawing.Size(102, 22)
         Me.ToolStripLabel3.Text = "Impresora Tickets:"
         '
         'tsImpresoraTi
         '
         Me.tsImpresoraTi.Name = "tsImpresoraTi"
-        Me.tsImpresoraTi.Size = New System.Drawing.Size(89, 22)
+        Me.tsImpresoraTi.Size = New System.Drawing.Size(87, 22)
         Me.tsImpresoraTi.Text = "ToolStripLabel4"
         '
         'ToolStripSeparator2
@@ -246,13 +246,13 @@ Partial Class PADRE
         'ToolStripLabel4
         '
         Me.ToolStripLabel4.Name = "ToolStripLabel4"
-        Me.ToolStripLabel4.Size = New System.Drawing.Size(63, 22)
+        Me.ToolStripLabel4.Size = New System.Drawing.Size(63, 15)
         Me.ToolStripLabel4.Text = "Impresora:"
         '
         'tsImpresora
         '
         Me.tsImpresora.Name = "tsImpresora"
-        Me.tsImpresora.Size = New System.Drawing.Size(89, 22)
+        Me.tsImpresora.Size = New System.Drawing.Size(87, 15)
         Me.tsImpresora.Text = "ToolStripLabel5"
         '
         'Timer1
@@ -485,7 +485,7 @@ Partial Class PADRE
         Me.TSNUEVOINGRESO.Size = New System.Drawing.Size(161, 54)
         Me.TSNUEVOINGRESO.Text = "NUEVO INGRESO"
         Me.TSNUEVOINGRESO.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.TSNUEVOINGRESO.ToolTipText = "ESTE APARTADO SE UTILIZA APRA REGISTRAR UN ALUMNO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "QUE NO HAYA ESTADO INSCRIO EN " & _
+        Me.TSNUEVOINGRESO.ToolTipText = "ESTE APARTADO SE UTILIZA APRA REGISTRAR UN ALUMNO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "QUE NO HAYA ESTADO INSCRIO EN " &
     "EL COLEGIO."
         '
         'TSREINSCRIPCION
@@ -497,7 +497,7 @@ Partial Class PADRE
         Me.TSREINSCRIPCION.Size = New System.Drawing.Size(161, 54)
         Me.TSREINSCRIPCION.Text = "REINSCRIPCION"
         Me.TSREINSCRIPCION.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.TSREINSCRIPCION.ToolTipText = "ESTE APARADO SE UTILIZA PARA REINSCRIBIR UN ALUMNO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PARA ELLO EL ALUNO DEBIO ESTA" & _
+        Me.TSREINSCRIPCION.ToolTipText = "ESTE APARADO SE UTILIZA PARA REINSCRIBIR UN ALUMNO" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PARA ELLO EL ALUNO DEBIO ESTA" &
     "R INSCRITO EN CICLOS PASADOS."
         '
         'ToolStripSeparator7
@@ -557,7 +557,7 @@ Partial Class PADRE
         Me.TSADEUDOS.Size = New System.Drawing.Size(161, 54)
         Me.TSADEUDOS.Text = "ADEUDOS"
         Me.TSADEUDOS.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText
-        Me.TSADEUDOS.ToolTipText = "EN ESTE APARTADO SE COBRAN LOS ADEDUSO QUE TIENE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EL ALUMNO EN CUANTO A COLEGIATU" & _
+        Me.TSADEUDOS.ToolTipText = "EN ESTE APARTADO SE COBRAN LOS ADEDUSO QUE TIENE" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "EL ALUMNO EN CUANTO A COLEGIATU" &
     "RAS O INSCRIPCION."
         Me.TSADEUDOS.Visible = False
         '
@@ -813,13 +813,13 @@ Partial Class PADRE
         'Impresora
         '
         Me.Impresora.Name = "Impresora"
-        Me.Impresora.Size = New System.Drawing.Size(205, 22)
+        Me.Impresora.Size = New System.Drawing.Size(204, 22)
         Me.Impresora.Text = "Definir Impresora"
         '
         'Ticket
         '
         Me.Ticket.Name = "Ticket"
-        Me.Ticket.Size = New System.Drawing.Size(205, 22)
+        Me.Ticket.Size = New System.Drawing.Size(204, 22)
         Me.Ticket.Text = "Definir Impresora Tickets"
         '
         'TValidarCierre

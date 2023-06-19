@@ -263,58 +263,60 @@ Public Class PADRE
     Private Sub tvAdministrativo_DoubleClick1(sender As Object, e As EventArgs) Handles tvAdministrativo.DoubleClick
         Select Case tvAdministrativo.SelectedNode.Text
             Case "Modificar Alumno"
-
+                tvAdministrativo.Visible = False
                 My.Forms.MODIFICARALUMNO.ShowDialog()
             Case "Modificar Tutor"
                 BANDERACOBRO = 3
-
+                tvAdministrativo.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Pagos Alumnos"
                 BANDERACOBRO = 5
-
+                tvAdministrativo.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Detalle Tutores"
-
+                tvAdministrativo.Visible = False
                 My.Forms.DETALLESTUTORES.ShowDialog()
             Case "Detalle Alumnos"
-
+                tvAdministrativo.Visible = False
                 My.Forms.DETALLESALUMNOS.ShowDialog()
-            Case "Pedido Uniformes"
 
+            Case "Pedido Uniformes"
+                tvAdministrativo.Visible = False
                 My.Forms.PEDIDOSUNIFORMES.ShowDialog()
             Case "Reimpresion Folio o Recibo"
-
+                tvAdministrativo.Visible = False
                 My.Forms.REIMPRESIONRECFOL.ShowDialog()
             Case "Creacion Reportes"
-
+                tvAdministrativo.Visible = False
                 My.Forms.REPORTES.ShowDialog()
             Case "Adeudo Alumnos"
                 BANDERACOBRO = 6
-
+                tvAdministrativo.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Asignar Becas"
-
+                tvAdministrativo.Visible = False
                 My.Forms.ASIGNACIONDEBECA.ShowDialog()
             Case "Eliminar Movimientos"
-
+                tvAdministrativo.Visible = False
                 My.Forms.ELIMINARMOVIMIENTOS.ShowDialog()
             Case "Modificar Productos"
-
+                tvAdministrativo.Visible = False
                 My.Forms.MODIFICARPRODUCTOS.ShowDialog()
             Case "Edicion Usuarios"
-
+                tvAdministrativo.Visible = False
                 My.Forms.USUARIOS.ShowDialog()
             Case "Modificar Pagos"
-
+                tvAdministrativo.Visible = False
                 My.Forms.MODIFICARMOVIMIENTOS.ShowDialog()
             Case "Modificar Facturas"
-
+                tvAdministrativo.Visible = False
                 My.Forms.DATOSFACTURA.ShowDialog()
             Case "Reporte Facturas"
                 BANDERACOBRO = 10
-
+                tvAdministrativo.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Crear Nuevo Ciclo"
+                tvAdministrativo.Visible = False
                 My.Forms.AgregarNuevoCiclo.ShowDialog()
             Case "Corte Diario"
                 If FechaActual = FechaCIerre Then
@@ -350,7 +352,7 @@ Public Class PADRE
                         Else
 
                         End If
-
+                        tvAdministrativo.Visible = False
                         My.Forms.CORTEDIARIOO.ShowDialog()
 
 
@@ -362,16 +364,22 @@ Public Class PADRE
 
 
             Case "Corte Diario por Fecha"
+                tvAdministrativo.Visible = False
                 My.Forms.FECHASCORTEPORFECHAS.ShowDialog()
             Case "Actividad de Usuario"
+                tvAdministrativo.Visible = False
                 My.Forms.ACTIVIDADUSUARIOS.ShowDialog()
             Case "Clientes Piden Factura"
+                tvAdministrativo.Visible = False
                 My.Forms.FECHASPIDENFACTURA.ShowDialog()
             Case "Pedidos de Uniformes"
+                tvAdministrativo.Visible = False
                 My.Forms.RANGOFECHASPEDIDOUNIFORMES.ShowDialog()
             Case "Becas Asignadas"
+                tvAdministrativo.Visible = False
                 My.Forms.BECASASIGNADASS.ShowDialog()
             Case "Costos de Productos"
+                tvAdministrativo.Visible = False
                 My.Forms.REPORTESCOSTOS.ShowDialog()
         End Select
     End Sub
@@ -390,27 +398,31 @@ Public Class PADRE
                 BANDERAPAGO = 2
                 BANDERACOBRO = 7
                 BANDERARECFOLFAC = 1
+                tvCobros.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
+
             Case "Inscripcion"
                 BANDERAPAGO = 1
                 BANDERACOBRO = 8
                 BANDERARECFOLFAC = 1
+                tvCobros.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Articulos"
                 BANDERACOBRO = 2
                 BANDERARECFOLFAC = 2
+                tvCobros.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Adeudos Articulos"
                 BANDERACOBRO = 4
                 BANDERARECFOLFAC = 3
+                tvCobros.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
             Case "Adeudos Colegiaturas/Inscripcion"
-
                 BANDERACOBRO = 9
                 BANDERAPAGO = 3
                 BANDERARECFOLFAC = 1
+                tvCobros.Visible = False
                 My.Forms.SELECCIONDEALUMNO.ShowDialog()
-
         End Select
     End Sub
 
@@ -420,19 +432,20 @@ Public Class PADRE
         Select Case tvAcademico.SelectedNode.Text
             Case "Lista Alumnos"
                 BANDERAREPORTE = 1
+                tvAcademico.Visible = False
                 My.Forms.SELECCIONARESCOLARIDAD.ShowDialog()
             Case "Lista Cumpleaños"
                 BANDERAREPORTE = 4
+                tvAcademico.Visible = False
                 My.Forms.SELECCIONARESCOLARIDAD.ShowDialog()
-
             Case "Lista Asistencia"
                 BANDERAREPORTE = 2
+                tvAcademico.Visible = False
                 My.Forms.SELECCIONARESCOLARIDAD.ShowDialog()
-
             Case "Lista Correos"
                 BANDERAREPORTE = 3
+                tvAcademico.Visible = False
                 My.Forms.SELECCIONARESCOLARIDAD.ShowDialog()
-
         End Select
     End Sub
 
@@ -575,6 +588,14 @@ Public Class PADRE
     End Sub
 
     Private Sub Impresora_Click(sender As Object, e As EventArgs) Handles Impresora.Click
+
+    End Sub
+
+    Private Sub tvAcademico_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvAcademico.AfterSelect
+
+    End Sub
+
+    Private Sub tvCobros_AfterSelect(sender As Object, e As TreeViewEventArgs) Handles tvCobros.AfterSelect
 
     End Sub
 End Class
